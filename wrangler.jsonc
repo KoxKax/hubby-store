@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hubby-local-skeleton",
+  "main": "workers/app.ts",
+  "compatibility_date": "2026-10-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "preview_urls": false,
+  "assets": { "directory": "./build/client" },
+  "durable_objects": {
+    "bindings": [{ "name": "LOCAL_SHOP", "class_name": "LocalShop" }]
+  },
+  "migrations": [
+    { "tag": "local-shop-v1", "new_sqlite_classes": ["LocalShop"] }
+  ],
+  "vars": {
+    "APP_ENV": "local",
+    "DATA_MODE": "fixtures",
+    "DEMO_INVENTORY_KEY": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+    "PAYMENTS_MODE": "mock",
+    "SUPPLIERS_MODE": "mock"
+  }
+}

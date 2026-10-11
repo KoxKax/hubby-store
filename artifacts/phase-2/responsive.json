@@ -1,0 +1,74 @@
+[
+  {
+    "mainCount": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "mainCount": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "mainCount": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "mainCount": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "mainCount": 1,
+    "path": "/dang-nhap",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "mainCount": 1,
+    "path": "/dang-nhap",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "mainCount": 1,
+    "path": "/dang-nhap",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "mainCount": 1,
+    "path": "/dang-nhap",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "mainCount": 1,
+    "path": "/tai-khoan",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "mainCount": 1,
+    "path": "/tai-khoan",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "mainCount": 1,
+    "path": "/tai-khoan",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "mainCount": 1,
+    "path": "/tai-khoan",
+    "scrollWidth": 1425,
+    "width": 1440
+  }
+]

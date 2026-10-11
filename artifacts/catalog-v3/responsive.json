@@ -1,0 +1,218 @@
+[
+  {
+    "theme": "dark",
+    "width": 360,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 360,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 360,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 768,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 768,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 768,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "dark",
+    "width": 1440,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 360,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 360,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 360,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 768,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 768,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 768,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "path": "/",
+    "brokenImages": 0,
+    "cards": 6,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "path": "/san-pham/canva",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "theme": "light",
+    "width": 1440,
+    "path": "/admin-demo/operations?tab=reviews",
+    "brokenImages": 0,
+    "cards": 0,
+    "main": 1,
+    "overflow": false
+  }
+]

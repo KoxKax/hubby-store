@@ -1,0 +1,162 @@
+[
+  {
+    "path": "/",
+    "client": 345,
+    "heading": "Trải nghiệm số.Thêm một tầm cao.",
+    "scroll": 345,
+    "width": 360,
+    "pass": true
+  },
+  {
+    "path": "/san-pham",
+    "client": 345,
+    "heading": "Một thế giới để khám phá.",
+    "scroll": 345,
+    "width": 360,
+    "pass": true
+  },
+  {
+    "path": "/san-pham/nova-ai",
+    "client": 345,
+    "heading": "Nova AI",
+    "scroll": 345,
+    "width": 360,
+    "pass": true
+  },
+  {
+    "path": "/gio-hang",
+    "client": 345,
+    "heading": "Lựa chọn của bạn.",
+    "scroll": 345,
+    "width": 360,
+    "pass": true
+  },
+  {
+    "path": "/thanh-toan?variant=nova-1",
+    "client": 345,
+    "heading": "Kiểm tra lần cuối nhé.",
+    "scroll": 345,
+    "width": 360,
+    "pass": true
+  },
+  {
+    "path": "/",
+    "client": 375,
+    "heading": "Trải nghiệm số.Thêm một tầm cao.",
+    "scroll": 375,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "path": "/san-pham",
+    "client": 375,
+    "heading": "Một thế giới để khám phá.",
+    "scroll": 375,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "path": "/san-pham/nova-ai",
+    "client": 375,
+    "heading": "Nova AI",
+    "scroll": 375,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "path": "/gio-hang",
+    "client": 375,
+    "heading": "Lựa chọn của bạn.",
+    "scroll": 375,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "path": "/thanh-toan?variant=nova-1",
+    "client": 375,
+    "heading": "Kiểm tra lần cuối nhé.",
+    "scroll": 375,
+    "width": 390,
+    "pass": true
+  },
+  {
+    "path": "/",
+    "client": 753,
+    "heading": "Trải nghiệm số.Thêm một tầm cao.",
+    "scroll": 753,
+    "width": 768,
+    "pass": true
+  },
+  {
+    "path": "/san-pham",
+    "client": 753,
+    "heading": "Một thế giới để khám phá.",
+    "scroll": 753,
+    "width": 768,
+    "pass": true
+  },
+  {
+    "path": "/san-pham/nova-ai",
+    "client": 753,
+    "heading": "Nova AI",
+    "scroll": 753,
+    "width": 768,
+    "pass": true
+  },
+  {
+    "path": "/gio-hang",
+    "client": 753,
+    "heading": "Lựa chọn của bạn.",
+    "scroll": 753,
+    "width": 768,
+    "pass": true
+  },
+  {
+    "path": "/thanh-toan?variant=nova-1",
+    "client": 753,
+    "heading": "Kiểm tra lần cuối nhé.",
+    "scroll": 753,
+    "width": 768,
+    "pass": true
+  },
+  {
+    "path": "/",
+    "client": 1425,
+    "heading": "Trải nghiệm số.Thêm một tầm cao.",
+    "scroll": 1425,
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "path": "/san-pham",
+    "client": 1425,
+    "heading": "Một thế giới để khám phá.",
+    "scroll": 1425,
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "path": "/san-pham/nova-ai",
+    "client": 1425,
+    "heading": "Nova AI",
+    "scroll": 1425,
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "path": "/gio-hang",
+    "client": 1425,
+    "heading": "Lựa chọn của bạn.",
+    "scroll": 1425,
+    "width": 1440,
+    "pass": true
+  },
+  {
+    "path": "/thanh-toan?variant=nova-1",
+    "client": 1425,
+    "heading": "Kiểm tra lần cuối nhé.",
+    "scroll": 1425,
+    "width": 1440,
+    "pass": true
+  }
+]

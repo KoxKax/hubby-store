@@ -1,0 +1,48 @@
+{
+  "name": "hubby-store",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0 <25"
+  },
+  "scripts": {
+    "dev": "react-router dev --host 127.0.0.1",
+    "preview": "node scripts/preview.mjs",
+    "build": "react-router build",
+    "cf:typegen": "wrangler types",
+    "typecheck": "npm run cf:typegen && react-router typegen && tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "vitest run",
+    "smoke": "node scripts/smoke.mjs",
+    "smoke:commerce": "node scripts/commerce-smoke.mjs",
+    "smoke:cms": "node scripts/cms-smoke.mjs",
+    "smoke:refresh": "node scripts/refresh-smoke.mjs",
+    "smoke:engagement": "node scripts/engagement-smoke.mjs",
+    "check": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "@fontsource/be-vietnam-pro": "5.3.0",
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.3",
+    "isbot": "5.2.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "react-router": "8.4.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@cloudflare/vite-plugin": "1.63.1",
+    "@electric-sql/pglite": "0.5.8",
+    "@react-router/dev": "8.4.0",
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "6.0.3",
+    "vite": "8.3.4",
+    "vitest": "5.0.3",
+    "wrangler": "4.149.0"
+  }
+}

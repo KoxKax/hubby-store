@@ -1,0 +1,102 @@
+[
+  {
+    "main": 1,
+    "path": "/",
+    "scrollWidth": 345,
+    "stepNumbers": ["static", "static", "static"],
+    "width": 360
+  },
+  {
+    "main": 1,
+    "path": "/",
+    "scrollWidth": 375,
+    "stepNumbers": ["static", "static", "static"],
+    "width": 390
+  },
+  {
+    "main": 1,
+    "path": "/",
+    "scrollWidth": 753,
+    "stepNumbers": ["static", "static", "static"],
+    "width": 768
+  },
+  {
+    "main": 1,
+    "path": "/",
+    "scrollWidth": 1425,
+    "stepNumbers": ["static", "static", "static"],
+    "width": 1440
+  },
+  {
+    "main": 1,
+    "path": "/tra-don-hang",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "main": 1,
+    "path": "/tra-don-hang",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "main": 1,
+    "path": "/tra-don-hang",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "main": 1,
+    "path": "/tra-don-hang",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "main": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "main": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "main": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "main": 1,
+    "path": "/admin-demo",
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "main": 1,
+    "path": "/san-pham/canva",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "main": 1,
+    "path": "/san-pham/canva",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "main": 1,
+    "path": "/san-pham/canva",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "main": 1,
+    "path": "/san-pham/canva",
+    "scrollWidth": 1425,
+    "width": 1440
+  }
+]

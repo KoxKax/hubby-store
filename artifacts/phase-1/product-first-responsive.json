@@ -1,0 +1,190 @@
+{
+  "viewports": [
+    {
+      "width": 360,
+      "route": "/",
+      "cardBottom": 703.6875,
+      "cardTop": 393.8999938964844,
+      "client": 345,
+      "height": 844,
+      "scroll": 345,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "route": "/san-pham",
+      "client": 345,
+      "height": 844,
+      "scroll": 345,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "route": "/san-pham/canva",
+      "client": 345,
+      "height": 844,
+      "scroll": 345,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "route": "/gio-hang",
+      "client": 345,
+      "height": 844,
+      "scroll": 345,
+      "pass": true
+    },
+    {
+      "width": 360,
+      "route": "/thanh-toan?variant=canva-1",
+      "client": 345,
+      "height": 844,
+      "scroll": 345,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "cardBottom": 716.9125061035156,
+      "cardTop": 393.8999938964844,
+      "client": 375,
+      "height": 844,
+      "scroll": 375,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/san-pham",
+      "client": 375,
+      "height": 844,
+      "scroll": 375,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/san-pham/canva",
+      "client": 375,
+      "height": 844,
+      "scroll": 375,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/gio-hang",
+      "client": 375,
+      "height": 844,
+      "scroll": 375,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "route": "/thanh-toan?variant=canva-1",
+      "client": 375,
+      "height": 844,
+      "scroll": 375,
+      "pass": true
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "cardBottom": 824.8375244140625,
+      "cardTop": 382.3000183105469,
+      "client": 753,
+      "height": 844,
+      "scroll": 753,
+      "pass": true
+    },
+    {
+      "width": 768,
+      "route": "/san-pham",
+      "client": 753,
+      "height": 844,
+      "scroll": 753,
+      "pass": true
+    },
+    {
+      "width": 768,
+      "route": "/san-pham/canva",
+      "client": 753,
+      "height": 844,
+      "scroll": 753,
+      "pass": true
+    },
+    {
+      "width": 768,
+      "route": "/gio-hang",
+      "client": 753,
+      "height": 844,
+      "scroll": 753,
+      "pass": true
+    },
+    {
+      "width": 768,
+      "route": "/thanh-toan?variant=canva-1",
+      "client": 753,
+      "height": 844,
+      "scroll": 753,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "cardBottom": 752.5874938964844,
+      "cardTop": 343.5,
+      "client": 1425,
+      "height": 900,
+      "scroll": 1425,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/san-pham",
+      "client": 1425,
+      "height": 900,
+      "scroll": 1425,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/san-pham/canva",
+      "client": 1425,
+      "height": 900,
+      "scroll": 1425,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/gio-hang",
+      "client": 1425,
+      "height": 900,
+      "scroll": 1425,
+      "pass": true
+    },
+    {
+      "width": 1440,
+      "route": "/thanh-toan?variant=canva-1",
+      "client": 1425,
+      "height": 900,
+      "scroll": 1425,
+      "pass": true
+    }
+  ],
+  "palette": [
+    {
+      "contrast": 11.43,
+      "name": "Canva"
+    },
+    {
+      "contrast": 12.66,
+      "name": "CapCut"
+    },
+    {
+      "contrast": 10.42,
+      "name": "Google"
+    },
+    {
+      "contrast": 9.66,
+      "name": "Netflix"
+    }
+  ]
+}
