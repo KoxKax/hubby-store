@@ -1,0 +1,218 @@
+[
+  {
+    "width": 360,
+    "path": "/",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 345,
+    "viewport": 360
+  },
+  {
+    "width": 360,
+    "path": "/san-pham/canva",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 345,
+    "viewport": 360
+  },
+  {
+    "width": 360,
+    "path": "/gio-hang",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 345,
+    "viewport": 360
+  },
+  {
+    "width": 360,
+    "path": "/thanh-toan",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 345,
+    "viewport": 360
+  },
+  {
+    "width": 360,
+    "path": "/admin-demo?tab=products",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 345,
+    "viewport": 360
+  },
+  {
+    "width": 360,
+    "path": "/admin-demo/operations?tab=orders",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 345,
+    "viewport": 360
+  },
+  {
+    "width": 390,
+    "path": "/",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 375,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "path": "/san-pham/canva",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 375,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "path": "/gio-hang",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 375,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "path": "/thanh-toan",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 375,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "path": "/admin-demo?tab=products",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 375,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "path": "/admin-demo/operations?tab=orders",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 375,
+    "viewport": 390
+  },
+  {
+    "width": 768,
+    "path": "/",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 753,
+    "viewport": 768
+  },
+  {
+    "width": 768,
+    "path": "/san-pham/canva",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 753,
+    "viewport": 768
+  },
+  {
+    "width": 768,
+    "path": "/gio-hang",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 753,
+    "viewport": 768
+  },
+  {
+    "width": 768,
+    "path": "/thanh-toan",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 753,
+    "viewport": 768
+  },
+  {
+    "width": 768,
+    "path": "/admin-demo?tab=products",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 753,
+    "viewport": 768
+  },
+  {
+    "width": 768,
+    "path": "/admin-demo/operations?tab=orders",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 753,
+    "viewport": 768
+  },
+  {
+    "width": 1440,
+    "path": "/",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 1425,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "path": "/san-pham/canva",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 1425,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "path": "/gio-hang",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 1425,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "path": "/thanh-toan",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 1425,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "path": "/admin-demo?tab=products",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 1425,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "path": "/admin-demo/operations?tab=orders",
+    "loaded": true,
+    "brokenImages": 0,
+    "mainCount": 1,
+    "scroll": 1425,
+    "viewport": 1440
+  }
+]

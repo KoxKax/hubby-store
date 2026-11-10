@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "react-router";
 import {
   data,
@@ -10,44 +11,71 @@ import {
   useNavigation,
 } from "react-router";
 import { z } from "zod";
+import { PasswordField } from "../components/password-field";
+import { GoogleLogin } from "../components/shop-extras";
 import { safeNext } from "../domain/request-security";
+import {
+  authAvailability,
+  emailServiceFailure,
+} from "../server/auth-availability.server";
 import { dataConfig } from "../server/config.server";
 import { csrfToken, secureForm } from "../server/form-security.server";
 import { runtimeContext } from "../server/runtime-context.server";
-import { identity, requestClient } from "../server/supabase.server";
+import {
+  identity,
+  requestClient,
+  signedInDestination,
+} from "../server/supabase.server";
 
 export function meta() {
   return [{ title: "Đăng nhập & bảo mật — Hubby" }];
 }
-export function loader({ request, context }: LoaderFunctionArgs) {
+export async function loader({ request, context, url }: LoaderFunctionArgs) {
   const config = dataConfig(context.get(runtimeContext).env);
+  const providers = await authAvailability(request, context);
   return {
-    configured: !!config,
+    configured: !!config && providers.available,
+    googleConfigured: providers.google,
+    emailConfigured: providers.email,
     csrf: csrfToken(request, context),
-    next: safeNext(new URL(request.url).searchParams.get("next")),
+    next: safeNext(url.searchParams.get("next")),
   };
 }
-export async function action({ request, context }: ActionFunctionArgs) {
+export async function action({ request, context, url }: ActionFunctionArgs) {
   const form = await secureForm(request, 12_000);
   const config = dataConfig(context.get(runtimeContext).env);
   if (!config)
     return data(
       {
         error:
-          "Chưa cấu hình staging. Không có tài khoản nào được tạo hoặc đăng nhập.",
+          "Hệ thống đăng nhập chưa sẵn sàng. Vui lòng thử lại sau.",
         message: "",
       },
       { status: 503 },
     );
   const client = requestClient(request, context);
-  const path = new URL(request.url).pathname;
+  // RR8 preserves .data transport suffixes in request.url; use its normalized URL.
+  const path = url.pathname;
   const next = safeNext(form.get("next"));
   const intent = String(form.get("intent") ?? "");
   if (path === "/dang-xuat") {
-    await client.auth.signOut({ scope: "local" });
+    const result = await client.auth.signOut({ scope: "local" });
+    if (result.error)
+      throw new Response("Chưa thể đăng xuất. Vui lòng thử lại.", {
+        status: 503,
+      });
+    context.get(runtimeContext).identity = undefined;
     return redirect("/");
   }
   if (intent === "google") {
+    if (!(await authAvailability(request, context)).google)
+      return data(
+        {
+          error: "Đăng nhập Google chưa sẵn sàng. Bạn có thể dùng email.",
+          message: "",
+        },
+        { status: 503 },
+      );
     const result = await client.auth.signInWithOAuth({
       provider: "google",
       options: {
@@ -96,9 +124,11 @@ export async function action({ request, context }: ActionFunctionArgs) {
   if (!email.success)
     return data({ error: "Email chưa hợp lệ.", message: "" }, { status: 400 });
   if (path === "/quen-mat-khau") {
-    await client.auth.resetPasswordForEmail(email.data, {
+    const result = await client.auth.resetPasswordForEmail(email.data, {
       redirectTo: `${config.origin}/auth/callback?next=/dat-lai-mat-khau`,
     });
+    const issue = emailServiceFailure(result.error?.code);
+    if (issue) return data({ error: issue, message: "" }, { status: 503 });
     return {
       error: "",
       message:
@@ -117,7 +147,7 @@ export async function action({ request, context }: ActionFunctionArgs) {
         { error: "Vui lòng nhập tên hiển thị (tối đa 80 ký tự).", message: "" },
         { status: 400 },
       );
-    await client.auth.signUp({
+    const result = await client.auth.signUp({
       email: email.data,
       password: password.data,
       options: {
@@ -125,6 +155,8 @@ export async function action({ request, context }: ActionFunctionArgs) {
         emailRedirectTo: `${config.origin}/auth/callback?next=/tai-khoan`,
       },
     });
+    const issue = emailServiceFailure(result.error?.code);
+    if (issue) return data({ error: issue, message: "" }, { status: 503 });
     return {
       error: "",
       message:
@@ -154,40 +186,46 @@ export async function action({ request, context }: ActionFunctionArgs) {
       },
       { status: 400 },
     );
+  const destination = await signedInDestination(request, context, next);
   if (form.get("presentation") === "modal")
-    return { error: "", message: "Đã đăng nhập.", signedIn: true };
-  return redirect(next);
+    return {
+      error: "",
+      message: "Đã đăng nhập.",
+      signedIn: true,
+      redirectTo: destination === "/tai-khoan" ? undefined : destination,
+    };
+  return redirect(destination);
 }
 export default function AuthPage() {
   const state = useLoaderData<typeof loader>();
   const result = useActionData<typeof action>();
   const path = useLocation().pathname;
   const busy = useNavigation().state !== "idle";
+  const [emailOpen, setEmailOpen] = useState(false);
+  useEffect(() => {
+    if (result?.error) setEmailOpen(true);
+  }, [result?.error]);
   const register = path === "/dang-ky",
     forgot = path === "/quen-mat-khau",
     reset = path === "/dat-lai-mat-khau";
   const title = register
-    ? "Tạo không gian của bạn."
+    ? "Đăng ký bằng email"
     : forgot
-      ? "Lấy lại quyền truy cập."
+      ? "Khôi phục mật khẩu"
       : reset
         ? "Đặt mật khẩu mới."
-        : "Chào bạn trở lại.";
+        : "Đăng nhập";
+  const login = !register && !forgot && !reset;
   return (
     <main id="main" tabIndex={-1} className="container auth-page">
       <div className="auth-card">
-        <p className="eyebrow">HUBBY ACCOUNT</p>
+        <p className="eyebrow">HUBBY</p>
         <h1>{title}</h1>
-        <p>
-          {state.configured
-            ? "Phiên đăng nhập được xác minh ở server."
-            : "Chế độ local — chưa kết nối dịch vụ đăng nhập. Không nhập thông tin thật."}
-        </p>
+        <p>Theo dõi đơn hàng và lưu sản phẩm bạn yêu thích.</p>
         {!state.configured && (
-          <div className="admin-notice">
-            Bạn có thể <Link to="/admin-demo">thử CMS local</Link> mà không cần
-            tài khoản. Đây không phải quyền Owner thật.
-          </div>
+          <p className="service-note">
+            Đăng nhập đang tạm đóng. Bạn vẫn có thể xem sản phẩm và gửi góp ý.
+          </p>
         )}
         {result?.error && (
           <p className="form-error" role="alert">
@@ -199,100 +237,97 @@ export default function AuthPage() {
             {result.message}
           </p>
         )}
-        <Form method="post" className="admin-form">
-          <input type="hidden" name="csrf" value={state.csrf} />
-          <input type="hidden" name="next" value={state.next} />
-          {register && (
-            <label>
-              Tên hiển thị
-              <input
-                name="name"
-                maxLength={80}
-                required
-                autoComplete="nickname"
-                disabled={!state.configured}
-              />
-            </label>
-          )}
-          {!reset && (
-            <label>
-              Email
-              <input
-                name="email"
-                type="email"
-                maxLength={254}
-                required
-                autoComplete="email"
-                disabled={!state.configured}
-              />
-            </label>
-          )}
-          {!forgot && (
-            <label>
-              Mật khẩu
-              <input
-                name="password"
-                type="password"
+        {login && (
+          <>
+            <GoogleLogin
+              csrf={state.csrf}
+              configured={state.configured && state.googleConfigured}
+              next={state.next}
+              busy={busy}
+            />
+            <button
+              type="button"
+              className="email-login-toggle"
+              aria-expanded={emailOpen}
+              aria-controls="page-email-login"
+              onClick={() => setEmailOpen(!emailOpen)}
+            >
+              Đăng nhập bằng email {emailOpen ? "−" : "+"}
+            </button>
+          </>
+        )}
+        <div id="page-email-login" hidden={login && !emailOpen}>
+          <Form method="post" className="admin-form">
+            <input type="hidden" name="csrf" value={state.csrf} />
+            <input type="hidden" name="next" value={state.next} />
+            {register && (
+              <label>
+                Tên hiển thị
+                <input
+                  name="name"
+                  maxLength={80}
+                  required
+                  autoComplete="nickname"
+                  disabled={!state.configured || !state.emailConfigured}
+                />
+              </label>
+            )}
+            {!reset && (
+              <label>
+                Email
+                <input
+                  name="email"
+                  type="email"
+                  maxLength={254}
+                  required
+                  autoComplete="email"
+                  disabled={!state.configured || !state.emailConfigured}
+                />
+              </label>
+            )}
+            {!forgot && (
+              <PasswordField
+                key={path}
                 minLength={register || reset ? 12 : 1}
-                maxLength={128}
-                required
                 autoComplete={
                   register || reset ? "new-password" : "current-password"
                 }
-                disabled={!state.configured}
+                disabled={!state.configured || !state.emailConfigured}
               />
-            </label>
-          )}
-          {reset && (
-            <label>
-              Nhập lại mật khẩu
-              <input
+            )}
+            {reset && (
+              <PasswordField
+                label="Nhập lại mật khẩu"
                 name="confirm"
-                type="password"
                 minLength={12}
-                maxLength={128}
                 autoComplete="new-password"
-                required
-                disabled={!state.configured}
+                disabled={!state.configured || !state.emailConfigured}
               />
-            </label>
-          )}
-          <button
-            className="button primary"
-            type="submit"
-            disabled={!state.configured || busy}
-          >
-            {busy
-              ? "Đang xử lý…"
-              : register
-                ? "Đăng ký"
-                : forgot
-                  ? "Gửi hướng dẫn"
-                  : reset
-                    ? "Cập nhật mật khẩu"
-                    : "Đăng nhập"}
-          </button>
-        </Form>
-        {!forgot && !reset && (
-          <Form method="post">
-            <input type="hidden" name="csrf" value={state.csrf} />
-            <input type="hidden" name="next" value={state.next} />
+            )}
             <button
-              className="button secondary auth-google"
-              name="intent"
-              value="google"
+              className="button primary"
               type="submit"
-              disabled={!state.configured || busy}
+              disabled={!state.configured || !state.emailConfigured || busy}
             >
-              Tiếp tục với Google
+              {busy
+                ? "Đang xử lý…"
+                : register
+                  ? "Đăng ký"
+                  : forgot
+                    ? "Gửi hướng dẫn"
+                    : reset
+                      ? "Cập nhật mật khẩu"
+                      : "Đăng nhập"}
             </button>
           </Form>
-        )}
-        <div className="auth-links">
-          <Link to={register ? "/dang-nhap" : "/dang-ky"}>
-            {register ? "Đã có tài khoản? Đăng nhập" : "Tạo tài khoản"}
-          </Link>
-          <Link to="/quen-mat-khau">Quên mật khẩu?</Link>
+          <div className="auth-links">
+            <Link to={register || forgot || reset ? "/dang-nhap" : "/dang-ky"}>
+              {register || forgot || reset
+                ? "Quay lại đăng nhập"
+                : "Chưa có tài khoản? Đăng ký"}
+            </Link>
+            <Link to="/quen-mat-khau">Quên mật khẩu?</Link>
+          </div>
         </div>
       </div>
     </main>

@@ -32,7 +32,7 @@ export const ownerProducts: DemoProduct[] = [
       warranty: "1 năm",
       receipt: "Link mời tham gia được gửi đến email bạn cung cấp.",
       activationNote:
-        "Cần email tài khoản Canva. Không cần gửi mật khẩu. Gói giáo dục có điều kiện đủ tiêu chuẩn; hỏi Hubby trước khi đặt.",
+        "Gói thuộc chương trình Canva Education và áp dụng điều kiện tham gia của chương trình. Bạn chỉ cần cung cấp email nhận lời mời, không cần gửi mật khẩu hoặc mã xác thực.",
     },
   },
   {
@@ -57,7 +57,7 @@ export const ownerProducts: DemoProduct[] = [
       warranty: "Trọn 1 năm",
       receipt: "Hướng dẫn nâng cấp trên tài khoản của bạn theo đơn hàng.",
       activationNote:
-        "Thông tin cần để nâng cấp sẽ được xác nhận trước khi mua. Không gửi mật khẩu hoặc mã xác thực.",
+        "Làm theo các bước hướng dẫn trong đơn hàng. Không gửi mật khẩu cá nhân hoặc mã xác thực qua tin nhắn hỗ trợ.",
     },
   },
   {
@@ -79,8 +79,8 @@ export const ownerProducts: DemoProduct[] = [
     deliveryLabel: "Cấp tài khoản",
     activationRequired: false,
     terms: {
-      warranty: "Liên hệ để xác nhận",
-      receipt: "Nhận thông tin tài khoản trong đơn hàng qua luồng bảo mật.",
+      warranty: "",
+      receipt: "Xem thông tin đăng nhập trong phần nhận sản phẩm của đơn hàng.",
       activationNote:
         "Kiểm tra điều kiện thiết bị, đăng nhập và bảo hành trước khi mua.",
     },
@@ -104,10 +104,10 @@ export const ownerProducts: DemoProduct[] = [
     deliveryLabel: "Cấp tài khoản",
     activationRequired: false,
     terms: {
-      warranty: "Liên hệ để xác nhận",
-      receipt: "Nhận thông tin tài khoản trong đơn hàng qua luồng bảo mật.",
+      warranty: "",
+      receipt: "Xem thông tin đăng nhập trong phần nhận sản phẩm của đơn hàng.",
       activationNote:
-        "Số thiết bị, loại tài khoản và điều kiện bảo hành cần được xác nhận trước khi mua.",
+        "Mở đơn hàng để xem hướng dẫn đăng nhập và sử dụng đúng loại tài khoản được giao.",
     },
   },
   {
@@ -129,7 +129,7 @@ export const ownerProducts: DemoProduct[] = [
     deliveryLabel: "Link kích hoạt",
     activationRequired: true,
     terms: {
-      warranty: "Liên hệ để xác nhận",
+      warranty: "",
       receipt: "Nhận link kích hoạt và hướng dẫn theo đơn hàng.",
       activationNote:
         "Đăng nhập đúng tài khoản muốn nâng trước khi kích hoạt. Không cần gửi mật khẩu.",

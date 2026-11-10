@@ -30,7 +30,7 @@ describe("Owner catalog, unpriced safety and private review contract", () => {
     expect(c.products.find((p) => p.id === "canva")?.terms?.warranty).toBe(
       "1 năm",
     );
-    expect(() => validateContent(c)).toThrow(/migration staging/);
+    expect(validateContent(c).products).toHaveLength(6);
   });
   it("preserves unrelated custom products, images, and original snapshots", () => {
     const original = structuredClone(getStorefrontContent());

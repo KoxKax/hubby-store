@@ -1,15 +1,29 @@
 import { useState } from "react";
-import { type Experience, experienceOf } from "../content/experience";
+import {
+  type Experience,
+  experienceOf,
+  imageSlides,
+} from "../content/experience";
 import type { StorefrontContent } from "../content/types";
+import { moveItem } from "../domain/cms-workspace";
 import { imageKind } from "../domain/media";
+import { MediaPicker, type MediaRecord } from "./media-picker";
 export function ExperienceEditor({
   draft,
   edit,
+  mode = "sandbox",
+  mediaRecords,
 }: {
   draft: StorefrontContent;
   edit: (change: (content: StorefrontContent) => void) => void;
+  mode?: "sandbox" | "staging";
+  mediaRecords?: MediaRecord[];
 }) {
   const settings = experienceOf(draft);
+  const renderedSlides = imageSlides(draft);
+  const bundledBanners = renderedSlides.filter((slide) =>
+    slide.media.src.startsWith("/visuals/"),
+  );
   const [error, setError] = useState("");
   function change(fn: (s: Experience) => void) {
     edit((p) => {
@@ -82,8 +96,8 @@ export function ExperienceEditor({
     <section className="experience-editor">
       <h2>Bố cục trang chủ</h2>
       <p>
-        Giới thiệu, banner trượt và thông báo đầu trang. Lưu nháp → xem trước →
-        áp dụng. Không tự ghi đè nội dung đã xuất bản.
+        Sửa nội dung, xem trước rồi lưu nháp. Chỉ khi xuất bản, thay đổi mới
+        hiện trên cửa hàng.
       </p>
       {Object.entries(settings.intro).map(([key, value]) => (
         <label key={key}>
@@ -109,7 +123,7 @@ export function ExperienceEditor({
           />
         </label>
       ))}
-      <h3>Thông báo luân phiên</h3>
+      <h3>Thông báo đầu trang</h3>
       {settings.notices.map((n, i) => (
         <fieldset key={n.id}>
           <legend>Thông báo {i + 1}</legend>
@@ -141,6 +155,34 @@ export function ExperienceEditor({
               }
             />
           </label>
+          <div className="admin-actions">
+            <button
+              type="button"
+              className="button secondary"
+              disabled={i === 0}
+              aria-label={`Đưa thông báo ${i + 1} lên trước`}
+              onClick={() =>
+                change((s) => {
+                  s.notices = moveItem(s.notices, i, i - 1);
+                })
+              }
+            >
+              ↑ Lên
+            </button>
+            <button
+              type="button"
+              className="button secondary"
+              disabled={i === settings.notices.length - 1}
+              aria-label={`Đưa thông báo ${i + 1} xuống sau`}
+              onClick={() =>
+                change((s) => {
+                  s.notices = moveItem(s.notices, i, i + 1);
+                })
+              }
+            >
+              ↓ Xuống
+            </button>
+          </div>
           <button
             type="button"
             className="button secondary"
@@ -172,23 +214,48 @@ export function ExperienceEditor({
         Thêm thông báo
       </button>
       <h3>Banner trượt</h3>
+      {!!bundledBanners.length && (
+        <div className="cms-bundled-banners">
+          <p>
+            Cửa hàng đang dùng {bundledBanners.length} banner có sẵn. Chọn ảnh
+            cho các banner bên dưới để thay bằng bộ ảnh của bạn. Các mục chưa có
+            ảnh sẽ không hiển thị.
+          </p>
+          <div>
+            {bundledBanners.map((slide) => (
+              <img
+                key={slide.id}
+                src={slide.media.src}
+                alt={slide.media.alt}
+                width="240"
+                height="160"
+                loading="lazy"
+              />
+            ))}
+          </div>
+        </div>
+      )}
       <p>
         Trang chủ tự chuyển ảnh mỗi 6 giây. Chỉ banner có ảnh mới được hiển thị;
-        tối đa 12 ảnh, 180KB/ảnh. Chọn nhiều ảnh cùng lúc, rồi lưu nháp và áp
-        dụng.
+        tối đa 12 banner.{" "}
+        {mode === "sandbox"
+          ? "Ảnh local tối đa 180KB/ảnh."
+          : "Tải ảnh lên Thư viện ảnh rồi chọn cho từng banner."}
       </p>
-      <label>
-        Thêm nhiều ảnh banner
-        <input
-          type="file"
-          multiple
-          accept="image/png,image/jpeg,image/webp,image/avif"
-          onChange={(e) => {
-            void uploadMany(Array.from(e.target.files ?? []));
-            e.target.value = "";
-          }}
-        />
-      </label>
+      {mode === "sandbox" && (
+        <label>
+          Thêm nhiều ảnh banner
+          <input
+            type="file"
+            multiple
+            accept="image/png,image/jpeg,image/webp,image/avif"
+            onChange={(e) => {
+              void uploadMany(Array.from(e.target.files ?? []));
+              e.target.value = "";
+            }}
+          />
+        </label>
+      )}
       {settings.slides.map((b, i) => (
         <fieldset key={b.id}>
           <legend>Banner {i + 1}</legend>
@@ -252,14 +319,27 @@ export function ExperienceEditor({
               <option value="lavender">Lavender</option>
             </select>
           </label>
-          <label>
-            Ảnh banner
-            <input
-              type="file"
-              accept="image/png,image/jpeg,image/webp,image/avif"
-              onChange={(e) => void upload(e.target.files?.[0], b.id)}
+          {mode === "sandbox" ? (
+            <label>
+              Tải ảnh banner
+              <input
+                type="file"
+                accept="image/png,image/jpeg,image/webp,image/avif"
+                onChange={(e) => void upload(e.target.files?.[0], b.id)}
+              />
+            </label>
+          ) : (
+            <MediaPicker
+              records={mediaRecords}
+              value={b.media?.src}
+              onPick={(media) =>
+                change((s) => {
+                  const item = s.slides.find((slide) => slide.id === b.id);
+                  if (item) item.media = media;
+                })
+              }
             />
-          </label>
+          )}
           {b.media && (
             <>
               <img
@@ -295,6 +375,34 @@ export function ExperienceEditor({
               </button>
             </>
           )}
+          <div className="admin-actions">
+            <button
+              type="button"
+              className="button secondary"
+              disabled={i === 0}
+              aria-label={`Đưa banner ${i + 1} lên trước`}
+              onClick={() =>
+                change((s) => {
+                  s.slides = moveItem(s.slides, i, i - 1);
+                })
+              }
+            >
+              ↑ Lên
+            </button>
+            <button
+              type="button"
+              className="button secondary"
+              disabled={i === settings.slides.length - 1}
+              aria-label={`Đưa banner ${i + 1} xuống sau`}
+              onClick={() =>
+                change((s) => {
+                  s.slides = moveItem(s.slides, i, i + 1);
+                })
+              }
+            >
+              ↓ Xuống
+            </button>
+          </div>
           <button
             type="button"
             className="button secondary"
@@ -346,88 +454,95 @@ export function ExperienceEditor({
       </label>
       <p>
         Chỉ hiện sản phẩm và thời hạn, không công khai email hoặc mã đơn. Thanh
-        toán thử trong local không tạo thông báo mua.
+        toán thử ở môi trường nội bộ không tạo thông báo mua.
       </p>
-      <h3>Đánh giá đã được phép công bố</h3>
-      <p>
-        Chỉ nhập phản hồi thật có sự đồng ý; để trống khi chưa có. Không tạo
-        điểm số hoặc khách hàng giả.
-      </p>
-      {settings.reviews.map((r, i) => (
-        <fieldset key={r.id}>
-          <legend>Đánh giá {i + 1}</legend>
-          <label>
-            Tên công khai
-            <input
-              value={r.name}
-              required
-              maxLength={80}
-              onChange={(e) =>
+      <details className="admin-details">
+        <summary>Đánh giá đã lưu</summary>
+        <p>
+          Khu vực đánh giá hiện không hiển thị trên trang chủ. Nội dung đã lưu
+          vẫn được giữ tại đây.
+        </p>
+        <h3>Đánh giá đã được phép công bố</h3>
+        <p>
+          Chỉ nhập phản hồi thật có sự đồng ý; để trống khi chưa có. Không tạo
+          điểm số hoặc khách hàng giả.
+        </p>
+        {settings.reviews.map((r, i) => (
+          <fieldset key={r.id}>
+            <legend>Đánh giá {i + 1}</legend>
+            <label>
+              Tên công khai
+              <input
+                value={r.name}
+                required
+                maxLength={80}
+                onChange={(e) =>
+                  change((s) => {
+                    const item = s.reviews[i];
+                    if (item) item.name = e.target.value;
+                  })
+                }
+              />
+            </label>
+            <label>
+              Sản phẩm đánh giá
+              <input
+                value={r.product}
+                required
+                maxLength={80}
+                onChange={(e) =>
+                  change((s) => {
+                    const item = s.reviews[i];
+                    if (item) item.product = e.target.value;
+                  })
+                }
+              />
+            </label>
+            <label>
+              Nội dung đánh giá
+              <textarea
+                value={r.text}
+                required
+                maxLength={1000}
+                onChange={(e) =>
+                  change((s) => {
+                    const item = s.reviews[i];
+                    if (item) item.text = e.target.value;
+                  })
+                }
+              />
+            </label>
+            <button
+              type="button"
+              className="button secondary"
+              onClick={() =>
                 change((s) => {
-                  const item = s.reviews[i];
-                  if (item) item.name = e.target.value;
+                  s.reviews.splice(i, 1);
                 })
               }
-            />
-          </label>
-          <label>
-            Sản phẩm đánh giá
-            <input
-              value={r.product}
-              required
-              maxLength={80}
-              onChange={(e) =>
-                change((s) => {
-                  const item = s.reviews[i];
-                  if (item) item.product = e.target.value;
-                })
-              }
-            />
-          </label>
-          <label>
-            Nội dung đánh giá
-            <textarea
-              value={r.text}
-              required
-              maxLength={1000}
-              onChange={(e) =>
-                change((s) => {
-                  const item = s.reviews[i];
-                  if (item) item.text = e.target.value;
-                })
-              }
-            />
-          </label>
-          <button
-            type="button"
-            className="button secondary"
-            onClick={() =>
-              change((s) => {
-                s.reviews.splice(i, 1);
-              })
-            }
-          >
-            Bỏ đánh giá {i + 1}
-          </button>
-        </fieldset>
-      ))}
-      <button
-        type="button"
-        className="button secondary"
-        disabled={settings.reviews.length >= 12}
-        onClick={() =>
-          change((s) => {
-            s.reviews.push({
-              id: `review-${crypto.randomUUID()}`,
-              name: "",
-              product: "",
-              text: "",
-            });
-          })
-        }
-      >
-        Thêm đánh giá đã duyệt
-      </button>
+            >
+              Bỏ đánh giá {i + 1}
+            </button>
+          </fieldset>
+        ))}
+        <button
+          type="button"
+          className="button secondary"
+          disabled={settings.reviews.length >= 12}
+          onClick={() =>
+            change((s) => {
+              s.reviews.push({
+                id: `review-${crypto.randomUUID()}`,
+                name: "",
+                product: "",
+                text: "",
+              });
+            })
+          }
+        >
+          Thêm đánh giá đã duyệt
+        </button>
+      </details>
     </section>
   );
 }

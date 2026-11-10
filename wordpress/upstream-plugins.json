@@ -1,0 +1,13 @@
+{
+  "woocommerce": {
+    "status": "installed-local",
+    "url": "https://downloads.wordpress.org/plugin/woocommerce.11.2.1.zip",
+    "version": "11.2.1"
+  },
+  "payos": {
+    "status": "downloaded-for-review-not-installed",
+    "url": "https://downloads.wordpress.org/plugin/payos.1.0.77.zip",
+    "sha256": "b7ad6723bb69c1991731a4661b8f69fbdececa24e7ab8e373a78e1049579bb39",
+    "version": "1.0.77"
+  }
+}

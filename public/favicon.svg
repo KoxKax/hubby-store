@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hubby">
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3a285a"/>
+      <stop offset="1" stop-color="#171020"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="url(#background)"/>
+  <path d="M17 15h9v13h12V15h9v35h-9V37H26v13h-9V15Z" fill="#f7f0ff"/>
+  <path d="m52 8 1.6 3.6L57 13l-3.4 1.4L52 18l-1.4-3.6L47 13l3.6-1.4Z" fill="#f8abd8"/>
+</svg>

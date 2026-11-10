@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useFetcher } from "react-router";
 import type { projection, Ticket } from "../domain/local-shop";
 import { formatVnd } from "../domain/money";
@@ -36,6 +36,11 @@ export function CommandButton({
     outcome?: string;
   }>();
   const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    if (fetcher.data?.outcome === "matched" && typeof window !== "undefined") {
+      window.dispatchEvent(new CustomEvent("hubby:paid"));
+    }
+  }, [fetcher.data?.outcome]);
   return (
     <div className="local-command">
       <fetcher.Form method="post" action="/local-api">

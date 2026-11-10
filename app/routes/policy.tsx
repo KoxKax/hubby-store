@@ -1,5 +1,5 @@
 import type { LoaderFunctionArgs, MetaFunction } from "react-router";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import { useContent } from "../components/content-context";
 import { PageIntro } from "../components/storefront";
 import { customerCopy } from "../content/experience";
@@ -24,11 +24,24 @@ export default function Policy() {
       <PageIntro
         eyebrow="THÔNG TIN CỬA HÀNG"
         title={policy.title}
-        description="Bạn đọc các thông tin dưới đây trước khi sử dụng dịch vụ nhé."
+        description="Vui lòng đọc thông tin dưới đây để hiểu rõ quyền lợi và điều kiện sử dụng dịch vụ tại Hubby."
       />
       <article className="policy-content">
-        <p>{customerCopy(policy.body)}</p>
+        {customerCopy(policy.body)
+          .split(/\n\s*\n/)
+          .filter(Boolean)
+          .map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
       </article>
+      <nav className="policy-actions" aria-label="Sau khi đọc chính sách">
+        <Link className="button secondary" to="/#san-pham">
+          Xem sản phẩm
+        </Link>
+        <Link className="button secondary" to="/#ho-tro">
+          Cách liên hệ Hubby
+        </Link>
+      </nav>
     </main>
   );
 }

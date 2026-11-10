@@ -2,28 +2,29 @@ import { Link } from "react-router";
 import { useContent } from "../components/content-context";
 import { Icon } from "../components/icons";
 import { PageIntro } from "../components/storefront";
+import { customerCopy, customerFacingFaqs } from "../content/experience";
 export function meta() {
-  return [{ title: "Một chút hỗ trợ từ Hubby" }];
+  return [{ title: "Hỗ trợ khách hàng — Hubby" }];
 }
 export default function Support() {
   const content = useContent();
   return (
     <main className="container support-page" id="main" tabIndex={-1}>
       <PageIntro
-        eyebrow="WE'RE HERE FOR YOU"
-        title="Cùng bạn, từ bước đầu."
-        description={content.support.description}
+        eyebrow="HỖ TRỢ KHÁCH HÀNG"
+        title="Hubby có thể giúp gì cho bạn?"
+        description={customerCopy(content.support.description)}
       />
       <div className="support-page-grid">
         <section className="faq-list">
-          <h2>Một vài điều bạn muốn biết.</h2>
-          {content.faqs.map((faq) => (
+          <h2>Câu hỏi thường gặp</h2>
+          {customerFacingFaqs(content).map((faq) => (
             <details key={faq.question}>
               <summary>
-                {faq.question}
+                {customerCopy(faq.question)}
                 <Icon name="plus" />
               </summary>
-              <p>{faq.answer}</p>
+              <p>{customerCopy(faq.answer)}</p>
             </details>
           ))}
         </section>
@@ -31,11 +32,16 @@ export default function Support() {
           <span className="category-icon">
             <Icon name="headset" />
           </span>
-          <h2>Hubby lắng nghe.</h2>
+          <h2>Liên hệ Hubby</h2>
           <p>
-            Ticket hỗ trợ và Fanpage sẽ được bật sau khi Owner cấu hình kênh
-            liên hệ chính thức.
+            Khi cần hỗ trợ sản phẩm đã mua, hãy mở đơn hàng và gửi yêu cầu
+            kèm mô tả vấn đề bạn gặp. Hubby sẽ dựa trên thông tin đơn để
+            kiểm tra và phản hồi.
           </p>
+          <Link className="text-link" to="/tra-don-hang">
+            Tra đơn và yêu cầu hỗ trợ
+            <Icon name="arrow" />
+          </Link>
           {content.support.fanpageUrl ? (
             <a
               className="button primary"
@@ -43,14 +49,12 @@ export default function Support() {
               target="_blank"
               rel="noreferrer"
             >
-              Ghé Facebook Fanpage
+              Nhắn tin qua Facebook
               <Icon name="arrow" />
             </a>
-          ) : (
-            <span className="pill">Kênh liên hệ đang chuẩn bị</span>
-          )}
+          ) : null}
           <Link className="text-link" to="/san-pham">
-            Khám phá bộ sưu tập
+            Xem các sản phẩm
             <Icon name="arrow" />
           </Link>
         </aside>

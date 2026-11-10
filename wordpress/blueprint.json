@@ -1,0 +1,27 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": { "php": "8.3", "wp": "7.1.4" },
+  "features": { "networking": false },
+  "plugins": [
+    { "resource": "url", "url": "https://downloads.wordpress.org/plugin/woocommerce.11.2.1.zip" }
+  ],
+  "steps": [
+    { "step": "runPHP", "code": "<?php require '/wordpress/wp-load.php'; file_put_contents('/wordpress/.hubby-setup-complete', '1');" }
+  ],
+  "siteOptions": {
+    "blogname": "Hubby",
+    "blogdescription": "Tài khoản và dịch vụ số",
+    "blog_public": "0",
+    "timezone_string": "Asia/Ho_Chi_Minh",
+    "woocommerce_currency": "VND",
+    "woocommerce_price_num_decimals": "0",
+    "woocommerce_currency_pos": "right_space",
+    "woocommerce_price_thousand_sep": ".",
+    "woocommerce_price_decimal_sep": ",",
+    "woocommerce_default_country": "VN",
+    "woocommerce_allow_tracking": "no",
+    "woocommerce_enable_guest_checkout": "yes",
+    "woocommerce_calc_taxes": "no",
+    "woocommerce_onboarding_profile": ""
+  }
+}

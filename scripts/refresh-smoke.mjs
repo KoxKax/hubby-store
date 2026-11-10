@@ -60,18 +60,33 @@ assert.equal(
   ).status,
   200,
 );
-const created = await owner.command({
+const checkout = {
   action: "checkout",
   key: randomUUID(),
   lines: [{ variantId: "canva-12", quantity: 1 }],
   coupon: "",
   expectedTotal: 699000,
-});
+  email: "QA.Lookup@buyer.example",
+};
+assert.equal(
+  (await owner.command({ ...checkout, email: "not-an-email" })).status,
+  400,
+);
+const created = await owner.command(checkout);
 assert.equal(created.status, 200);
 const order = await created.json();
+assert.equal(
+  (await owner.command({ ...checkout, email: "qa.lookup@buyer.example" }))
+    .status,
+  200,
+);
+assert.equal(
+  (await owner.command({ ...checkout, email: "other@buyer.example" })).status,
+  409,
+);
 const fields = {
   code: order.id.slice(0, 8).toUpperCase(),
-  email: "demo@buyer.example",
+  email: "qa.lookup@buyer.example",
 };
 const lookup = await owner.post("/tra-don-hang", fields);
 assert.equal(lookup.status, 200);
@@ -79,6 +94,7 @@ assert.ok((await lookup.text()).includes(`/don-hang/${order.id}`));
 for (const [who, input] of [
   [other, fields],
   [owner, { ...fields, email: "wrong@example.com" }],
+  [owner, { ...fields, email: "demo@buyer.example" }],
   [owner, { ...fields, code: "00000000" }],
 ]) {
   const response = await who.post("/tra-don-hang", input);

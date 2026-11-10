@@ -1,0 +1,2 @@
+<?php defined('ABSPATH') || exit; get_header(); ?>
+<main id="main" class="container content-main"><?php if (have_posts()): while (have_posts()): the_post(); ?><article><h1><?php the_title(); ?></h1><div class="policy-content"><?php the_content(); ?></div></article><?php endwhile; the_posts_pagination(); else: ?><h1>Không tìm thấy nội dung</h1><p><a href="<?php echo esc_url(home_url('/')); ?>">Về cửa hàng</a></p><?php endif; ?></main><?php get_footer(); ?>

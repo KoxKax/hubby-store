@@ -86,6 +86,40 @@ describe("CMS contract and sandbox", () => {
       [],
     );
   });
+  it("rejects inline images in every staging media slot, allowing managed references", () => {
+    for (const slot of ["announcement", "slides"] as const) {
+      const content = fresh();
+      const image = { src: "data:image/png;base64,iVBORw0KGgo=", alt: "Local" };
+      if (slot === "announcement") content.announcement.media = image;
+      else {
+        content.experience = {
+          intro: {
+            eyebrow: "Test",
+            title: "Test",
+            accent: "Test",
+            description: "Test",
+          },
+          notices: [{ id: "notice", text: "Test", href: "/" }],
+          slides: [
+            {
+              id: "banner",
+              title: "Test",
+              description: "Test",
+              theme: "mint",
+              href: "/",
+              media: image,
+            },
+          ],
+          reviews: [],
+          illustrativePurchases: false,
+          telegramUrl: null,
+        };
+      }
+      expect(() => validateContent(content)).toThrow(/local/);
+      image.src = "/media/55555555-5555-4555-8555-555555555555";
+      expect(() => validateContent(content)).not.toThrow();
+    }
+  });
 });
 describe("request and configuration safety", () => {
   it("rejects external and encoded open redirects", () => {

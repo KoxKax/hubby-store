@@ -7,6 +7,33 @@ export interface CartLine {
   quantity: number;
 }
 
+// A cart action must report what actually changed, not just a button click.
+export function planCartAddition(
+  current: CartLine[],
+  variantId: string,
+  quantity: number,
+  content: StorefrontContent,
+) {
+  const lines = normalizeCart(current, content);
+  const found = findVariant(variantId, content);
+  if (!Number.isSafeInteger(quantity) || quantity <= 0)
+    return { lines, added: 0, reason: "invalid" as const };
+  if (found?.variant.priceConfigured === false)
+    return { lines, added: 0, reason: "unpriced" as const };
+  if (!found || found.variant.stock < 1)
+    return { lines, added: 0, reason: "unavailable" as const };
+  const before =
+    lines.find((line) => line.variantId === variantId)?.quantity ?? 0;
+  const next = normalizeCart([...lines, { variantId, quantity }], content);
+  const after =
+    next.find((line) => line.variantId === variantId)?.quantity ?? 0;
+  return {
+    lines: next,
+    added: after - before,
+    reason: after > before ? ("added" as const) : ("limit" as const),
+  };
+}
+
 export function normalizeCart(
   value: unknown,
   content: StorefrontContent = getStorefrontContent(),

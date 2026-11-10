@@ -21,22 +21,36 @@ import "./styles/admin.css";
 import "./styles/commerce.css";
 import "./styles/refresh.css";
 import "./styles/themes.css";
+import "./styles/admin-workspace.css";
+import "./styles/visual-polish.css";
+import "./styles/light-theme.css";
 import { ContentProvider } from "./components/content-context";
 import { StoreProvider } from "./components/store-context";
+import { authAvailability } from "./server/auth-availability.server";
 import { dataConfig } from "./server/config.server";
 import { publishedContent } from "./server/content-repository.server";
 import { csrfToken } from "./server/form-security.server";
+import { localEnabled } from "./server/local-shop.server";
 import { runtimeContext } from "./server/runtime-context.server";
 import { identity } from "./server/supabase.server";
 import { readTheme } from "./server/theme.server";
 
 export async function loader({ request, context }: LoaderFunctionArgs) {
   const env = context.get(runtimeContext).env;
+  const [user, providers, content] = await Promise.all([
+    identity(request, context),
+    authAvailability(request, context),
+    publishedContent(request, context),
+  ]);
   return {
-    content: await publishedContent(request, context),
-    signedIn: !!(await identity(request, context)),
-    authConfigured: !!dataConfig(env),
+    content,
+    signedIn: !!user,
+    owner: user?.owner === true,
+    authConfigured: !!dataConfig(env) && providers.available,
+    googleConfigured: providers.google,
+    emailConfigured: providers.email,
     csrf: csrfToken(request, context),
+    couponsEnabled: localEnabled(request, context),
     theme: readTheme(request),
     sandbox:
       env.APP_ENV === "local" &&
@@ -53,6 +67,14 @@ export function Layout({ children }: { children: ReactNode }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="noindex, nofollow" />
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/favicon.ico"
+          sizes="48x48"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <Meta />
         <Links />
       </head>

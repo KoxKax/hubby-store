@@ -202,6 +202,11 @@ assert.equal(
   403,
 );
 assert.equal((await other.fetch(`/don-hang/${order.id}`)).status, 404);
+const activity = await (await other.fetch("/activity")).json();
+assert.ok(
+  activity.events.every((event) => event.kind !== "purchase"),
+  "Mock payment/refund must never appear as a real sale",
+);
 const final = await (await operator.command({ action: "ops" })).json();
 assert.equal(final.stock.find((v) => v.variantId === "canva-12").available, 0);
 console.log(

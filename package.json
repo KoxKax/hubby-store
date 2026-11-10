@@ -20,6 +20,14 @@
     "smoke:cms": "node scripts/cms-smoke.mjs",
     "smoke:refresh": "node scripts/refresh-smoke.mjs",
     "smoke:engagement": "node scripts/engagement-smoke.mjs",
+    "staging:preflight": "node scripts/staging-preflight.mjs",
+    "staging:preflight:cloud": "node scripts/staging-preflight.mjs --staging",
+    "staging:smoke": "node scripts/staging-service-smoke.mjs --confirm-staging",
+    "staging:content:plan": "node scripts/staging-content-plan.mjs",
+    "staging:preview": "node scripts/preview.mjs --staging --port 5176 --state hubby-staging-state",
+    "staging:web:smoke": "node scripts/staging-web-smoke.mjs",
+    "hosting:build": "node scripts/hosting-build.mjs",
+    "hosting:preflight": "node scripts/hosting-preflight.mjs",
     "check": "npm run lint && npm run typecheck && npm run test && npm run build"
   },
   "dependencies": {
@@ -30,6 +38,7 @@
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "react-router": "8.4.0",
+    "teleproto": "1.232.1",
     "zod": "4.6.5"
   },
   "devDependencies": {

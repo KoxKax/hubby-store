@@ -1,0 +1,32 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hubby",
+  "account_id": "86c1d76dcc262c997cac07cc973d0576",
+  "main": "workers/hosted.ts",
+  "compatibility_date": "2026-10-10",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "triggers": { "crons": ["*/5 * * * *"] },
+  "routes": [
+    {
+      "pattern": "hubby.dpdns.org",
+      "zone_id": "2f4457ab24731c570d2f86fa026a46af",
+      "custom_domain": true
+    }
+  ],
+  "assets": { "directory": "./.wrangler/hosted-build/client" },
+  "vars": {
+    "APP_ENV": "staging",
+    "DATA_MODE": "supabase",
+    "SUPABASE_ENVIRONMENT": "staging",
+    "PAYMENTS_MODE": "payos",
+    "PAYOS_CHECKOUT_READY": "true",
+    "SUPPLIERS_MODE": "bite",
+    "BITE_SCHEMA_READY": "true",
+    "BITE_READY": "true",
+    "BITE_TRACKING_READY": "true",
+    "SITE_ORIGIN": "https://hubby.kienhoang1919.workers.dev",
+    "SITE_ALIAS": "https://hubby.dpdns.org"
+  }
+}

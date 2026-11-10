@@ -141,6 +141,12 @@ const feed = (await (await reader.get("/activity")).json()).events;
 assert.equal(feed.filter((e) => !before.some((b) => b.id === e.id)).length, 1);
 assert.equal(feed.at(-1).kind, "cart");
 assert.ok(feed.at(-1).product && feed.at(-1).variant);
+assert.ok(
+  feed.every(
+    (event) => event.kind === "cart" && event.customer === "Một khách",
+  ),
+);
+assert.ok(!JSON.stringify(feed).includes("@"));
 assert.equal(JSON.stringify(feed).includes(message), false);
 for (const event of feed)
   assert.deepEqual(

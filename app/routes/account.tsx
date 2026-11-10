@@ -33,7 +33,10 @@ export async function action({ request, context }: ActionFunctionArgs) {
   const form = await secureForm(request, 4000);
   const user = await identity(request, context);
   if (!user)
-    return data({ message: "Bạn cần đăng nhập vào staging." }, { status: 401 });
+    return data(
+      { message: "Bạn cần đăng nhập để lưu hồ sơ." },
+      { status: 401 },
+    );
   const name = String(form.get("displayName") ?? "").trim();
   if (name.length < 1 || name.length > 80)
     return data({ message: "Tên cần 1–80 ký tự." }, { status: 400 });
@@ -51,13 +54,13 @@ export default function Account() {
   return (
     <main id="main" tabIndex={-1} className="container account-page">
       <PageIntro
-        eyebrow="YOUR HUBBY SPACE"
-        title={state.user ? "Không gian của bạn." : "Một nơi cho mọi lựa chọn."}
-        description="Hồ sơ, lịch sử mua và hỗ trợ ở cùng một nơi."
+        eyebrow="TÀI KHOẢN"
+        title={state.user ? "Tài khoản của bạn" : "Chào bạn, đây là Hubby"}
+        description="Xem thông tin tài khoản, đơn hàng và yêu cầu hỗ trợ."
       />
       <div className="account-grid">
         <section className="admin-panel">
-          <h2>{state.user ? "Hồ sơ" : "Đăng nhập & đăng ký"}</h2>
+          <h2>{state.user ? "Hồ sơ" : "Đăng nhập"}</h2>
           {state.user ? (
             <>
               <p>{state.user.email}</p>
@@ -88,24 +91,21 @@ export default function Account() {
             <>
               <p>
                 {state.configured
-                  ? "Dùng email hoặc Google để truy cập."
-                  : "Chưa cấu hình dịch vụ đăng nhập. Các biểu mẫu đã có, nhưng chưa nhận thông tin thật."}
+                  ? "Đăng nhập để quản lý đơn hàng, xem sản phẩm đã mua và gửi yêu cầu hỗ trợ."
+                  : "Đăng nhập đang tạm đóng. Bạn vẫn có thể xem sản phẩm và gửi góp ý."}
               </p>
               <AccountAccess />
             </>
           )}
         </section>
         <section className="admin-panel">
-          <h2>Lựa chọn của bạn</h2>
+          <h2>Đơn hàng và sản phẩm</h2>
           {state.user?.owner && (
-            <Link
-              className="button primary"
-              to={state.user.aal2 ? "/admin" : "/xac-thuc"}
-            >
-              {state.user.aal2 ? "Mở Owner CMS" : "Xác thực MFA"}
+            <Link className="button primary" to="/admin">
+              Quản trị cửa hàng
             </Link>
           )}
-          {state.sandbox && (
+          {(state.sandbox || state.user) && (
             <div className="admin-actions">
               <Link className="button secondary" to="/tai-khoan/don-hang">
                 Đơn hàng của bạn
@@ -122,8 +122,13 @@ export default function Account() {
             </div>
           )}
           <div>
+            {state.user && (
+              <Link className="button secondary" to="/tai-khoan/yeu-thich">
+                Sản phẩm đã lưu vào tài khoản
+              </Link>
+            )}
             <Link className="text-link" to="/yeu-thich">
-              Xem sản phẩm yêu thích
+              Yêu thích trên trình duyệt này
             </Link>
           </div>
         </section>

@@ -9,15 +9,13 @@ import {
 import { safeNext } from "../domain/request-security";
 import { csrfToken, secureForm } from "../server/form-security.server";
 import { identity, requestClient } from "../server/supabase.server";
-export async function loader({ request, context }: LoaderFunctionArgs) {
+export async function loader({ request, context, url }: LoaderFunctionArgs) {
   const user = await identity(request, context);
   if (!user) throw redirect("/dang-nhap?next=/xac-thuc");
   if (!user.owner)
     throw new Response("Chỉ Owner dùng trang này", { status: 403 });
-  if (user.aal2)
-    throw redirect(
-      safeNext(new URL(request.url).searchParams.get("next"), "/admin"),
-    );
+  if (user.aal2 || !user.mfaRequired)
+    throw redirect(safeNext(url.searchParams.get("next"), "/admin"));
   const result = await requestClient(request, context).auth.mfa.listFactors();
   if (result.error) throw new Response("Chưa tải được MFA", { status: 503 });
   return {
@@ -25,7 +23,7 @@ export async function loader({ request, context }: LoaderFunctionArgs) {
     factors: result.data.totp
       .filter((f) => f.status === "verified")
       .map((f) => ({ id: f.id, name: f.friendly_name ?? "Authenticator" })),
-    next: safeNext(new URL(request.url).searchParams.get("next"), "/admin"),
+    next: safeNext(url.searchParams.get("next"), "/admin"),
   };
 }
 export async function action({ request, context }: ActionFunctionArgs) {
@@ -53,7 +51,7 @@ export async function action({ request, context }: ActionFunctionArgs) {
       return data(
         {
           error:
-            "Có quá nhiều yêu cầu MFA chưa hoàn tất; quản lý lại trong Supabase staging.",
+            "Bạn có quá nhiều lần thiết lập xác thực chưa hoàn tất. Vui lòng liên hệ quản trị để xử lý.",
           enrollment: null,
         },
         { status: 400 },
@@ -81,7 +79,7 @@ export async function action({ request, context }: ActionFunctionArgs) {
     );
   const factors = await client.auth.mfa.listFactors();
   if (factors.error || !factors.data.all.some((f) => f.id === factorId))
-    throw new Response("Factor không thuộc phiên hiện tại", { status: 403 });
+    throw new Response("Phương thức xác thực không thuộc phiên đăng nhập này.", { status: 403 });
   const result = await client.auth.mfa.challengeAndVerify({ factorId, code });
   if (result.error)
     return data(
@@ -96,11 +94,11 @@ export default function Mfa() {
   return (
     <main id="main" tabIndex={-1} className="container auth-page">
       <div className="auth-card">
-        <p className="eyebrow">OWNER SECURITY</p>
+        <p className="eyebrow">BẢO MẬT TÀI KHOẢN QUẢN TRỊ</p>
         <h1>Xác thực hai bước.</h1>
         <p>
-          Chỉ xác minh trên staging của bạn. Không gửi mã hoặc khóa TOTP vào
-          chat.
+          Nhập mã từ ứng dụng xác thực của bạn. Không chia sẻ mã hoặc khóa
+          thiết lập với bất kỳ ai.
         </p>
         {result?.error && (
           <p role="alert" className="form-error">

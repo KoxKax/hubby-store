@@ -1,3 +1,4 @@
+import { z } from "zod";
 import type { StorefrontContent } from "../content/types";
 import { calculateLineTotal } from "./money";
 
@@ -45,6 +46,7 @@ export interface LocalOrder {
     | "review_required"
     | "refunded";
   generations: Record<string, string[]>;
+  email?: string;
 }
 export interface Observation {
   id: string;
@@ -134,6 +136,7 @@ export function checkout(
     lines: { variantId: string; quantity: number }[];
     coupon: string;
     expectedTotal: number;
+    email?: string;
   },
   now: number,
 ) {
@@ -151,10 +154,14 @@ export function checkout(
   );
   if (new Set(lines.map((l) => l.variantId)).size !== lines.length)
     throw new ShopError("Gói bị trùng.");
+  const suppliedEmail = input.email?.trim().toLowerCase();
+  if (suppliedEmail && !z.email().max(254).safeParse(suppliedEmail).success)
+    throw new ShopError("Email đặt hàng chưa hợp lệ.");
   const fingerprint = JSON.stringify({
     lines,
     coupon: input.coupon.trim().toUpperCase(),
     expectedTotal: input.expectedTotal,
+    ...(suppliedEmail ? { email: suppliedEmail } : {}),
   });
   const replay = s.orders.find(
     (o) => o.actor === input.actor && o.key === input.key,
@@ -242,6 +249,7 @@ export function checkout(
     refunded: 0,
     state: "pending_payment",
     generations: {},
+    email: suppliedEmail || undefined,
   };
   for (const unit of s.stock)
     if (allocated.has(unit.id)) {

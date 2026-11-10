@@ -8,9 +8,14 @@ import {
 import { getStorefrontContent } from "../app/content/fixtures";
 import { validateContent } from "../app/content/schema";
 import {
+  createVirtualActivity,
   feedbackInput,
+  generateVirtualEmail,
+  maskCustomerEmail,
   publicActivity,
   purchaseActivity,
+  randomBirthdateSuffix,
+  randomCharNumSuffix,
   recentActivities,
 } from "../app/domain/engagement";
 import { themeValue } from "../app/domain/theme";
@@ -32,9 +37,11 @@ describe("truthful public activity and private feedback", () => {
       actor: "secret",
       email: "private@example.com",
       orderId: "secret",
+      customer: "private@example.com",
     } as typeof event);
     expect(projected).toEqual(event);
     expect(JSON.stringify(projected)).not.toMatch(/email|actor|orderId|secret/);
+    expect(projected.customer).toBe("Một khách");
   });
   it("expires activity and excludes future timestamps", () => {
     expect(recentActivities([event], 1001)).toEqual([event]);
@@ -75,17 +82,18 @@ describe("truthful public activity and private feedback", () => {
   });
 });
 describe("image-count carousel and non-destructive CMS defaults", () => {
-  it("only uploaded images become slides; zero images and removal are valid", () => {
+  it("uses three approved campaign defaults, with Owner uploads and removal taking priority", () => {
     const content = {
       ...getStorefrontContent(),
       experience: structuredClone(defaultExperience),
     };
-    expect(imageSlides(content)).toHaveLength(0);
+    expect(imageSlides(content)).toHaveLength(3);
     const first = content.experience.slides[0];
     if (!first) throw Error("fixture missing");
     first.media = { src: "data:image/png;base64,AAAA", alt: "Owner banner" };
     expect(imageSlides(content)).toHaveLength(1);
     content.experience.slides = [];
+    expect(imageSlides(content)).toHaveLength(0);
     expect(validateContent(content, true).experience?.slides).toEqual([]);
   });
   it("legacy simulation toggle is inert without changing immutable data", () => {
@@ -177,5 +185,66 @@ describe("SSR theme preference", () => {
     expect(cookie).toMatch(/HttpOnly/);
     expect(cookie).toMatch(/Max-Age=31536000/);
     expect(cookie).not.toMatch(/Domain=/);
+  });
+});
+
+describe("virtual social notifications and real customer privacy masking", () => {
+  it("generates virtual emails with xxxx prefix, birthdate or character+number suffix, and @gmail.com", () => {
+    for (let i = 0; i < 30; i++) {
+      const email = generateVirtualEmail();
+      expect(email).toMatch(/^xxxx[a-z0-9]+@gmail\.com$/);
+      expect(email.startsWith("xxxx")).toBe(true);
+      expect(email.endsWith("@gmail.com")).toBe(true);
+    }
+  });
+
+  it("random birthdate suffix always formats 4 digits (DDMM)", () => {
+    for (let i = 0; i < 20; i++) {
+      const suffix = randomBirthdateSuffix();
+      expect(suffix).toMatch(/^\d{4}$/);
+      const day = Number.parseInt(suffix.slice(0, 2), 10);
+      const month = Number.parseInt(suffix.slice(2, 4), 10);
+      expect(day).toBeGreaterThanOrEqual(1);
+      expect(day).toBeLessThanOrEqual(28);
+      expect(month).toBeGreaterThanOrEqual(1);
+      expect(month).toBeLessThanOrEqual(12);
+    }
+  });
+
+  it("random char-num suffix contains valid characters and numbers", () => {
+    for (let i = 0; i < 20; i++) {
+      const suffix = randomCharNumSuffix();
+      expect(suffix).toMatch(/^[a-z]+(?:\d{2}|2k\d)$/);
+    }
+  });
+
+  it("masks real customer emails preserving birthdate/suffix while safeguarding privacy", () => {
+    expect(maskCustomerEmail("maihoang2705@gmail.com")).toBe(
+      "xxxx2705@gmail.com",
+    );
+    expect(maskCustomerEmail("nguyenvana1607@gmail.com")).toBe(
+      "xxxx1607@gmail.com",
+    );
+    expect(maskCustomerEmail("customerk99@gmail.com")).toBe(
+      "xxxxk99@gmail.com",
+    );
+    expect(maskCustomerEmail("demo@buyer.example")).toMatch(
+      /^xxxx[a-z0-9]+@gmail\.com$/,
+    );
+    expect(maskCustomerEmail("")).toMatch(/^xxxx[a-z0-9]+@gmail\.com$/);
+    expect(maskCustomerEmail(undefined)).toMatch(/^xxxx[a-z0-9]+@gmail\.com$/);
+  });
+
+  it("creates virtual activities with random products and proper attributes", () => {
+    const products = [
+      { name: "Canva Edu", variants: [{ label: "3 năm" }] },
+      { name: "Capcut Pro", variants: [{ label: "1 tháng" }] },
+    ];
+    const activity = createVirtualActivity(products);
+    expect(activity.id.startsWith("virt-")).toBe(true);
+    expect(["cart", "purchase"]).toContain(activity.kind);
+    expect(["Canva Edu", "Capcut Pro"]).toContain(activity.product);
+    expect(activity.customer).toMatch(/^xxxx[a-z0-9]+@gmail\.com$/);
+    expect(activity.at).toBeLessThanOrEqual(Date.now());
   });
 });

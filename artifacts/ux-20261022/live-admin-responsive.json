@@ -1,0 +1,266 @@
+[
+  {
+    "path": "/admin?tab=dashboard",
+    "width": 360,
+    "broken": 0,
+    "heading": "Bảng điều khiển",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=products",
+    "width": 360,
+    "broken": 0,
+    "heading": "Sản phẩm",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=home",
+    "width": 360,
+    "broken": 0,
+    "heading": "Trang chủ & banner",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=content",
+    "width": 360,
+    "broken": 0,
+    "heading": "Nội dung & chính sách",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=media",
+    "width": 360,
+    "broken": 0,
+    "heading": "Thư viện media",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=history",
+    "width": 360,
+    "broken": 0,
+    "heading": "Lịch sử phiên bản",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=overview",
+    "width": 360,
+    "broken": 0,
+    "heading": "Tổng quan",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=orders",
+    "width": 360,
+    "broken": 0,
+    "heading": "Đơn hàng",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=tickets",
+    "width": 360,
+    "broken": 0,
+    "heading": "Yêu cầu hỗ trợ",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=reviews",
+    "width": 360,
+    "broken": 0,
+    "heading": "Đánh giá gửi riêng",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=feedback",
+    "width": 360,
+    "broken": 0,
+    "heading": "Góp ý",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=dashboard",
+    "width": 768,
+    "broken": 0,
+    "heading": "Bảng điều khiển",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=products",
+    "width": 768,
+    "broken": 0,
+    "heading": "Sản phẩm",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=home",
+    "width": 768,
+    "broken": 0,
+    "heading": "Trang chủ & banner",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=content",
+    "width": 768,
+    "broken": 0,
+    "heading": "Nội dung & chính sách",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=media",
+    "width": 768,
+    "broken": 0,
+    "heading": "Thư viện media",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=history",
+    "width": 768,
+    "broken": 0,
+    "heading": "Lịch sử phiên bản",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=overview",
+    "width": 768,
+    "broken": 0,
+    "heading": "Tổng quan",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=orders",
+    "width": 768,
+    "broken": 0,
+    "heading": "Đơn hàng",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=tickets",
+    "width": 768,
+    "broken": 0,
+    "heading": "Yêu cầu hỗ trợ",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=reviews",
+    "width": 768,
+    "broken": 0,
+    "heading": "Đánh giá gửi riêng",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=feedback",
+    "width": 768,
+    "broken": 0,
+    "heading": "Góp ý",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=dashboard",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Bảng điều khiển",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=products",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Sản phẩm",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=home",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Trang chủ & banner",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=content",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Nội dung & chính sách",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=media",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Thư viện media",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin?tab=history",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Lịch sử phiên bản",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=overview",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Tổng quan",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=orders",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Đơn hàng",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=tickets",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Yêu cầu hỗ trợ",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=reviews",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Đánh giá gửi riêng",
+    "main": 1,
+    "overflow": false
+  },
+  {
+    "path": "/admin/operations?tab=feedback",
+    "width": 1440,
+    "broken": 0,
+    "heading": "Góp ý",
+    "main": 1,
+    "overflow": false
+  }
+]

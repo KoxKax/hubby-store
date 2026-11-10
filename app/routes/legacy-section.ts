@@ -1,8 +1,13 @@
 import type { LoaderFunctionArgs } from "react-router";
 import { redirect } from "react-router";
 import { publishedContent } from "../server/content-repository.server";
-export async function loader({ request, params, context }: LoaderFunctionArgs) {
-  const url = new URL(request.url);
+export async function loader({
+  request,
+  params,
+  context,
+  url: location,
+}: LoaderFunctionArgs) {
+  const url = new URL(location);
   if (url.pathname === "/ho-tro") return redirect("/#ho-tro");
   if (params.category) {
     if (

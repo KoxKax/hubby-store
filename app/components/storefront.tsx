@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
-import {
-  Form,
-  Link,
-  Outlet,
-  useNavigation,
-  useSearchParams,
-} from "react-router";
+import { Link, Outlet, useNavigation, useLocation, useRevalidator } from "react-router";
 import { customerCopy, experienceOf } from "../content/experience";
 import type { DemoProduct } from "../content/types";
+import { brandImage } from "../content/visual-assets";
 import { formatVnd } from "../domain/money";
 import { useContent } from "./content-context";
 import {
@@ -16,6 +11,7 @@ import {
   ThemeToggle,
 } from "./engagement";
 import { Icon } from "./icons";
+import { ProductSearch } from "./product-search";
 import { AccountAccess, SupportDock } from "./shop-extras";
 import { useStore } from "./store-context";
 
@@ -26,15 +22,44 @@ export function ProductArt({
   product: DemoProduct;
   large?: boolean;
 }) {
-  if (product.media)
+  const [failedImages, setFailedImages] = useState<string[]>([]);
+  const media = product.media;
+  function imageFailed(src: string) {
+    setFailedImages((current) =>
+      current.includes(src) ? current : [...current, src].slice(-8),
+    );
+  }
+  const officialImage = brandImage(product);
+  if (media && !failedImages.includes(media.src))
     return (
       <div className={`product-art media-art ${large ? "art-large" : ""}`}>
         <img
-          src={product.media.src}
-          alt={product.media.alt}
+          src={media.src}
+          alt={media.alt}
           loading={large ? "eager" : "lazy"}
           decoding="async"
+          onError={() => imageFailed(media.src)}
         />
+      </div>
+    );
+  if (officialImage && !failedImages.includes(officialImage))
+    return (
+      <div
+        className={`product-art brand-art brand-art-${product.id} ${large ? "art-large" : ""}`}
+      >
+        <span className="brand-art-shape" aria-hidden="true" />
+        <img
+          src={officialImage}
+          srcSet={`${officialImage.replace("320", "160")} 160w, ${officialImage} 320w`}
+          sizes={large ? "160px" : product.id === "office" ? "180px" : "72px"}
+          alt=""
+          width="72"
+          height="72"
+          loading={large ? "eager" : "lazy"}
+          decoding="async"
+          onError={() => imageFailed(officialImage)}
+        />
+        <strong>{product.name}</strong>
       </div>
     );
   return (
@@ -68,9 +93,14 @@ export function ProductArt({
 export function ProductCard({ product }: { product: DemoProduct }) {
   const content = useContent();
   const store = useStore();
-  const available = product.variants.some((variant) => variant.stock > 0);
   const priced = product.variants.filter((v) => v.priceConfigured !== false);
+  const available = priced.some((variant) => variant.stock > 0);
   const minimum = Math.min(...priced.map((variant) => variant.priceVnd));
+  const tagline = customerCopy(product.tagline).trim();
+  const deliveryLabel = customerCopy(product.deliveryLabel).trim();
+  // The card is a short product overview; the detail page explains delivery.
+  // Fall back to the delivery label only when no product summary was provided.
+  const cardSummary = tagline || deliveryLabel;
   return (
     <article className={`product-card brand-${product.art}`}>
       <div className="product-visual">
@@ -89,7 +119,9 @@ export function ProductCard({ product }: { product: DemoProduct }) {
         {(customerCopy(product.badge ?? "") ||
           (!available && priced.length > 0)) && (
           <span className="art-badge">
-            {available ? customerCopy(product.badge ?? "") : "Hết hàng"}
+            {!available && priced.length > 0
+              ? "Hết hàng"
+              : customerCopy(product.badge ?? "")}
           </span>
         )}
       </div>
@@ -107,27 +139,24 @@ export function ProductCard({ product }: { product: DemoProduct }) {
             <Icon name="arrow" />
           </Link>
         </h3>
-        <p className="product-tagline">{product.tagline}</p>
-        {!product.tagline.includes(product.deliveryLabel) && (
-          <p className="product-plan-count">{product.deliveryLabel}</p>
-        )}
+        {cardSummary && <p className="product-tagline">{cardSummary}</p>}
         <div className="product-bottom">
           <span>
             {priced.length ? (
               <>
-                <small>Từ</small> {formatVnd(minimum)}
+                {priced.length > 1 && <small>Từ</small>} {formatVnd(minimum)}
               </>
             ) : (
-              "Chưa niêm yết giá"
+              <span className="price-pending">Chưa có giá bán</span>
             )}
           </span>
-          {priced.length > 0 && (
-            <span
-              role="img"
-              className={`stock-dot ${available ? "" : "unavailable"}`}
-              aria-label={available ? "Còn hàng" : "Hết hàng"}
-            />
-          )}
+          <Link
+            className="product-open"
+            to={`/san-pham/${product.slug}`}
+            aria-label={`Xem chi tiết ${product.name}`}
+          >
+            <Icon name="arrow" />
+          </Link>
         </div>
       </div>
     </article>
@@ -135,16 +164,24 @@ export function ProductCard({ product }: { product: DemoProduct }) {
 }
 
 export function StorefrontLayout() {
+  const location = useLocation();
+  const revalidator = useRevalidator();
+  useEffect(() => {
+    if (location.pathname !== "/" && !location.pathname.startsWith("/san-pham/")) return;
+    const refresh = () => {
+      if (document.visibilityState === "visible" && revalidator.state === "idle") void revalidator.revalidate();
+    };
+    const timer = window.setInterval(refresh, 60_000);
+    document.addEventListener("visibilitychange", refresh);
+    return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", refresh); };
+  }, [location.pathname, revalidator]);
   const content = useContent();
   const store = useStore();
   const navigation = useNavigation();
   const settings = experienceOf(content);
-  const [params] = useSearchParams();
   const [noticeIndex, setNoticeIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
   useEffect(() => {
     if (
-      paused ||
       settings.notices.length < 2 ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches
     )
@@ -154,43 +191,57 @@ export function StorefrontLayout() {
       6500,
     );
     return () => clearInterval(timer);
-  }, [paused, settings.notices.length]);
+  }, [settings.notices.length]);
   const notice = settings.notices[noticeIndex % settings.notices.length];
   const count = store.lines.reduce((sum, line) => sum + line.quantity, 0);
   return (
     <>
       <div className="star-field" aria-hidden="true">
-        {Array.from({ length: 26 }, (_, n) => (
-          <span
-            // biome-ignore lint/suspicious/noArrayIndexKey: fixed decorative particles never reordered.
-            key={`star-${n}`}
-            style={{
-              left: `${(n * 37 + 7) % 100}%`,
-              top: `${(n * 23 + 11) % 100}%`,
-              animationDelay: `${-n * 0.8}s`,
-              animationDuration: `${10 + (n % 7)}s`,
-            }}
-          />
-        ))}
+        {Array.from({ length: 38 }, (_, n) => {
+          const colors = [
+            "p-violet",
+            "p-cyan",
+            "p-rose",
+            "p-amber",
+            "p-emerald",
+            "p-blue",
+          ];
+          const motions = ["m-float", "m-sway", "m-pulse", "m-drift"];
+          const sizes = [
+            "s-sm",
+            "s-md",
+            "s-sm",
+            "s-lg",
+            "s-sm",
+            "s-orb",
+            "s-md",
+          ];
+          const colorClass = colors[n % colors.length] ?? "p-violet";
+          const motionClass = motions[n % motions.length] ?? "m-float";
+          const sizeClass = sizes[n % sizes.length] ?? "s-sm";
+          return (
+            <span
+              // biome-ignore lint/suspicious/noArrayIndexKey: fixed decorative particles never reordered.
+              key={`star-${n}`}
+              className={`particle ${colorClass} ${motionClass} ${sizeClass}`}
+              style={{
+                left: `${(n * 31 + 4) % 97}%`,
+                top: `${(n * 23 + 6) % 96}%`,
+                animationDelay: `${-((n * 0.9) % 12)}s`,
+                animationDuration: `${12 + (n % 8) * 2}s`,
+              }}
+            />
+          );
+        })}
       </div>
       <a className="skip-link" href="#main">
         Đi đến nội dung
       </a>
       <div className="announcement">
         <Link to={notice?.href ?? "/#san-pham"} key={noticeIndex}>
-          {notice?.text ?? content.announcement.text}
+          {customerCopy(notice?.text ?? content.announcement.text)}
           <Icon name="arrow" />
         </Link>
-        {settings.notices.length > 1 && (
-          <button
-            type="button"
-            className="notice-pause"
-            aria-label={paused ? "Tiếp tục thông báo" : "Tạm dừng thông báo"}
-            onClick={() => setPaused(!paused)}
-          >
-            {paused ? "▷" : "Ⅱ"}
-          </button>
-        )}
       </div>
       <header className="header">
         <div className="container header-inner">
@@ -198,24 +249,7 @@ export function StorefrontLayout() {
             {content.brand.name}
             <span>✳</span>
           </Link>
-          <Form
-            action="/"
-            method="get"
-            className="header-search main-search"
-            role="search"
-          >
-            <Icon name="search" />
-            <input
-              key={params.get("q")}
-              name="q"
-              aria-label="Tìm sản phẩm"
-              placeholder={content.shop.searchPlaceholder}
-              defaultValue={params.get("q") ?? ""}
-            />
-            <button type="submit" aria-label="Tìm kiếm">
-              <Icon name="arrow" />
-            </button>
-          </Form>
+          <ProductSearch />
           <div className="header-actions">
             <details className="language-picker">
               <summary aria-label="Ngôn ngữ">
@@ -223,7 +257,6 @@ export function StorefrontLayout() {
               </summary>
               <div>
                 <strong>Tiếng Việt · VND</strong>
-                <span>English đang được chuẩn bị</span>
               </div>
             </details>
             <Link
@@ -260,13 +293,16 @@ export function StorefrontLayout() {
               {content.brand.name}
               <span>✳</span>
             </Link>
-            <p>{content.brand.footer}</p>
+            <p>{customerCopy(content.brand.footer)}</p>
           </div>
           <div>
             <h3>Khám phá</h3>
             <Link to="/#san-pham">Tất cả sản phẩm</Link>
-            <Link to="/?category=ai#san-pham">Sáng tạo</Link>
-            <Link to="/?category=entertainment#san-pham">Giải trí</Link>
+            {content.categories.map((category) => (
+              <Link key={category.id} to={`/?category=${category.id}#san-pham`}>
+                {category.name}
+              </Link>
+            ))}
           </div>
           <div>
             <h3>Hỗ trợ & chính sách</h3>

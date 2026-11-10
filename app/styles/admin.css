@@ -203,6 +203,25 @@
   width: 80px;
   flex-shrink: 0;
 }
+.admin-content-section-row,
+.admin-copy-step-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+.admin-content-section-row > label,
+.admin-copy-step-row > label,
+.admin-content-section-row > label:last-child,
+.admin-copy-step-row > label:last-child {
+  width: auto;
+  min-width: 0;
+}
+@media (max-width: 620px) {
+  .admin-content-section-row,
+  .admin-copy-step-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 .admin-details {
   border: 1px solid #403546;
   padding: 16px;

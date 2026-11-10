@@ -1,11 +1,13 @@
 import { useEffect, useState } from "react";
 import type { LoaderFunctionArgs, MetaFunction } from "react-router";
 import { Link, useLoaderData, useNavigate } from "react-router";
+import { AccountFavorite } from "../components/account-favorite";
 import { useContent } from "../components/content-context";
 import { Icon } from "../components/icons";
+import { ProductDescription } from "../components/product-description";
 import { useStore } from "../components/store-context";
 import { ProductArt, ProductCard } from "../components/storefront";
-import { customerCopy } from "../content/experience";
+import { customerCopy, customerProductDescription } from "../content/experience";
 import { formatVnd } from "../domain/money";
 import { publishedContent } from "../server/content-repository.server";
 
@@ -44,11 +46,38 @@ function ProductDetail({ product }: Awaited<ReturnType<typeof loader>>) {
     if (store.ready) store.markViewed(product.id);
   }, [store.ready, store.markViewed, product.id]);
   const variant = product.variants.find((item) => item.id === selected);
-  const priced = variant?.priceConfigured !== false;
+  const priced = Boolean(variant && variant.priceConfigured !== false);
   const available = Boolean(variant && variant.stock > 0 && priced);
   const category = content.categories.find(
     (item) => item.id === product.category,
   );
+  const description = customerProductDescription(product.description).trim();
+  const tagline = customerCopy(product.tagline).trim();
+  const normalize = (text: string) => text.toLocaleLowerCase("vi-VN").replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  const descriptionText = normalize(description);
+  const hasBenefitSection = /(?:^|\n)\s*(?:tính năng(?: nổi bật)?|điểm nổi bật|lợi ích(?: nổi bật)?|quyền lợi(?: của gói)?|bạn nhận được(?: những)? (?:lợi ích|quyền lợi)|sản phẩm giúp bạn làm được gì\??)/imu.test(description);
+  const features = hasBenefitSection
+    ? []
+    : [...new Set(product.features.map(customerCopy))].filter(
+        (feature) => feature.trim() && !descriptionText.includes(normalize(feature)),
+      );
+  const receipt = product.terms?.receipt?.trim() ?? "";
+  const activationNote = product.terms?.activationNote?.trim() ?? "";
+  const warranty = product.terms?.warranty?.trim().replace(/[.!?]+$/, "") ?? "";
+  const hasReceivingInstructions = /(?:^|\n)\s*(?:cách nhận(?: và (?:kích hoạt|đăng nhập))?|cách bắt đầu|hướng dẫn (?:nhận hàng|kích hoạt|đăng nhập)|chi tiết gói,? cách nhận và điều kiện sử dụng)/imu.test(description);
+  const showReceipt = receipt && !hasReceivingInstructions && !descriptionText.includes(normalize(receipt));
+  const showActivation =
+    activationNote &&
+    !hasReceivingInstructions &&
+    activationNote !== receipt &&
+    !descriptionText.includes(normalize(activationNote));
+  const knownWarranty =
+    warranty && !/^(?:liên hệ|cần xác nhận|đang cập nhật|chưa rõ)/i.test(warranty);
+  const showWarranty =
+    knownWarranty &&
+    !/(?:^|\n)\s*(?:[•*\-]\s*)?(?:chính sách )?bảo hành\s*[:：]/imu.test(description) &&
+    !descriptionText.includes(normalize(`Bảo hành: ${warranty}`)) &&
+    !descriptionText.includes(normalize(`Bảo hành ${warranty}`));
   return (
     <main className="container detail-page" id="main" tabIndex={-1}>
       <nav className="breadcrumbs" aria-label="Breadcrumb">
@@ -65,16 +94,12 @@ function ProductDetail({ product }: Awaited<ReturnType<typeof loader>>) {
           <ProductArt large product={product} />
         </div>
         <div className="detail-copy">
-          <p className="eyebrow">{category?.name}</p>
           <h1>{product.name}</h1>
-          <p className="detail-tagline">{product.tagline}</p>
-          <div className="detail-price">
-            {priced ? formatVnd(variant?.priceVnd ?? 0) : "Chưa niêm yết giá"}
-            <span>/ {variant?.label}</span>
-          </div>
-          <p>{customerCopy(product.description)}</p>
+          {tagline && !descriptionText.startsWith(normalize(tagline)) && (
+            <p className="detail-tagline">{tagline}</p>
+          )}
           <fieldset className="variant-fieldset">
-            <legend>Chọn thời hạn</legend>
+            <legend>Chọn gói sản phẩm</legend>
             <div className="variant-options">
               {product.variants.map((item) => (
                 <label
@@ -92,7 +117,7 @@ function ProductDetail({ product }: Awaited<ReturnType<typeof loader>>) {
                       setAdded(false);
                     }}
                   />
-                  <span>{item.label}</span>
+                  <span>{customerCopy(item.label)}</span>
                   {item.stock === 0 && item.priceConfigured !== false && (
                     <small>Hết hàng</small>
                   )}
@@ -100,10 +125,13 @@ function ProductDetail({ product }: Awaited<ReturnType<typeof loader>>) {
               ))}
             </div>
           </fieldset>
+          <div className="detail-price" aria-live="polite">
+            {priced ? formatVnd(variant?.priceVnd ?? 0) : "Chưa có giá bán"}
+          </div>
           <div className="detail-availability">
             <span className={`stock-dot ${available ? "" : "unavailable"}`} />
             {!priced
-              ? "Liên hệ Hubby để biết giá"
+              ? "Gói này chưa có giá bán"
               : available
                 ? "Còn hàng"
                 : "Gói này hiện hết hàng"}
@@ -111,111 +139,129 @@ function ProductDetail({ product }: Awaited<ReturnType<typeof loader>>) {
             <Icon name="clock" />
             {customerCopy(product.deliveryLabel)}
           </div>
-          <div className="detail-quantity">
-            <label htmlFor="product-quantity">Số lượng</label>
-            <div className="quantity-control">
-              <button
-                type="button"
-                aria-label="Giảm số lượng"
-                disabled={quantity <= 1}
-                onClick={() => setQuantity(quantity - 1)}
-              >
-                <Icon name="minus" />
-              </button>
-              <input
-                id="product-quantity"
-                type="number"
-                min="1"
-                max={Math.min(9, variant?.stock ?? 1)}
-                value={quantity}
-                onChange={(event) =>
-                  setQuantity(
-                    Math.max(
-                      1,
-                      Math.min(
-                        9,
-                        variant?.stock ?? 1,
-                        Math.floor(Number(event.target.value) || 1),
+          {available && (
+            <div className="detail-quantity">
+              <label htmlFor="product-quantity">Số lượng</label>
+              <div className="quantity-control">
+                <button
+                  type="button"
+                  aria-label="Giảm số lượng"
+                  disabled={!available || quantity <= 1}
+                  onClick={() => setQuantity(quantity - 1)}
+                >
+                  <Icon name="minus" />
+                </button>
+                <input
+                  id="product-quantity"
+                  type="number"
+                  min="1"
+                  max={Math.max(1, Math.min(9, variant?.stock ?? 1))}
+                  disabled={!available}
+                  value={quantity}
+                  onChange={(event) =>
+                    setQuantity(
+                      Math.max(
+                        1,
+                        Math.min(
+                          9,
+                          variant?.stock ?? 1,
+                          Math.floor(Number(event.target.value) || 1),
+                        ),
                       ),
-                    ),
+                    )
+                  }
+                />
+                <button
+                  type="button"
+                  aria-label="Tăng số lượng"
+                  disabled={
+                    !available || quantity >= Math.min(9, variant?.stock ?? 1)
+                  }
+                  onClick={() => setQuantity(quantity + 1)}
+                >
+                  <Icon name="plus" />
+                </button>
+              </div>
+            </div>
+          )}
+          {available ? (
+            <div className="detail-ctas">
+              <button
+                className="button primary"
+                type="button"
+                disabled={!available || !store.ready}
+                onClick={() =>
+                  navigate(
+                    `/thanh-toan?variant=${selected}&quantity=${quantity}`,
                   )
                 }
-              />
-              <button
-                type="button"
-                aria-label="Tăng số lượng"
-                disabled={
-                  !available || quantity >= Math.min(9, variant?.stock ?? 1)
-                }
-                onClick={() => setQuantity(quantity + 1)}
               >
-                <Icon name="plus" />
+                Mua ngay
+                <Icon name="arrow" />
+              </button>
+              <button
+                className="button secondary"
+                type="button"
+                disabled={!available || !store.ready}
+                onClick={() => {
+                  setAdded(store.add(selected, quantity));
+                }}
+              >
+                <Icon name={added ? "check" : "bag"} />
+                {added ? "Đã thêm vào giỏ" : "Thêm vào giỏ"}
               </button>
             </div>
-          </div>
-          <div className="detail-ctas">
-            <button
-              className="button primary"
-              type="button"
-              disabled={!available || !store.ready}
-              onClick={() =>
-                navigate(`/thanh-toan?variant=${selected}&quantity=${quantity}`)
-              }
-            >
-              Mua ngay
-              <Icon name="arrow" />
-            </button>
-            <button
-              className="button secondary"
-              type="button"
-              disabled={!available || !store.ready}
-              onClick={() => {
-                store.add(selected, quantity);
-                setAdded(true);
-              }}
-            >
-              <Icon name={added ? "check" : "bag"} />
-              {added ? "Đã thêm vào giỏ" : "Thêm vào giỏ"}
-            </button>
-          </div>
-          {!priced && (
-            <Link className="text-link" to="/#ho-tro">
-              Hỏi về gói này <Icon name="arrow" />
-            </Link>
+          ) : (
+            <div className="unavailable-purchase" role="status">
+              <p>
+                {priced
+                  ? "Gói này đang hết hàng. Bạn có thể xem các gói khác hoặc hỏi Hubby về sản phẩm."
+                  : "Hubby sẽ cập nhật giá tại đây. Bạn có thể xem thông tin gói hoặc hỏi thêm trước khi chọn."}
+              </p>
+              <Link className="button secondary" to="/#ho-tro">
+                Hỏi về gói này <Icon name="headset" />
+              </Link>
+            </div>
           )}
-          <ul className="feature-list">
-            {product.features.map((feature) => (
-              <li key={feature}>
-                <Icon name="check" />
-                {customerCopy(feature)}
-              </li>
-            ))}
-          </ul>
+          <AccountFavorite productId={product.id} />
         </div>
       </div>
-      <div className="detail-information">
+      <div className="detail-content-layout">
+        <section className="detail-description" aria-labelledby="product-description-heading">
+          <h2 id="product-description-heading">Thông tin sản phẩm</h2>
+          {description && <ProductDescription text={description} productName={product.name} />}
+          {features.length > 0 && (
+            <div className="detail-benefits">
+              <h3>Quyền lợi của gói</h3>
+              <ul className="feature-list">
+                {features.map((feature) => (
+                  <li key={feature}><Icon name="check" />{feature}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </section>
+      <aside className="detail-information" aria-label="Nhận hàng và hỗ trợ">
+        {(showReceipt || showActivation) && (
+          <article>
+            <h2>Cách nhận sản phẩm</h2>
+            {showReceipt && <p>{customerCopy(receipt)}</p>}
+            {showActivation && <p>{customerCopy(activationNote)}</p>}
+          </article>
+        )}
         <article>
-          <h2>Cách nhận sản phẩm</h2>
+          <h2>Hỗ trợ đơn hàng</h2>
+          {showWarranty && <p>Bảo hành: {warranty}.</p>}
           <p>
-            {product.terms?.receipt ??
-              (product.activationRequired
-                ? "Đọc thông tin kích hoạt theo từng gói. Không cung cấp mật khẩu cá nhân hoặc mã xác thực cho người hỗ trợ."
-                : "Giữ mã đơn để theo dõi thông tin nhận hàng và hướng dẫn sử dụng.")}
+            Nếu gặp sự cố khi nhận hoặc sử dụng sản phẩm, bạn có thể tra đơn
+            hàng và gửi yêu cầu để Hubby hỗ trợ.
           </p>
-          {product.terms && <p>{product.terms.activationNote}</p>}
-        </article>
-        <article>
-          <h2>Bảo hành & lưu ý</h2>
-          <p>
-            {product.terms
-              ? `Bảo hành: ${product.terms.warranty}.`
-              : "Xem điều kiện bảo hành của gói trước khi mua."}
-          </p>
-          <Link className="text-link" to="/#faq">
-            Xem câu hỏi thường gặp
+          <Link className="text-link" to="/tra-don-hang">
+            Tra cứu đơn hàng
             <Icon name="arrow" />
           </Link>
         </article>
+      </aside>
       </div>
       <section className="section related-section">
         <div className="section-heading">

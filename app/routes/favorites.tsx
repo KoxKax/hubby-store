@@ -12,12 +12,12 @@ export default function Favorites() {
   return (
     <main className="container favorites-page" id="main" tabIndex={-1}>
       <PageIntro
-        eyebrow="SAVED FOR LATER"
-        title="Những điều bạn thích."
-        description="Lưu lại chút cảm hứng cho lần ghé thăm tiếp theo."
+        eyebrow="YÊU THÍCH"
+        title="Sản phẩm bạn đã lưu"
+        description="Các gói bạn muốn xem lại. Danh sách được lưu trên trình duyệt này."
       />
       {!store.ready ? (
-        <p role="status">Đang tải lựa chọn mẫu…</p>
+        <p role="status">Đang mở danh sách yêu thích…</p>
       ) : products.length ? (
         <div className="product-grid">
           {products.map((product) => (
@@ -26,8 +26,8 @@ export default function Favorites() {
         </div>
       ) : (
         <EmptyState
-          title="Chưa có sản phẩm yêu thích."
-          description="Chạm biểu tượng trái tim trên một sản phẩm để lưu lại trên trình duyệt này."
+          title="Chưa có sản phẩm yêu thích"
+          description="Nhấn biểu tượng trái tim trên sản phẩm bạn quan tâm để lưu lại và xem sau trên trình duyệt này."
         />
       )}
     </main>

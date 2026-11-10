@@ -1,7 +1,10 @@
 import { readFile } from "node:fs/promises";
 import { PGlite } from "@electric-sql/pglite";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
+import { defaultExperience } from "../app/content/experience";
 import { getStorefrontContent } from "../app/content/fixtures";
+import { applyOwnerCatalog } from "../app/content/owner-catalog";
+import { initialStagingImportSql } from "../app/server/staging-import-plan";
 
 const OWNER = "11111111-1111-4111-8111-111111111111",
   A = "22222222-2222-4222-8222-222222222222",
@@ -9,7 +12,8 @@ const OWNER = "11111111-1111-4111-8111-111111111111",
 let pg: PGlite;
 beforeAll(async () => {
   pg = new PGlite();
-  await pg.exec(`create role anon;create role authenticated;create schema auth;create schema storage;
+  await pg.exec(`create role anon;create role authenticated;create role service_role;create schema auth;create schema storage;
+ alter default privileges in schema public grant execute on functions to anon,authenticated,service_role;
  create table auth.users(id uuid primary key,email text,raw_user_meta_data jsonb default '{}');
  create function auth.jwt() returns jsonb language sql stable as $$select coalesce(nullif(current_setting('request.jwt.claims',true),'')::jsonb,'{}'::jsonb)$$;
  create function auth.uid() returns uuid language sql stable as $$select nullif(auth.jwt()->>'sub','')::uuid$$;
@@ -26,7 +30,75 @@ beforeAll(async () => {
       "utf8",
     ),
   );
+  await pg.exec(
+    await readFile(
+      new URL(
+        "../supabase/migrations/20261011200620_staging_acl_hardening.sql",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
   await pg.exec("set hubby.environment='staging'");
+  await pg.exec(
+    await readFile(
+      new URL(
+        "../supabase/migrations/20261011201932_current_storefront_contract.sql",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
+  // Exercise the actual first-content bootstrap in a rolled-back transaction.
+  await pg.exec(
+    await readFile(
+      new URL(
+        "../supabase/migrations/20261011211233_staging_owner_access_policy.sql",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
+  await pg.exec(
+    await readFile(
+      new URL(
+        "../supabase/migrations/20261012111208_cms_safe_publication.sql",
+        import.meta.url,
+      ),
+      "utf8",
+    ),
+  );
+  // Historical fixtures remain regression data, never the remote import source.
+  const imported = applyOwnerCatalog(getStorefrontContent());
+  imported.brand.name = "Owner's $hubby_import_0$";
+  const bootstrap = initialStagingImportSql(imported)
+    .replace(/^begin;/, "")
+    .replace(/commit;$/, "");
+  await pg.exec("begin");
+  await pg.exec(bootstrap);
+  expect(
+    (await pg.query("select count(*)::int as n from public.products")).rows,
+  ).toEqual([{ n: 6 }]);
+  expect(
+    (
+      await pg.query(
+        "select count(*)::int as n from public.product_variants where not price_configured",
+      )
+    ).rows,
+  ).toEqual([{ n: 7 }]);
+  expect(
+    (await pg.query("select public.published_storefront() as p")).rows[0],
+  ).toHaveProperty("p.brand.name", imported.brand.name);
+  expect(
+    (await pg.query("select count(*)::int as n from public.cms_publications"))
+      .rows,
+  ).toEqual([{ n: 0 }]);
+  expect(
+    (await pg.query("select actor_id,action from private.cms_audit")).rows,
+  ).toEqual([{ actor_id: null, action: "staging_content_import" }]);
+  await pg.exec("savepoint duplicate_import");
+  await expect(pg.exec(bootstrap)).rejects.toThrow(/untouched staging/);
+  await pg.exec("rollback");
   await pg.exec(
     await readFile(new URL("../supabase/seed.sql", import.meta.url), "utf8"),
   );
@@ -75,6 +147,343 @@ async function denied(work: () => Promise<unknown>) {
   }
 }
 describe("real PostgreSQL migration/RLS with test Auth/Storage stubs", () => {
+  it("staging password-only policy stays private and cannot authorize customers or other issuers", async () => {
+    const issuer = "https://isolated-staging.supabase.co/auth/v1";
+    await pg.query(
+      "update private.owner_access_policy set password_only_issuer=$1 where singleton",
+      [issuer],
+    );
+    try {
+      for (const [user, tokenIssuer, allowed] of [
+        [OWNER, issuer, true],
+        [A, issuer, false],
+        [OWNER, "https://other.supabase.co/auth/v1", false],
+        [OWNER, "", false],
+      ] as const) {
+        await actor(user, "aal1", async () => {
+          await pg.query("select set_config('request.jwt.claims',$1,true)", [
+            JSON.stringify({
+              sub: user,
+              role: "authenticated",
+              aal: "aal1",
+              iss: tokenIssuer,
+            }),
+          ]);
+          expect(
+            (await pg.query("select public.hubby_owner() as allowed")).rows,
+          ).toEqual([{ allowed }]);
+          expect(
+            (await pg.query("select * from public.cms_revisions")).rows.length >
+              0,
+          ).toBe(allowed);
+          await denied(() =>
+            pg.query(
+              "update private.owner_access_policy set password_only_issuer=null",
+            ),
+          );
+          await denied(() =>
+            pg.query("select * from private.owner_access_policy"),
+          );
+          if (allowed) {
+            await pg.query("select public.save_cms_draft($1::jsonb,1)", [
+              JSON.stringify(getStorefrontContent()),
+            ]);
+            await pg.query(
+              "insert into storage.objects(bucket_id,name) values('hubby-media',$1)",
+              [`${OWNER}/stage-asset.png`],
+            );
+          } else {
+            await denied(() =>
+              pg.query("select public.save_cms_draft($1::jsonb,1)", [
+                JSON.stringify(getStorefrontContent()),
+              ]),
+            );
+          }
+        });
+      }
+      await actor(OWNER, "aal1", async () => {
+        await pg.query("select set_config('request.jwt.claims',$1,true)", [
+          JSON.stringify({
+            sub: OWNER,
+            role: "authenticated",
+            aal: "aal1",
+            user_metadata: { iss: issuer, mfa_required: false },
+          }),
+        ]);
+        expect(
+          (await pg.query("select public.hubby_owner() as allowed")).rows,
+        ).toEqual([{ allowed: false }]);
+      });
+      await pg.query(
+        "update private.role_memberships set revoked_at=now() where user_id=$1",
+        [OWNER],
+      );
+      await actor(OWNER, "aal1", async () => {
+        await pg.query("select set_config('request.jwt.claims',$1,true)", [
+          JSON.stringify({
+            sub: OWNER,
+            role: "authenticated",
+            aal: "aal1",
+            iss: issuer,
+          }),
+        ]);
+        expect(
+          (await pg.query("select public.hubby_owner() as allowed")).rows,
+        ).toEqual([{ allowed: false }]);
+      });
+    } finally {
+      await pg.exec(
+        "update private.owner_access_policy set password_only_issuer=null",
+      );
+      await pg.query(
+        "update private.role_memberships set revoked_at=null where user_id=$1",
+        [OWNER],
+      );
+    }
+  });
+  it("retains qualified UPDATEs for hosted pg-safeupdate without disabling guards", async () => {
+    const result = await pg.query<{ source: string }>(
+      "select pg_get_functiondef('private.materialize_storefront_base(jsonb)'::regprocedure) as source",
+    );
+    const source = result.rows[0]?.source ?? "";
+    expect(source).toContain("where enabled=true");
+    expect(source).toContain("where status<>'archived'");
+    expect(source).not.toMatch(
+      /set\s+(?:enabled=false|status='archived')\s*;/i,
+    );
+    expect(source).not.toMatch(/set_config|safeupdate\s*=/i);
+  });
+  it("publishes current terms, unpriced variants and experience without changing old history", async () => {
+    await actor(OWNER, "aal2", async () => {
+      const current = applyOwnerCatalog(getStorefrontContent());
+      current.experience = structuredClone(defaultExperience);
+      const draft = (
+        await pg.query<{ id: string }>(
+          "select public.save_cms_draft($1::jsonb,1) as id",
+          [JSON.stringify(current)],
+        )
+      ).rows[0]?.id;
+      await pg.query("select public.publish_cms_revision($1,2)", [draft]);
+      expect(
+        (
+          await pg.query(
+            "select count(*)::int as n from public.product_variants where enabled and not price_configured",
+          )
+        ).rows,
+      ).toEqual([{ n: 7 }]);
+      expect(
+        (
+          await pg.query(
+            "select terms->>'warranty' as warranty from public.products where catalog_key='google'",
+          )
+        ).rows,
+      ).toEqual([{ warranty: "Không bảo hành" }]);
+      expect(
+        (
+          await pg.query(
+            "select payload ? 'experience' as extended from public.cms_revisions where version=1",
+          )
+        ).rows,
+      ).toEqual([{ extended: false }]);
+      expect(
+        (await pg.query("select public.published_storefront() as p")).rows[0],
+      ).toHaveProperty(
+        "p.experience.intro.title",
+        current.experience.intro.title,
+      );
+    });
+  });
+  it("validates extensions at raw RPC boundary, not just the application", async () => {
+    const current = applyOwnerCatalog(getStorefrontContent());
+    current.experience = structuredClone(defaultExperience);
+    const raw = JSON.parse(JSON.stringify(current));
+    const cases = [
+      { ...raw, injected: true },
+      {
+        ...raw,
+        experience: { ...raw.experience, activityNotifications: "true" },
+      },
+      {
+        ...raw,
+        experience: {
+          ...raw.experience,
+          telegramUrl: "https://t.me/owner_name?unsafe=1",
+        },
+      },
+      {
+        ...raw,
+        experience: {
+          ...raw.experience,
+          notices: [{ id: "unsafe", text: "Unsafe", href: "//evil.example" }],
+        },
+      },
+      {
+        ...raw,
+        experience: {
+          ...raw.experience,
+          slides: [
+            {
+              id: "unsafe",
+              title: "Unsafe",
+              description: "Unsafe",
+              theme: "mint",
+              href: "/",
+              media: {
+                src: "data:image/png;base64,iVBORw0KGgo=",
+                alt: "Unsafe",
+              },
+            },
+          ],
+        },
+      },
+      {
+        ...raw,
+        experience: {
+          ...raw.experience,
+          reviews: [
+            { id: "duplicate", name: "Test", text: "Test", product: "Test" },
+            { id: "duplicate", name: "Test", text: "Test", product: "Test" },
+          ],
+        },
+      },
+      {
+        ...raw,
+        products: raw.products.map((p: Record<string, unknown>) => ({
+          ...p,
+          terms: {
+            warranty: "Test",
+            receipt: "Test",
+            activationNote: "Test",
+            injected: true,
+          },
+        })),
+      },
+      {
+        ...raw,
+        products: raw.products.map((p: Record<string, unknown>) => ({
+          ...p,
+          variants: [
+            {
+              id: "bad",
+              label: "Bad",
+              priceVnd: 0,
+              stock: 0,
+              priceConfigured: null,
+            },
+          ],
+        })),
+      },
+    ];
+    for (const invalid of cases) {
+      await actor(OWNER, "aal2", async () => {
+        await expect(
+          pg.query("select public.save_cms_draft($1::jsonb,1)", [
+            JSON.stringify(invalid),
+          ]),
+        ).rejects.toThrow();
+      });
+    }
+    for (const name of [
+      "cms_valid",
+      "cms_valid_base",
+      "materialize_storefront",
+      "materialize_storefront_base",
+      "cms_media_valid",
+      "cms_media_ids",
+    ]) {
+      expect(
+        (
+          await pg.query(
+            "select has_function_privilege('authenticated',$1,'EXECUTE') as allowed",
+            [`private.${name}(jsonb)`],
+          )
+        ).rows,
+      ).toEqual([{ allowed: false }]);
+    }
+  });
+  it("publishes only referenced banner media and revokes it after removal", async () => {
+    await actor(OWNER, "aal2", async () => {
+      const asset = "55555555-5555-4555-8555-555555555555";
+      const path = `${OWNER}/${asset}.png`;
+      await pg.query(
+        "insert into public.media_assets(id,object_path,mime,byte_size,alt,source_license,checksum,uploaded_by) values($1,$2,'image/png',12,'Banner','Synthetic',repeat('0',64),$3)",
+        [asset, path, OWNER],
+      );
+      const current = structuredClone(getStorefrontContent());
+      current.experience = structuredClone(defaultExperience);
+      current.announcement.media = { src: `/media/${asset}`, alt: "Banner" };
+      await pg.exec("savepoint missing_object");
+      await expect(
+        pg.query("select public.save_cms_draft($1::jsonb,1)", [
+          JSON.stringify(current),
+        ]),
+      ).rejects.toThrow(/Missing media object/);
+      await pg.exec("rollback to savepoint missing_object");
+      await pg.query(
+        "insert into storage.objects(bucket_id,name) values('hubby-media',$1)",
+        [path],
+      );
+      at(current.experience.slides).media = current.announcement.media;
+      const draft = (
+        await pg.query<{ id: string }>(
+          "select public.save_cms_draft($1::jsonb,1) as id",
+          [JSON.stringify(current)],
+        )
+      ).rows[0]?.id;
+      await pg.query("select public.publish_cms_revision($1,2)", [draft]);
+      expect(
+        (
+          await pg.query("select status from public.media_assets where id=$1", [
+            asset,
+          ])
+        ).rows,
+      ).toEqual([{ status: "published" }]);
+      const next = (
+        await pg.query<{ id: string }>(
+          "select public.save_cms_draft($1::jsonb,2) as id",
+          [JSON.stringify(getStorefrontContent())],
+        )
+      ).rows[0]?.id;
+      await pg.query("select public.publish_cms_revision($1,3)", [next]);
+      await pg.exec("set local role anon");
+      await pg.query("select set_config('request.jwt.claims','{}',true)");
+      expect((await pg.query("select * from storage.objects")).rows).toEqual(
+        [],
+      );
+      expect(
+        (await pg.query("select * from public.media_assets")).rows,
+      ).toEqual([]);
+    });
+  });
+  it("overrides provider default grants and keeps privileged implementations out of public", async () => {
+    const functions = await pg.query<{ proname: string; prosecdef: boolean }>(
+      "select p.proname,p.prosecdef from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public'",
+    );
+    expect(functions.rows).toHaveLength(6);
+    expect(functions.rows.every((p) => !p.prosecdef)).toBe(true);
+    for (const schema of ["public", "private"]) {
+      for (const signature of [
+        "save_cms_draft(jsonb,integer)",
+        "restore_cms_draft(uuid,integer)",
+        "publish_cms_revision(uuid,integer)",
+      ]) {
+        const privileges = await pg.query<{ anon: boolean; customer: boolean }>(
+          "select has_function_privilege('anon',$1,'EXECUTE') as anon,has_function_privilege('authenticated',$1,'EXECUTE') as customer",
+          [`${schema}.${signature}`],
+        );
+        expect(privileges.rows).toEqual([{ anon: false, customer: true }]);
+      }
+    }
+    await actor(A, "aal2", async () => {
+      await denied(() =>
+        pg.query("select private.save_cms_draft('{}'::jsonb,1)"),
+      );
+      await denied(() => pg.query("select * from private.cms_audit"));
+      await denied(() =>
+        pg.query("select private.materialize_storefront('{}'::jsonb)"),
+      );
+    });
+  });
   it("keeps draft files private and exposes only referenced published media", async () => {
     await actor(OWNER, "aal2", async () => {
       const asset = "44444444-4444-4444-8444-444444444444",

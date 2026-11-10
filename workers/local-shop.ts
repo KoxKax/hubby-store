@@ -33,6 +33,7 @@ import {
   ShopError,
   type ShopState,
 } from "../app/domain/local-shop";
+import { findOwnedOrder } from "../app/domain/order-lookup";
 import { seal, unseal } from "../app/server/seal.server";
 
 const uuid = z.uuid();
@@ -57,6 +58,14 @@ const command = z.discriminatedUnion("action", [
     })
     .strict(),
   z.object({ ...common, action: z.literal("list") }).strict(),
+  z
+    .object({
+      ...common,
+      action: z.literal("lookup"),
+      code: z.string().trim().min(8).max(36),
+      email: z.email().max(254),
+    })
+    .strict(),
   z.object({ ...common, action: z.literal("ops") }).strict(),
   z.object({ ...common, action: z.literal("activity_list") }).strict(),
   z
@@ -90,6 +99,7 @@ const command = z.discriminatedUnion("action", [
         .max(19),
       coupon: z.string().max(30),
       expectedTotal: z.number().int().nonnegative().max(200_000_000_000),
+      email: z.union([z.literal(""), z.email().max(254)]).optional(),
     })
     .strict(),
   z
@@ -320,7 +330,10 @@ export class LocalShop extends DurableObject<Env> {
           result = {
             events:
               experienceOf(this.catalog()).activityNotifications !== false
-                ? recentActivities(events, now)
+                ? recentActivities(
+                    events.filter((event) => event.kind === "cart"),
+                    now,
+                  )
                 : [],
           };
         } else if (c.action === "activity_cart") {
@@ -475,6 +488,14 @@ export class LocalShop extends DurableObject<Env> {
           );
           audit(s, c.action, String(workspace.headVersion), now);
           result = { ok: true };
+        } else if (c.action === "lookup") {
+          // Match private email inside the actor-scoped transaction; never put it in public projections.
+          const matched = findOwnedOrder(
+            s.orders.filter((order) => order.actor === c.actor),
+            c.code,
+            c.email,
+          );
+          result = { order: matched ? projection(matched) : null };
         } else if (c.action === "list")
           result = {
             orders: s.orders.filter((o) => o.actor === c.actor).map(projection),
@@ -576,8 +597,10 @@ export class LocalShop extends DurableObject<Env> {
               },
               now,
             );
-            if (scenario !== "deferred" && outcome === "matched")
+            if (scenario !== "deferred" && outcome === "matched") {
               fulfill(s, o.id, now);
+              // Mock settlement is never a public purchase announcement.
+            }
             result = { outcome, order: projection(o) };
           } else if (c.action === "retry") {
             fulfill(s, o.id, now);

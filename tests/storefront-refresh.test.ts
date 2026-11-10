@@ -9,7 +9,28 @@ import { validateContent } from "../app/content/schema";
 import { findOwnedOrder, localOrderEmail } from "../app/domain/order-lookup";
 
 describe("storefront experience preserves existing CMS and validates local extensions", () => {
+  it("owned lookup requires the order's exact email; fixture email fallback only applies to legacy orders", () => {
+    const id = "12345678-1234-1234-1234-123456789abc";
+    const owned = [{ id, email: "buyer@test.example" }];
+    expect(findOwnedOrder(owned, id, "BUYER@Test.example")).toBe(owned[0]);
+    expect(findOwnedOrder(owned, id, localOrderEmail)).toBeUndefined();
+    expect(findOwnedOrder([{ id }], id, localOrderEmail)?.id).toBe(id);
+  });
   const baseline = getStorefrontContent();
+  it("refreshes only known default intro copy and leaves Owner content untouched", () => {
+    const content = structuredClone(baseline);
+    content.experience = structuredClone(defaultExperience);
+    content.experience.intro.description =
+      "Tụi mình cung cấp tài khoản và gói dịch vụ số, với thông tin thời hạn, cách nhận và bảo hành rõ ràng. Cần tư vấn hay gặp vấn đề khi sử dụng? Cứ hỏi Hubby nhé.";
+    expect(experienceOf(content).intro.description).toBe(
+      defaultExperience.intro.description,
+    );
+    expect(content.experience.intro.description).toContain("Cứ hỏi Hubby nhé.");
+    content.experience.intro.description = "Nội dung riêng do chủ shop viết.";
+    expect(experienceOf(content).intro.description).toBe(
+      "Nội dung riêng do chủ shop viết.",
+    );
+  });
   it("old published snapshots render new defaults without changing stored content", () => {
     const old = structuredClone(baseline);
     expect(experienceOf(old).slides).toHaveLength(3);
@@ -26,13 +47,13 @@ describe("storefront experience preserves existing CMS and validates local exten
     draft.experience.intro.title = "New heading";
     expect(experienceOf(draft).intro.title).toBe("New heading");
   });
-  it("supports typed local experience but refuses unsupported staging writes", () => {
+  it("supports migrated staging experience without permitting local images", () => {
     const draft = {
       ...baseline,
       experience: structuredClone(defaultExperience),
     };
     expect(validateContent(draft, true).experience?.notices).toHaveLength(3);
-    expect(() => validateContent(draft, false)).toThrow("migration");
+    expect(validateContent(draft, false).experience).toEqual(draft.experience);
   });
   it("rejects executable links, duplicate identities and unsafe media", () => {
     const draft = {

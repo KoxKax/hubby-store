@@ -1,5 +1,5 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "react-router";
-import { data, Link, useFetcher, useLoaderData } from "react-router";
+import { data, useFetcher, useLoaderData } from "react-router";
 import { CmsPanel } from "../components/cms-panel";
 import type { LocalWorkspace } from "../domain/cms";
 import { csrfToken, secureForm } from "../server/form-security.server";
@@ -55,28 +55,21 @@ export default function AdminDemo() {
     );
   }
   return (
-    <>
-      <div className="container admin-actions">
-        <Link className="button secondary" to="/admin-demo/operations">
-          Mở bảng vận hành local
-        </Link>
-      </div>
-      <CmsPanel
-        key={head.id}
-        mode="sandbox"
-        revision={head}
-        history={[...w.revisions].reverse()}
-        publishedId={w.publishedId}
-        headVersion={w.headVersion}
-        busy={fetcher.state !== "idle"}
-        feedback={
-          fetcher.data?.error ??
-          (fetcher.data?.ok ? "Đã lưu trên máy chủ local." : "")
-        }
-        onSave={(snapshot) => submit({ action: "cms_save", snapshot })}
-        onPublish={(id) => submit({ action: "cms_publish", id })}
-        onRestore={(id) => submit({ action: "cms_restore", id })}
-      />
-    </>
+    <CmsPanel
+      key={head.id}
+      mode="sandbox"
+      revision={head}
+      history={[...w.revisions].reverse()}
+      publishedId={w.publishedId}
+      headVersion={w.headVersion}
+      busy={fetcher.state !== "idle"}
+      feedback={
+        fetcher.data?.error ??
+        (fetcher.data?.ok ? "Đã lưu trên máy chủ local." : "")
+      }
+      onSave={(snapshot) => submit({ action: "cms_save", snapshot })}
+      onPublish={(id) => submit({ action: "cms_publish", id })}
+      onRestore={(id) => submit({ action: "cms_restore", id })}
+    />
   );
 }

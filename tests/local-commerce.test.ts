@@ -58,6 +58,27 @@ function paid(s: ShopState, o: LocalOrder, patch: Partial<Observation> = {}) {
   );
 }
 describe("local atomic commerce domain (runtime concurrency checked separately)", () => {
+  it("validates and canonicalizes checkout email; changing email cannot reuse a checkout key", () => {
+    const s = fixture();
+    const request = { ...input(), email: "  Buyer@Test.example  " };
+    const o = checkout(s, content, request, now);
+    expect(o.email).toBe("buyer@test.example");
+    expect(
+      checkout(s, content, { ...request, email: "buyer@test.example" }, now + 1)
+        .id,
+    ).toBe(o.id);
+    expect(() =>
+      checkout(
+        s,
+        content,
+        { ...request, email: "other@test.example" },
+        now + 1,
+      ),
+    ).toThrow("đã thay đổi");
+    expect(() =>
+      checkout(fixture(), content, { ...input(), email: "not-an-email" }, now),
+    ).toThrow("Email");
+  });
   it("reserves exactly qty and immutable server price; rejects other actor projections", () => {
     const s = fixture();
     const o = checkout(s, content, input(2), now);

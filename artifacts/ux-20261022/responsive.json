@@ -1,0 +1,842 @@
+[
+  {
+    "path": "/",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/san-pham/microsoft-office-365",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/san-pham/microsoft-office-365",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/san-pham/microsoft-office-365",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/san-pham/microsoft-office-365",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/san-pham/microsoft-office-365",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/thanh-toan",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/yeu-thich",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan/da-xem",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/dang-nhap",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/chinh-sach/bao-mat",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/thanh-toan",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/yeu-thich",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan/da-xem",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/dang-nhap",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/chinh-sach/bao-mat",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/thanh-toan",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/yeu-thich",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan/da-xem",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/dang-nhap",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/chinh-sach/bao-mat",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/thanh-toan",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/yeu-thich",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan/da-xem",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/dang-nhap",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/chinh-sach/bao-mat",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/thanh-toan",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/yeu-thich",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/tai-khoan/da-xem",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/dang-nhap",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/chinh-sach/bao-mat",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=dashboard",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=products",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=home",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=content",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=media",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=history",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=dashboard",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=products",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=home",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=content",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=media",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=history",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=dashboard",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=products",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=home",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=content",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=media",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=history",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=dashboard",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=products",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=home",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=content",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=media",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=history",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=dashboard",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=products",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=home",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=content",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=media",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/admin-demo?tab=history",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "dark"
+  },
+  {
+    "path": "/",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/san-pham/capcut",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 360,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/san-pham/capcut",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 390,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/san-pham/capcut",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 768,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/san-pham/capcut",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 1024,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/san-pham/capcut",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tra-don-hang",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/gio-hang",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  },
+  {
+    "path": "/tai-khoan",
+    "width": 1440,
+    "broken": 0,
+    "main": 1,
+    "overflow": false,
+    "theme": "light"
+  }
+]

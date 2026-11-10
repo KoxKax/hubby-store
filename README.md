@@ -1,5 +1,19 @@
 # Hubby
 
+**payOS/Bite 02/11/2026:** đã cập nhật web cũ và bật các cờ giao dịch thật theo yêu cầu Owner. Còn thiếu khóa Bite nhập riêng, mapping gói và xác nhận đăng ký webhook; chưa có giao dịch thật được kiểm chứng. Hướng dẫn thao tác: [docs/BITE_PAYOS_LIVE.md](docs/BITE_PAYOS_LIVE.md). Các ghi chú mock/chưa deploy bên dưới là lịch sử khi mâu thuẫn mục này.
+
+**Quyết định hiện hành 02/11/2026:** giữ giao diện shop/CMS cũ và Cloudflare Workers + Supabase, ngân sách hosting 0đ. Đã hủy hướng chuyển WordPress/WooCommerce; thư mục `wordpress/` chỉ là prototype lưu tham khảo, không phải bản shop cần triển khai. Shop chính: https://hubby.dpdns.org. Thanh toán và nguồn API thật chưa được xác nhận hoạt động; không coi bản code là đã mở bán.
+
+Tên miền miễn phí đã nối: https://hubby.dpdns.org. Địa chỉ workers.dev bên dưới vẫn là dự phòng; chưa bật thanh toán thật. Gia hạn/bảo vệ tên miền: docs/CUSTOM_DOMAIN.md.
+
+Public storefront: https://hubby.kienhoang1919.workers.dev. Checkout is still closed pending verified payment and actual fulfillment. Canva49,000 VND published via CMS revision2; other variants unpriced. TPBank connected in SePay, webhook not yet enabled. Latest acceptance/remaining work: IMPLEMENTATION_PLAN.md, docs/SEPAY_SETUP.md.
+
+## Trạng thái hiện tại — 12/10/2026
+
+Catalog6 sản phẩm/7 gói hiện hành đã nối Supabase; giá chưa được Owner niêm yết. Admin thật tại http://127.0.0.1:5176/admin dùng tài khoản đã xác nhận và quyền Owner, không bắt buộc MFA theo lựa chọn đã chốt.5174 vẫn là sandbox riêng; không nhập dữ liệu thật vào sandbox. Cloudflare đã kết nối, chưa deploy/mở bán.169 tests/lint/types/build đã qua; backend đơn/kho/thanh toán/email khách và nghiệm thu phát hành chưa xong.
+
+`npm run hosting:build` chỉ dựng gói riêng ở .wrangler/hosted-build, không tải lên mạng và không chứa binding/migration/khóa kho thử. `npm run hosting:preflight` hiện báo thiếu cấu hình hosting đã xác minh; không phải lỗi build hay bằng chứng sẵn sàng production. Chi tiết mới nhất trong IMPLEMENTATION_PLAN.md và docs/LOW_COST_RELEASE.md. Các ghi chú fixture/MFA bắt buộc phía dưới mô tả các phiên bản cũ khi mâu thuẫn mục này.
+
 Bản local tiếng Việt/VND cho Canva/CapCut/Google/Netflix và catalog do CMS tạo. Bố cục mới: giới thiệu/banner → cách mua → nhóm sản phẩm → reviews → FAQ → hỗ trợ; catalog/hỗ trợ cũ chuyển về home. Chưa mở bán; giá/kho/đơn/giao dịch là giả, không chứng minh quyền phân phối hoặc quan hệ thương hiệu. Xem docs/STOREFRONT_REFRESH.md cho thay đổi và giới hạn.
 
 ## Mở và thử
@@ -37,6 +51,8 @@ npm run smoke:cms
 `smoke` đặt `HUBBY_SMOKE_URL=http://127.0.0.1:5174` khi cần (mặc định script public là5173); các commerce/CMS scripts mặc định5174. Chỉ nhận loopback HTTP. Tests dùng dữ liệu giả và giữ audit/revisions, không reset Owner state. `npm run format` cho lint formatting. CI chưa chạy GitHub vì chưa push.
 
 ## Tài liệu hiện hành
+
+- [Lộ trình tiết kiệm để mở bán](docs/LOW_COST_RELEASE.md): Oracle/Free-tier tradeoffs, TPBank và bước tạo staging; `npm run staging:preflight` chỉ kiểm cấu hình, không deploy hay xác nhận production-ready.
 
 - [Local handoff](docs/LOCAL_HANDOFF.md): chức năng, giới hạn, Owner/Codex actions và những gì chưa xong.
 - [Staging setup](docs/STAGING_SETUP.md): chuẩn bị tài khoản riêng sau khi Owner cho phép.

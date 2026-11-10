@@ -2,6 +2,7 @@ node_modules/
 build/
 .react-router/
 .wrangler/
+supabase/.temp/
 worker-configuration.d.ts
 .env
 .env.*
@@ -15,4 +16,7 @@ playwright-report/
 *.tsbuildinfo
 backups/
 private-inventory/
+wordpress/.runtime/
+wordpress/.private/
+wordpress/dist/
 

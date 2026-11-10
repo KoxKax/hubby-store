@@ -14,9 +14,9 @@ export default function Recent() {
   return (
     <main id="main" tabIndex={-1} className="container account-page">
       <PageIntro
-        eyebrow="PICK UP WHERE YOU LEFT OFF"
-        title="Bạn vừa xem."
-        description="Tiếp tục khám phá những lựa chọn bạn đã ghé xem."
+        eyebrow="ĐÃ XEM"
+        title="Sản phẩm vừa xem"
+        description="Quay lại các gói bạn vừa xem trên trình duyệt này."
       />
       {!store.ready ? (
         <p role="status">Đang mở danh sách…</p>

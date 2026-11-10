@@ -1,8 +1,9 @@
 import { type ActionFunctionArgs, data } from "react-router";
 import { reviewInput } from "../domain/engagement";
+import { commerceRpc } from "../server/commerce-repository.server";
 import { publishedContent } from "../server/content-repository.server";
 import { secureForm } from "../server/form-security.server";
-import { localCall } from "../server/local-shop.server";
+import { localCall, localEnabled } from "../server/local-shop.server";
 export function loader() {
   return new Response(null, { status: 405 });
 }
@@ -25,12 +26,22 @@ export async function action({ request, context }: ActionFunctionArgs) {
         { error: "Bạn chọn một sản phẩm trong danh mục nhé." },
         { status: 400 },
       );
-    await localCall(request, context, {
-      action: "feedback",
-      key: input.key,
-      category: "review",
-      message: `${product.name} · ${input.rating}/5\n${input.message}`,
-    });
+    if (localEnabled(request, context))
+      await localCall(request, context, {
+        action: "feedback",
+        key: input.key,
+        category: "review",
+        message: `${product.name} · ${input.rating}/5\n${input.message}`,
+      });
+    else
+      await commerceRpc(request, context, "submit_community", {
+        p_key: input.key,
+        p_kind: "review",
+        p_category: "review",
+        p_body: input.message,
+        p_product: input.productId,
+        p_rating: input.rating,
+      });
     return { ok: true };
   } catch (error) {
     return data(

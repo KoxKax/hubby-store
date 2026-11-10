@@ -292,29 +292,19 @@ export function validateContent(
   localMedia = false,
 ): StorefrontContent {
   const content = contentSchema.parse(value);
-  if (
-    !localMedia &&
-    content.products.some(
-      (p) => p.terms || p.variants.some((v) => v.priceConfigured !== undefined),
-    )
-  )
+  const media = [
+    ...content.products.map((p) => p.media),
+    content.announcement.media,
+    ...(content.experience?.slides.map((s) => s.media) ?? []),
+  ];
+  if (!localMedia && media.some((m) => m?.src.startsWith("data:")))
     throw new Error(
-      "Thông tin gói mới cần migration staging trước khi xuất bản online",
-    );
-  if (!localMedia && content.experience)
-    throw new Error(
-      "Bố cục mới cần migration CMS staging trước khi xuất bản online",
-    );
-  if (!localMedia && content.announcement.media)
-    throw new Error(
-      "Banner ảnh local cần migration staging riêng trước khi xuất bản online",
+      "Ảnh chỉ lưu trên máy không thể xuất bản. Hãy tải ảnh lên thư viện rồi chọn lại.",
     );
   if (
     !localMedia &&
-    content.products.some((p) => p.media?.src.startsWith("data:"))
+    new TextEncoder().encode(JSON.stringify(content)).length > 200_000
   )
-    throw new Error(
-      "Ảnh local không được publish lên staging; hãy upload qua media library",
-    );
+    throw new Error("Nội dung vượt quá dung lượng cho phép (200KB).");
   return content;
 }

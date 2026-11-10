@@ -71,7 +71,8 @@ export async function identity(
   context: Readonly<RouterContextProvider>,
 ): Promise<VerifiedIdentity | null> {
   const runtime = context.get(runtimeContext);
-  if (!dataConfig(runtime.env)) return null;
+  const config = dataConfig(runtime.env);
+  if (!config) return null;
   runtime.identity ??= (async () => {
     const client = requestClient(request, context);
     const { data, error } = await client.auth.getUser();
@@ -81,8 +82,15 @@ export async function identity(
     return {
       id: data.user.id,
       email: data.user.email ?? "",
+      emailVerified: Boolean(data.user.email && data.user.email_confirmed_at),
       owner: raw?.owner === true,
       aal2: raw?.aal2 === true,
+      // Owner authorized password-only access, including the eventual live site.
+      // Require a trusted DB policy bound to this exact verified Auth project.
+      // Missing/malformed policy or a different issuer always retains MFA.
+      mfaRequired:
+        raw?.mfa_required !== false ||
+        raw?.password_only_issuer !== `${config.url}/auth/v1`,
     };
   })();
   return runtime.identity;
@@ -90,15 +98,38 @@ export async function identity(
 export async function requireOwner(
   request: Request,
   context: Readonly<RouterContextProvider>,
+  appUrl = new URL(request.url),
 ) {
   requestClient(request, context);
   const user = await identity(request, context);
   if (!user)
     throw redirect(
-      `/dang-nhap?next=${encodeURIComponent(safeNext(new URL(request.url).pathname))}`,
+      `/dang-nhap?next=${encodeURIComponent(safeNext(appUrl.pathname + appUrl.search))}`,
     );
   if (!user.owner)
     throw new Response("Chỉ Owner được truy cập", { status: 403 });
-  if (!user.aal2) throw redirect("/xac-thuc?next=/admin");
+  if (!user.aal2 && user.mfaRequired)
+    throw redirect(
+      `/xac-thuc?next=${encodeURIComponent(safeNext(appUrl.pathname + appUrl.search, "/admin"))}`,
+    );
   return { user, client: requestClient(request, context) };
+}
+
+// Navigation only: destination pages still enforce their own server/RLS guards.
+export async function signedInDestination(
+  request: Request,
+  context: Readonly<RouterContextProvider>,
+  requestedNext: unknown,
+) {
+  // Login/callback can replace a session already inspected earlier this request.
+  context.get(runtimeContext).identity = undefined;
+  const user = await identity(request, context);
+  if (!user)
+    throw new Response("Chưa xác minh được phiên đăng nhập", { status: 401 });
+  const next = safeNext(requestedNext);
+  if (user.owner && next === "/tai-khoan")
+    return user.aal2 || !user.mfaRequired
+      ? "/admin"
+      : "/xac-thuc?next=%2Fadmin";
+  return next;
 }

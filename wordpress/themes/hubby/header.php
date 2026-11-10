@@ -1,0 +1,7 @@
+<?php defined('ABSPATH') || exit; $content = hubby_content(); ?>
+<!doctype html><html <?php language_attributes(); ?>><head><meta charset="<?php bloginfo('charset'); ?>"><meta name="viewport" content="width=device-width,initial-scale=1"><?php wp_head(); ?></head>
+<body <?php body_class(); ?>><?php wp_body_open(); ?><a class="skip-link" href="#main">Đi đến nội dung</a>
+<?php if (!empty($content['announcement']['text'])): ?><div class="announcement"><?php echo esc_html($content['announcement']['text']); ?></div><?php endif; ?>
+<header class="site-header"><div class="container header-row"><a class="logo" href="<?php echo esc_url(home_url('/')); ?>">hubby<span> ✳</span></a>
+<form class="header-search" role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>"><label class="search-label" for="hubby-search">Tìm sản phẩm</label><input id="hubby-search" type="search" name="s" placeholder="Tìm gói bạn cần…" value="<?php echo esc_attr(get_search_query()); ?>"><input type="hidden" name="post_type" value="product"><button class="button" type="submit">Tìm</button></form>
+<nav class="header-links" aria-label="Tài khoản và đơn hàng"><a href="<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>"><?php echo is_user_logged_in() ? 'Tài khoản' : 'Đăng nhập'; ?></a><a href="<?php echo esc_url(wc_get_cart_url()); ?>">Giỏ hàng<?php if (WC()->cart) echo ' (' . absint(WC()->cart->get_cart_contents_count()) . ')'; ?></a></nav></div></header>

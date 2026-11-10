@@ -7,9 +7,8 @@ import {
   useLoaderData,
 } from "react-router";
 import { csrfToken, secureForm } from "../server/form-security.server";
-import { requestClient } from "../server/supabase.server";
-export function loader({ request, context }: LoaderFunctionArgs) {
-  const url = new URL(request.url);
+import { requestClient, signedInDestination } from "../server/supabase.server";
+export function loader({ request, context, url }: LoaderFunctionArgs) {
   const hash = url.searchParams.get("token_hash") ?? "";
   const type = url.searchParams.get("type");
   if (!/^[a-f0-9]{64}$/.test(hash) || (type !== "email" && type !== "recovery"))
@@ -31,7 +30,13 @@ export async function action({ request, context }: ActionFunctionArgs) {
       { message: "Link không đúng hoặc đã hết hạn. Yêu cầu hướng dẫn mới." },
       { status: 400 },
     );
-  return redirect(type === "recovery" ? "/dat-lai-mat-khau" : "/tai-khoan");
+  return redirect(
+    await signedInDestination(
+      request,
+      context,
+      type === "recovery" ? "/dat-lai-mat-khau" : "/tai-khoan",
+    ),
+  );
 }
 export default function Confirm() {
   const state = useLoaderData<typeof loader>();

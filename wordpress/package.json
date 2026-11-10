@@ -1,0 +1,15 @@
+{
+  "name": "hubby-wordpress-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "sync:local": "node scripts/sync-local.mjs",
+    "lint:php": "node scripts/php-syntax.mjs",
+    "export:published": "node scripts/export-published.mjs",
+    "export:presentation": "node scripts/export-presentation.mjs",
+    "export:woocommerce": "node scripts/export-woocommerce-csv.mjs"
+  },
+  "dependencies": { "@wp-playground/cli": "3.1.61" }
+}

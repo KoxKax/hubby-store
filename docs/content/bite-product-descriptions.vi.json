@@ -1,0 +1,1001 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "externalId": "173",
+      "expectedDescription": "Liên kết ưu đãi LinkedIn Career trong 3 tháng, dành cho tài khoản chưa từng nâng cấp. Cần kiểm tra điều kiện áp dụng trước khi gửi cho khách.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết nâng cấp LinkedIn Career trong 3 tháng, dành cho tài khoản chưa từng nâng cấp. Đăng nhập tài khoản muốn sử dụng, mở liên kết và thêm thẻ thanh toán để nhận ưu đãi 0 đồng. Gói không có bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "214",
+      "expectedDescription": "Bộ quản trị Canva cho tối đa 500 thành viên, giao thông tin đăng nhập và hướng dẫn sử dụng qua email. Đây là quyền quản trị nhóm, không phải một suất Canva cá nhân.",
+      "description": "Canva là nền tảng thiết kế trực quan cho bài trình chiếu, hình ảnh mạng xã hội và tài liệu truyền thông. Bạn chọn theo nhu cầu sử dụng cá nhân hoặc quản lý thành viên. Lời mời tham gia, quyền quản trị và bộ hướng dẫn thiết lập là những hình thức khác nhau; quyền lợi cụ thể của lựa chọn này được nêu bên dưới.\n\nThông tin gói và cách sử dụng\nBộ quản trị nhóm Canva có quy mô tối đa 500 thành viên. Bạn nhận thông tin đăng nhập email và Canva. Đăng nhập email trên Outlook, lấy mã xác thực để vào Canva, sau đó đặt mật khẩu và bật xác thực hai bước. Được đổi mật khẩu hộp thư và thêm email khôi phục; không đổi email chính của Canva, tên tài khoản, tên nhóm hoặc thông tin hồ sơ. Thay đổi các thông tin bị hạn chế sẽ làm mất bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "218",
+      "expectedDescription": "Tài khoản Grok Super đi kèm X Premium với thời hạn nguồn công bố 12 tháng. Nhận tài khoản đã tạo sẵn; cần xác nhận gói quyền lợi thực tế.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Super Grok đi kèm X Premium, thời hạn 12 tháng. Nhận tài khoản đã tạo sẵn để đăng nhập và sử dụng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "266",
+      "expectedDescription": "Mặt hàng kiểm tra API của nhà cung cấp, không có quyền lợi sử dụng thương mại. Không đưa vào danh mục bán.",
+      "description": "Sản phẩm dùng để kiểm tra kết nối API, không cung cấp quyền sử dụng phần mềm hay dịch vụ thương mại.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "277",
+      "expectedDescription": "Gói quyền truy cập Claude qua cổng API bên thứ ba, hạn mức nguồn ghi 100 USD và thời hạn 30 ngày. Sử dụng theo hướng dẫn tại cổng riêng của nguồn.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói truy cập Claude qua cổng API riêng, hạn mức tín dụng 100 USD trong 30 ngày. Nhận mã nạp, đăng ký hoặc đăng nhập cổng sử dụng, đổi mã rồi cấu hình kết nối API trong công cụ bạn dùng. Đây là tín dụng sử dụng dịch vụ, không phải tiền mặt hoặc gói đăng nhập Claude trên web.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "278",
+      "expectedDescription": "Gói quyền truy cập Claude qua cổng API bên thứ ba, hạn mức nguồn ghi 500 USD và thời hạn 30 ngày. Cần xác nhận cách tính tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói truy cập Claude qua cổng API riêng, hạn mức tín dụng 500 USD trong 30 ngày. Nhận mã nạp, đăng ký hoặc đăng nhập cổng sử dụng, đổi mã rồi cấu hình kết nối API trong công cụ bạn dùng. Đây là tín dụng sử dụng dịch vụ, không phải tiền mặt hoặc gói đăng nhập Claude trên web.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "286",
+      "expectedDescription": "Tài khoản iLovePDF Premium thời hạn 1 năm, sử dụng các công cụ chỉnh sửa, chuyển đổi PDF và chữ ký điện tử. Bite giao email và mật khẩu của tài khoản đã tạo; người nhận đăng nhập rồi đổi mật khẩu theo hướng dẫn. Nguồn ghi kèm 2.000 tín dụng AI; cần kiểm tra quyền truy cập và thời hạn thực tế trước khi bán.",
+      "description": "iLovePDF tập hợp các công cụ làm việc với tài liệu PDF trong một nơi. Gói Premium phù hợp khi bạn thường xuyên xử lý hồ sơ, bài tập, tài liệu công việc, cần chỉnh sửa hoặc chuyển đổi tệp mà không phải chuyển qua nhiều ứng dụng.\n\nThông tin gói và cách sử dụng\nTài khoản iLovePDF Premium 1 năm, kèm 2.000 tín dụng AI. Sử dụng bộ công cụ PDF trên web, điện thoại và máy tính, bao gồm chỉnh sửa, chuyển đổi tài liệu và chữ ký điện tử. Trải nghiệm không quảng cáo, có lựa chọn xử lý tệp theo khu vực. Nhận email và mật khẩu tài khoản; sau khi đăng nhập, đổi mật khẩu theo hướng dẫn.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "287",
+      "expectedDescription": "Liên kết kích hoạt Adobe Express Premium trong 12 tháng trên tài khoản người dùng. Mở liên kết sau khi đăng nhập đúng tài khoản cần nâng cấp.",
+      "description": "Adobe Express là công cụ thiết kế và tạo nội dung trực quan, phù hợp làm hình ảnh quảng bá, bài đăng và tài liệu học tập hoặc công việc. Premium dành cho người muốn sử dụng tài nguyên và công cụ trả phí trong cùng một tài khoản.\n\nThông tin gói và cách sử dụng\nLiên kết kích hoạt Adobe Express Premium 12 tháng trên tài khoản của bạn. Mở liên kết, đăng nhập đúng email và hoàn thành các bước nâng cấp. Không cần thẻ thanh toán. Nếu gặp lỗi khu vực khi đổi ưu đãi, quy trình kích hoạt yêu cầu kết nối VPN Ấn Độ.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "290",
+      "expectedDescription": "Tài khoản Microsoft 365 đã tạo sẵn với thời hạn công bố 1 năm. Mô tả nguồn có cơ cấu 1 tháng cộng 11 tháng tặng; không nhầm với nâng cấp tài khoản chính chủ.",
+      "description": "Microsoft 365 là bộ công cụ phục vụ soạn thảo, bảng tính, trình chiếu và công việc hằng ngày. Gói phù hợp với người học hoặc làm việc thường xuyên cùng tài liệu Office. Hình thức cấp tài khoản và quyền quản trị có phạm vi sử dụng khác nhau; thông tin dưới đây mô tả lựa chọn này.\n\nThông tin gói và cách sử dụng\nTài khoản Microsoft Office 365 Plus gồm Word, Excel, PowerPoint, OneNote và Forms. Thời hạn gồm 1 tháng sử dụng cùng 11 tháng tặng, tổng cộng 12 tháng; hỗ trợ tối đa 5 máy tính Windows. Nhận email và mật khẩu tài khoản đã tạo sẵn. Đây là hình thức cấp tài khoản, không phải nâng cấp tài khoản Microsoft cá nhân.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "345",
+      "expectedDescription": "Tài khoản quản trị Microsoft 365 thời hạn 12 tháng. Nguồn yêu cầu giữ nguyên mật khẩu và email khôi phục để gia hạn; cần kiểm tra giới hạn quyền quản trị.",
+      "description": "Microsoft 365 là bộ công cụ phục vụ soạn thảo, bảng tính, trình chiếu và công việc hằng ngày. Gói phù hợp với người học hoặc làm việc thường xuyên cùng tài liệu Office. Hình thức cấp tài khoản và quyền quản trị có phạm vi sử dụng khác nhau; thông tin dưới đây mô tả lựa chọn này.\n\nThông tin gói và cách sử dụng\nTài khoản quản trị Microsoft 365 trong 12 tháng, có thể thêm 5 thành viên vào nhóm gia đình. Nhận email, mật khẩu và thông tin email khôi phục. Gói được gia hạn theo tháng; giữ nguyên mật khẩu, email khôi phục và cấu hình bảo mật để quy trình gia hạn hoạt động. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "347",
+      "expectedDescription": "Tài khoản Notion Education Plus đã tạo sẵn, thời hạn công bố 12 tháng. Nhà cung cấp giao email và mật khẩu, có hướng dẫn đổi thông tin bảo mật.",
+      "description": "Notion là không gian ghi chú, tổ chức tài liệu và quản lý công việc. Bạn có thể tập hợp nội dung học tập, kế hoạch cá nhân và tài liệu nhóm trong cùng một hệ thống. Gói phù hợp với người muốn xây dựng nơi làm việc có tổ chức. Education Plus và Business là các loại gói khác nhau.\n\nThông tin gói và cách sử dụng\nTài khoản Notion Education Plus 12 tháng, nhận email cùng mật khẩu Notion và hộp thư. Đăng nhập hộp thư Outlook trước, sau đó vào Notion bằng thông tin được giao. Có thể đổi email tài khoản; thiết lập lại thông tin bảo mật sau khi đăng nhập.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "361",
+      "expectedDescription": "Tài khoản dùng thử ChatGPT trong 1 tháng, nguồn ghi không bảo hành và có yêu cầu vùng truy cập. Cần xác minh điều kiện kích hoạt.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT miễn phí có ưu đãi dùng thử Plus 1 tháng, không phải tài khoản đã nâng cấp Plus. Nhận thông tin đăng nhập và xác thực hai bước. Việc nhận ưu đãi yêu cầu kết nối từ khu vực được áp dụng trước khi đăng nhập, gồm Việt Nam hoặc Thái Lan. Được hỗ trợ trong 2 giờ đầu; không bảo hành và không hoàn tiền do bỏ qua hướng dẫn. Sau khi nhận cần tự bảo mật email và xác thực hai bước.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "364",
+      "expectedDescription": "Mã kích hoạt Gemini Pro dùng trong 1 năm theo công bố nguồn; không bảo hành. Cần đọc quy trình đổi mã và điều kiện tài khoản trước khi mua.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nMã kích hoạt ưu đãi Gemini Pro 1 năm. Đổi mã theo hướng dẫn đi kèm để nhận liên kết kích hoạt; sử dụng ngay sau khi nhận. Bước nhận ưu đãi yêu cầu thêm thẻ thanh toán. Gói không có bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "372",
+      "expectedDescription": "Tài khoản Avira VPN; tiêu đề ghi 1 tháng nhưng mô tả nguồn ghi Avira Prime 3 tháng, tối đa 5 thiết bị. Chưa xác nhận được thời hạn chính xác.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản Avira Prime bao gồm phần mềm diệt virus, Phantom VPN không giới hạn, quản lý mật khẩu và công cụ tối ưu thiết bị. Hỗ trợ tối đa 5 thiết bị Windows, macOS, Android hoặc iOS. Nhận email và mật khẩu tài khoản đã kích hoạt, tải ứng dụng Avira phù hợp rồi đăng nhập.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "393",
+      "expectedDescription": "Tài khoản CapCut Pro dùng khoảng 6–7 ngày kèm 500 tín dụng AI. Giao email và mật khẩu; kiểm tra số ngày còn lại khi nhận.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro dùng trong khoảng 6–7 ngày, kèm 500 tín dụng AI. Nhận email và mật khẩu để đăng nhập. Bảo hành quyền sử dụng Pro trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "413",
+      "expectedDescription": "Quyền quản trị nhóm Miro với khả năng mời tối đa 100 người theo thông tin nhà cung cấp. Cần kiểm tra chính sách thời hạn và số lượng thực tế.",
+      "description": "Gói phù hợp với nhu cầu thiết kế, phát triển ý tưởng hoặc tổ chức dự án trên nền tảng tương ứng. Bạn chọn theo mục đích cá nhân hay quản lý nhóm. Quyền quản trị, quy mô thành viên và loại giấy phép quyết định phạm vi sử dụng của từng lựa chọn.\n\nThông tin gói và cách sử dụng\nQuyền quản trị nhóm Miro quy mô tối đa 100 thành viên. Bạn nắm vai trò Owner và Admin để quản lý cài đặt nhóm, quyền thành viên và không gian dự án. Phù hợp khi cần tổ chức công việc chung cho lớp học, câu lạc bộ hoặc nhóm dự án.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "422",
+      "expectedDescription": "Suất tham gia Duolingo Super trong 3 tháng, dạng nâng cấp quyền sử dụng. Không nhầm với sản phẩm Duolingo 1 năm trên Hubby.",
+      "description": "Duolingo là ứng dụng học ngôn ngữ qua bài tập và hoạt động luyện tập. Gói Super phù hợp với người muốn duy trì thói quen học và sử dụng các tính năng trả phí. Suất tham gia và liên kết nâng cấp có cách kích hoạt khác nhau; chọn theo tài khoản và thời hạn bạn cần.\n\nThông tin gói và cách sử dụng\nSuất Duolingo Super thời hạn 3 tháng, nâng quyền sử dụng trên tài khoản. Học không quảng cáo và sử dụng các tính năng học tập của Super. Quy trình nâng cấp cần xử lý thủ công trên tài khoản, yêu cầu tách liên kết Google hoặc Facebook và thông tin đăng nhập; không kích hoạt chỉ bằng một đường dẫn. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "428",
+      "expectedDescription": "Bộ tài khoản JetBrains Education dùng khoảng 1 năm cho các IDE lập trình. Nguồn giao thông tin đăng nhập và mô tả quyền lợi giáo dục; cần kiểm tra tính đủ điều kiện.",
+      "description": "JetBrains cung cấp các môi trường phát triển tích hợp phục vụ viết mã và xây dựng phần mềm. Bộ Education phù hợp với sinh viên, giáo viên và người học lập trình cần công cụ cho nhiều ngôn ngữ. Hãy chọn theo hình thức cấp tài khoản hoặc kích hoạt trên email của bạn.\n\nThông tin gói và cách sử dụng\nTài khoản JetBrains Education với giấy phép 1 năm, sử dụng bộ 18 sản phẩm phát triển phần mềm trên Windows, macOS và Linux. Nhận email, mật khẩu hộp thư và mật khẩu JetBrains. Đây là giấy phép giáo dục dành cho nhu cầu học tập, không mặc nhiên thay thế giấy phép thương mại.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "433",
+      "expectedDescription": "Tài khoản ChatGPT Plus 1 tháng thanh toán qua Google Pay, bảo hành từ nguồn 1 ngày. Giao tài khoản Gmail và mã xác thực hai bước.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 1 tháng, nhận Gmail, mật khẩu và thông tin xác thực hai bước. Bảo hành 1 ngày. Sau khi nhận, đổi xác thực hai bước để bảo vệ tài khoản.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "463",
+      "expectedDescription": "Tài khoản quản trị Autodesk được nguồn giới thiệu cho tối đa 3.000 lời mời trong 3 năm. Cần xác nhận phạm vi giấy phép và quyền truy cập.",
+      "description": "Gói phù hợp với nhu cầu thiết kế, phát triển ý tưởng hoặc tổ chức dự án trên nền tảng tương ứng. Bạn chọn theo mục đích cá nhân hay quản lý nhóm. Quyền quản trị, quy mô thành viên và loại giấy phép quyết định phạm vi sử dụng của từng lựa chọn.\n\nThông tin gói và cách sử dụng\nBộ tài khoản quản trị Autodesk Education thời hạn 3 năm, quản lý tối đa 3.000 lời mời. Nhận thông tin đăng nhập Gmail và Autodesk. Đăng nhập trang quản lý Autodesk, cập nhật thông tin bảo mật, chọn phần mềm giáo dục và phân bổ quyền sử dụng cho thành viên. Có thể xem thời hạn giấy phép trong phần quản lý đăng ký. Bảo hành đăng nhập; quyền giáo dục không đồng nghĩa với quyền sử dụng thương mại.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "466",
+      "expectedDescription": "Liên kết ưu đãi Notion Business 3 tháng, cần có thẻ thanh toán khi kích hoạt. Nguồn ghi không bảo hành.",
+      "description": "Notion là không gian ghi chú, tổ chức tài liệu và quản lý công việc. Bạn có thể tập hợp nội dung học tập, kế hoạch cá nhân và tài liệu nhóm trong cùng một hệ thống. Gói phù hợp với người muốn xây dựng nơi làm việc có tổ chức. Education Plus và Business là các loại gói khác nhau.\n\nThông tin gói và cách sử dụng\nLiên kết ưu đãi Notion Business 3 tháng. Sử dụng trên tài khoản của bạn, thêm thẻ thanh toán để hoàn tất kích hoạt. Gói không có bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "488",
+      "expectedDescription": "Danh sách hơn 500 cộng đồng bán hàng quốc tế để kết nối và quảng bá sản phẩm. Cần kiểm tra tính cập nhật và quyền truy cập từng nhóm.",
+      "description": "Thông tin gói và cách sử dụng\nDanh sách hơn 500 cộng đồng bán hàng quốc tế. Phù hợp để tìm nơi giới thiệu sản phẩm, kết nối người bán và tiếp cận các nhóm khách hàng ở nhiều quốc gia. Việc tham gia và đăng bài tuân theo quy định của từng cộng đồng; danh sách không bảo đảm doanh số.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "501",
+      "expectedDescription": "Tài khoản Wink VIP trên iOS, thời hạn 90 ngày, dùng các công cụ làm đẹp ảnh và video. Nguồn ghi bảo hành trọn gói.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Wink VIP 90 ngày dành riêng cho iOS. Sử dụng bộ công cụ làm đẹp bằng AI, làm nét video, xóa vật thể, hiệu ứng chuyển cảnh VIP và xuất tệp chất lượng cao không watermark. Chỉ đăng nhập trên 1 thiết bị; dùng nhiều thiết bị có thể bị khóa và mất bảo hành.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "512",
+      "expectedDescription": "Tài khoản Grok Super dùng 7 ngày, nguồn công bố bảo hành 6 ngày. Nhận email và mật khẩu đăng nhập.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Grok Super 7 ngày. Nhận email và mật khẩu đăng nhập; bảo hành 6 ngày.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "517",
+      "expectedDescription": "Tài khoản ChatGPT Business đã tạo sẵn, thời hạn 1 tháng, bảo hành từ nguồn 1 ngày. Cần kiểm tra quyền truy cập không gian làm việc.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Business thời hạn 1 tháng. Nhận email, mật khẩu và thông tin xác thực hai bước; bảo hành 1 ngày. Đổi mật khẩu và xác thực hai bước sau khi nhận.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "520",
+      "expectedDescription": "Tài khoản Notion Education Plus trong 12 tháng, nguồn giao email và mật khẩu, công bố bảo hành trọn gói. Cần xác minh điều kiện giáo dục.",
+      "description": "Notion là không gian ghi chú, tổ chức tài liệu và quản lý công việc. Bạn có thể tập hợp nội dung học tập, kế hoạch cá nhân và tài liệu nhóm trong cùng một hệ thống. Gói phù hợp với người muốn xây dựng nơi làm việc có tổ chức. Education Plus và Business là các loại gói khác nhau.\n\nThông tin gói và cách sử dụng\nTài khoản Notion Education Plus 12 tháng, bảo hành trong thời hạn gói. Nhận email, mật khẩu hộp thư và mật khẩu Notion. Đăng nhập Outlook để truy cập hộp thư, sau đó đăng nhập Notion. Có thể đổi email và thiết lập lại bảo mật tài khoản.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "521",
+      "expectedDescription": "Tài khoản CapCut Pro 1 tháng với 1.600 tín dụng, nhận email và mật khẩu tài khoản đã tạo sẵn.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro 1 tháng, kèm 1.600 tín dụng. Nhận email và mật khẩu tài khoản đã tạo sẵn. Bảo hành quyền sử dụng trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "535",
+      "expectedDescription": "Tài khoản Prime Video riêng theo nguồn, thời hạn 6 tháng. Cần đọc giới hạn thiết bị và điều kiện xem nội dung theo khu vực.",
+      "description": "Gói giải trí phù hợp khi bạn muốn xem nội dung trong thời gian xác định. Tài khoản riêng, hồ sơ riêng và suất sử dụng khác nhau về quản lý tài khoản, thiết bị và số lượt xem đồng thời. Thông tin bên dưới giúp bạn hiểu đúng quyền sử dụng của lựa chọn này.\n\nThông tin gói và cách sử dụng\nTài khoản Prime Video riêng trong 180 ngày. Nhận thông tin đăng nhập để sử dụng trên thiết bị phù hợp. Không đổi mật khẩu trong 24 giờ đầu; không thuê, mua nội dung hoặc thực hiện giao dịch bằng tài khoản. Hạn chế đăng nhập, đăng xuất liên tục. Bảo hành đến khi đăng nhập.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "537",
+      "expectedDescription": "Tài khoản Figma Education Pro với thời hạn công bố 2 năm; nguồn giao email, mật khẩu và cách nhận mã đăng nhập. Cần xác nhận quyền lợi giáo dục.",
+      "description": "Gói phù hợp với nhu cầu thiết kế, phát triển ý tưởng hoặc tổ chức dự án trên nền tảng tương ứng. Bạn chọn theo mục đích cá nhân hay quản lý nhóm. Quyền quản trị, quy mô thành viên và loại giấy phép quyết định phạm vi sử dụng của từng lựa chọn.\n\nThông tin gói và cách sử dụng\nTài khoản Figma Pro Education thời hạn 2 năm, có tính năng Make và 3.000 tín dụng mỗi tháng. Nhận email, mật khẩu và cách truy cập mã đăng nhập. Giữ nguyên email Figma trong quá trình sử dụng. Gói thuộc chương trình giáo dục.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "540",
+      "expectedDescription": "Tài khoản ElevenLabs Creator 1 tháng, nguồn ghi khoảng 131.000 tín dụng và bảo hành 5 ngày. Nhận thông tin đăng nhập tài khoản.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nTài khoản ElevenLabs Creator 1 tháng với 131.000 tín dụng. Nhận email và mật khẩu ElevenLabs. Bảo hành 5 ngày.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "541",
+      "expectedDescription": "Liên kết đổi gói Duolingo Super 12 tháng trên tài khoản đủ điều kiện, nguồn yêu cầu dùng VPN tại khu vực nhất định trong một số trường hợp.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết kích hoạt Duolingo Super 12 tháng trên tài khoản của bạn. Mở liên kết, đăng nhập đúng tài khoản muốn nâng cấp và hoàn tất bước nhận ưu đãi 0 đồng. Nếu mã gặp lỗi khu vực, quy trình kích hoạt yêu cầu VPN Ấn Độ.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "550",
+      "expectedDescription": "Lời mời Canva Pro thời hạn 3 năm trên email của khách. Đây là Canva Pro, không phải Canva Education; nguồn ghi không bảo hành.",
+      "description": "Canva là nền tảng thiết kế trực quan cho bài trình chiếu, hình ảnh mạng xã hội và tài liệu truyền thông. Bạn chọn theo nhu cầu sử dụng cá nhân hoặc quản lý thành viên. Lời mời tham gia, quyền quản trị và bộ hướng dẫn thiết lập là những hình thức khác nhau; quyền lợi cụ thể của lựa chọn này được nêu bên dưới.\n\nThông tin gói và cách sử dụng\nLời mời tham gia Canva Pro 3 năm bằng email của bạn. Cung cấp đúng email Canva để nhận lời mời và làm theo hướng dẫn tham gia nhóm. Đây là gói Canva Pro. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "626",
+      "expectedDescription": "Tài khoản Hotmail riêng kèm email khôi phục, nguồn ghi không bảo hành. Kiểm tra khả năng đăng nhập và cách nhận mã trước khi sử dụng.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản Hotmail riêng, có email khôi phục đi kèm. Nhận thông tin truy cập và hướng dẫn đọc thư, gồm cả hộp thư khôi phục. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "627",
+      "expectedDescription": "Tài khoản Outlook riêng kèm email khôi phục, nguồn ghi không bảo hành. Kiểm tra khả năng đăng nhập và cách nhận mã trước khi sử dụng.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản Outlook riêng, có email khôi phục đi kèm. Nhận thông tin truy cập và hướng dẫn đọc thư, gồm cả hộp thư khôi phục. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "628",
+      "expectedDescription": "Tài khoản Coursera Premium quyền tổ chức trong 12 tháng, có thông tin đăng nhập và mã xác thực; nguồn ghi không bảo hành. Cần xác nhận khả năng nhận chứng chỉ.",
+      "description": "Coursera là nền tảng học trực tuyến cho người muốn bổ sung kiến thức và kỹ năng theo khóa học. Gói này phù hợp với kế hoạch học trong thời gian dài hơn một khóa ngắn. Quyền truy cập thuộc loại Premium theo tổ chức, không đồng nhất với Coursera Plus.\n\nThông tin gói và cách sử dụng\nTài khoản Coursera Premium theo quyền tổ chức Org+ trong 12 tháng, truy cập khóa học và chứng chỉ thuộc phạm vi gói. Nhận thông tin đăng nhập và xác thực hai bước. Đây là Premium theo tổ chức, không phải Coursera Plus. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "630",
+      "expectedDescription": "Liên kết dùng thử Lovable Pro Lite 12 tháng kèm tổng khoảng 300 tín dụng, dành cho tài khoản đủ điều kiện. Nguồn yêu cầu kích hoạt sớm sau khi mua.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết dùng thử Lovable Pro Lite 12 tháng, kèm hơn 300 tín dụng cấp một lần. Chỉ áp dụng cho tài khoản chưa từng có hoặc chưa có gói trả phí đang hoạt động. Không cần thẻ thanh toán. Đổi mã trong 48 giờ từ lúc mua; bảo hành kích hoạt 48 giờ và bảo hành 2 tháng sau kích hoạt.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "631",
+      "expectedDescription": "Mã kích hoạt NordVPN Basic 3 tháng, nguồn ghi dùng tối đa 10 thiết bị và có thể cộng dồn mã. Phải đổi mã trong 72 giờ từ lúc mua; Bite ghi bảo hành kích hoạt 72 giờ và bảo hành 1 tháng sau khi kích hoạt. Kiểm tra tài khoản và khu vực áp dụng trước khi bán.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nMã kích hoạt NordVPN Basic 3 tháng, hỗ trợ tối đa 10 thiết bị. Có thể cộng dồn nhiều mã trên cùng tài khoản và không cần thẻ thanh toán. Đổi mã tại trang kích hoạt Nord Account trong 72 giờ từ lúc mua. Bảo hành kích hoạt 72 giờ, sau kích hoạt bảo hành 1 tháng.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "632",
+      "expectedDescription": "Liên kết kích hoạt Adobe Express Premium 12 tháng trên tài khoản của người mua. Nguồn chỉ bảo hành liên kết trước khi kích hoạt trong 24 giờ.",
+      "description": "Adobe Express là công cụ thiết kế và tạo nội dung trực quan, phù hợp làm hình ảnh quảng bá, bài đăng và tài liệu học tập hoặc công việc. Premium dành cho người muốn sử dụng tài nguyên và công cụ trả phí trong cùng một tài khoản.\n\nThông tin gói và cách sử dụng\nLiên kết nâng cấp Adobe Express Premium 12 tháng trên tài khoản Adobe mới hoặc đang sử dụng. Gói có 3.000 tín dụng AI, hơn 350.000 mẫu thiết kế và hơn 200 triệu tài nguyên; dùng trên web và ứng dụng iOS, Android với cùng tài khoản. Không cần thẻ thanh toán. Mỗi tài khoản đổi một lần, không kết hợp với ưu đãi Adobe khác. Nếu gặp lỗi khu vực cần kích hoạt với VPN Ấn Độ. Gói kết thúc sau 12 tháng, không tự thu phí; tệp vẫn được giữ nhưng tài nguyên Premium bị khóa. Bảo hành liên kết 24 giờ trước kích hoạt; không bảo hành sau kích hoạt, không đổi trả mã đã giao.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "633",
+      "expectedDescription": "Liên kết kích hoạt Apple Music Individual 5 tháng, nguồn yêu cầu tài khoản mới hoặc đủ điều kiện. Bảo hành liên kết trước khi dùng tối đa 24 giờ.",
+      "description": "Gói nghe nhạc phù hợp với người muốn sử dụng Premium trong một khoảng thời gian nhất định. Bạn có thể nhận tài khoản có gói hoặc kích hoạt ưu đãi trên tài khoản của mình tùy lựa chọn. Hãy chú ý điều kiện tài khoản, cách kích hoạt và gia hạn nếu ưu đãi yêu cầu thẻ thanh toán.\n\nThông tin gói và cách sử dụng\nLiên kết kích hoạt Apple Music Individual 5 tháng cho tài khoản mới thuộc khu vực Ấn Độ, chưa dùng thử và chưa có gói đang hoạt động. Cần thẻ thanh toán hợp lệ; nếu ở ngoài Ấn Độ cần VPN khi kích hoạt. Sau ưu đãi, gói tự gia hạn ở mức 139 rupee/tháng; chủ động hủy trong phần Đăng ký của tài khoản Apple trước khi hết hạn nếu không tiếp tục. Bảo hành liên kết 24 giờ, không bảo hành sau kích hoạt và không hoàn mã đã giao.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "636",
+      "expectedDescription": "Bộ phương pháp/tài khoản quản trị Canva Education có hướng dẫn mời tối đa 499 người. Không phải một lời mời Canva Edu đơn lẻ.",
+      "description": "Canva là nền tảng thiết kế trực quan cho bài trình chiếu, hình ảnh mạng xã hội và tài liệu truyền thông. Bạn chọn theo nhu cầu sử dụng cá nhân hoặc quản lý thành viên. Lời mời tham gia, quyền quản trị và bộ hướng dẫn thiết lập là những hình thức khác nhau; quyền lợi cụ thể của lựa chọn này được nêu bên dưới.\n\nThông tin gói và cách sử dụng\nBộ hướng dẫn thiết lập Canva Education và bảng quản trị để mời tối đa 499 người sau khi tạo tài khoản. Nhận tài liệu và hướng dẫn thao tác. Đây là bộ phương pháp triển khai, không phải một suất mời Canva Edu có sẵn.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "641",
+      "expectedDescription": "Tài khoản ElevenLabs Creator thời hạn 3 tháng, nguồn ghi bảo hành 1 tháng và tín dụng được bổ sung theo từng tháng. Cần đối chiếu định mức.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nTài khoản ElevenLabs Creator 3 tháng, bảo hành 1 tháng. Tín dụng được cấp theo từng tháng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "650",
+      "expectedDescription": "Mã nâng cấp Framer Basic theo chu kỳ thanh toán năm, áp dụng cho dự án đang ở gói Free. Vào Settings → Plans → Subscribe Basic (Yearly), nhập mã ở mục Add Promotion Code theo hướng dẫn của nguồn. Kiểm tra mã, điều kiện tài khoản và thời hạn 1 năm trước khi giao.",
+      "description": "Gói phù hợp với nhu cầu thiết kế, phát triển ý tưởng hoặc tổ chức dự án trên nền tảng tương ứng. Bạn chọn theo mục đích cá nhân hay quản lý nhóm. Quyền quản trị, quy mô thành viên và loại giấy phép quyết định phạm vi sử dụng của từng lựa chọn.\n\nThông tin gói và cách sử dụng\nMã nâng cấp Framer Basic 1 năm theo chu kỳ thanh toán năm cho dự án đang ở gói Free. Mở dự án, vào Settings → Plans, chọn Basic và chu kỳ Yearly, rồi nhập mã tại Add Promotion Code để kích hoạt.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "652",
+      "expectedDescription": "Liên kết ưu đãi Gemini Pro, dung lượng 5 TB và Antigravity trong 3 tháng. Chỉ dành cho tài khoản đủ điều kiện dùng thử, cần đăng nhập trước khi mở liên kết.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nLiên kết dùng thử Gemini Pro 3 tháng, kèm Antigravity và 5 TB lưu trữ. Chỉ áp dụng cho tài khoản chưa từng có hoặc chưa có gói trả phí đang hoạt động; cần phương thức thanh toán. Đăng nhập đúng tài khoản trước khi mở vì liên kết gắn với tài khoản mở đầu tiên. Đổi trong 48 giờ từ lúc mua. Bảo hành kích hoạt 48 giờ và 7 ngày sau kích hoạt.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "655",
+      "expectedDescription": "Mã ưu đãi YouTube Premium 3 tháng, cần phương thức thanh toán và tài khoản đủ điều kiện dùng thử tại quốc gia được hỗ trợ.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết dùng thử YouTube Premium 3 tháng, yêu cầu thẻ hoặc phương thức thanh toán và tài khoản chưa từng có hoặc chưa có gói đang hoạt động. Đổi tại trang YouTube Redeem trong 72 giờ sau khi mua. Áp dụng tại các khu vực: Ba Lan, Ấn Độ, Bỉ, Argentina, Indonesia, Canada, Đan Mạch, Ý, Mexico, Pháp, UAE, Hà Lan, Nam Phi, Brazil, Thổ Nhĩ Kỳ, Hoa Kỳ, Thụy Điển, Úc, Đức, Anh, Tây Ban Nha, Thụy Sĩ và Hồng Kông. Bảo hành sau kích hoạt 1 tháng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "660",
+      "expectedDescription": "Quyền truy cập Codex qua cổng API bên thứ ba, hạn mức 10 triệu token trong 1 ngày theo tên gói. Cần kiểm tra cách tính token và endpoint.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API 10 triệu token, sử dụng trong 1 ngày tính từ khi đổi mã. Nhận mã kích hoạt, mở cổng đổi mã theo hướng dẫn, cấu hình khóa API và chọn ứng dụng hoặc mô hình phù hợp. Có thể kết nối với các công cụ hỗ trợ API như Cursor, VS Code và 9router. Theo dõi hạn mức còn lại và ngày hết hạn trên trang quản lý. Mã chưa kích hoạt chưa bắt đầu tính thời gian. Đây là gói kết nối API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "661",
+      "expectedDescription": "Quyền truy cập Codex qua cổng API bên thứ ba, hạn mức 50 triệu token trong 2 ngày theo tên gói. Cần xác minh mô hình và giới hạn.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API 50 triệu token, sử dụng trong 2 ngày tính từ khi đổi mã. Nhận mã kích hoạt, mở cổng đổi mã theo hướng dẫn, cấu hình khóa API và chọn ứng dụng hoặc mô hình phù hợp. Có thể kết nối với các công cụ hỗ trợ API như Cursor, VS Code và 9router. Theo dõi hạn mức còn lại và ngày hết hạn trên trang quản lý. Mã chưa kích hoạt chưa bắt đầu tính thời gian. Đây là gói kết nối API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "663",
+      "expectedDescription": "Quyền truy cập Claude qua cổng API bên thứ ba, hạn mức 10 triệu token trong 1 ngày theo tên gói. Đây không phải khóa API trực tiếp của nhà sản xuất.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Claude API 10 triệu token, sử dụng trong 1 ngày tính từ khi đổi mã. Nhận mã kích hoạt, mở cổng đổi mã theo hướng dẫn, cấu hình khóa API và chọn ứng dụng hoặc mô hình phù hợp. Có thể kết nối với các công cụ hỗ trợ API như Cursor, VS Code và 9router. Theo dõi hạn mức còn lại và ngày hết hạn trên trang quản lý. Mã chưa kích hoạt chưa bắt đầu tính thời gian. Đây là gói kết nối API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "664",
+      "expectedDescription": "Quyền truy cập Codex API bên thứ ba; tên ghi 100 triệu token/3 ngày nhưng nội dung nguồn có chi tiết mâu thuẫn. Cần xác nhận trước khi bán.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói truy cập Codex API với hạn mức 100 triệu token. Nhận mã để đổi và cấu hình khóa kết nối trong ứng dụng hoặc công cụ lập trình. Thời gian sử dụng bắt đầu khi kích hoạt mã.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "665",
+      "expectedDescription": "Tài khoản Muse AI với hạn mức nguồn công bố 5 tỷ token. Nhà cung cấp giao tài khoản đã tạo sẵn; cần kiểm tra quy tắc sử dụng tín dụng.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Muse AI với 5 tỷ token, nhận thông tin đăng nhập có sẵn. Bảo hành khả năng đăng nhập khi giao. Nếu không thấy token hoặc gặp lỗi Wishlist, báo trong 1 giờ sau khi nhận; quá thời gian này không tiếp nhận khiếu nại tương ứng. Không cam kết thời hạn sử dụng hoặc bảo hành dài hạn cho tín dụng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "666",
+      "expectedDescription": "Tài khoản Muse AI với hạn mức nguồn công bố 10 tỷ token. Nhà cung cấp giao tài khoản đã tạo sẵn; cần kiểm tra quy tắc sử dụng tín dụng.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Muse AI với 10 tỷ token, nhận thông tin đăng nhập có sẵn. Bảo hành khả năng đăng nhập khi giao. Nếu không thấy token hoặc gặp lỗi Wishlist, báo trong 1 giờ sau khi nhận; quá thời gian này không tiếp nhận khiếu nại tương ứng. Không cam kết thời hạn sử dụng hoặc bảo hành dài hạn cho tín dụng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "667",
+      "expectedDescription": "Tài khoản Muse AI được giới thiệu với 20 tỷ token. Mô tả nguồn có phần hạn mức không nhất quán; cần đối chiếu trước khi bán.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Muse AI đã tạo sẵn, nhận email, mật khẩu hoặc đường dẫn truy cập hộp thư để đăng nhập. Không cần thẻ thanh toán.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "668",
+      "expectedDescription": "Tài khoản Muse AI được nguồn giới thiệu với hạn mức 30 tỷ token, giao thông tin đăng nhập. Cần xác nhận số tín dụng và chính sách sử dụng.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Muse AI với 30 tỷ token, nhận thông tin đăng nhập có sẵn. Bảo hành khả năng đăng nhập khi giao. Nếu không thấy token hoặc gặp lỗi Wishlist, báo trong 1 giờ sau khi nhận; quá thời gian này không tiếp nhận khiếu nại tương ứng. Không cam kết thời hạn sử dụng hoặc bảo hành dài hạn cho tín dụng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "672",
+      "expectedDescription": "Mã hoặc liên kết ưu đãi ElevenLabs Creator trong 1 tháng, yêu cầu thẻ thanh toán và tài khoản chưa từng kích hoạt Premium.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nLiên kết ưu đãi ElevenLabs Creator 1 tháng trên tài khoản của bạn. Chỉ áp dụng cho tài khoản mới hoặc chưa từng kích hoạt Premium. Cần thẻ thanh toán để nhận ưu đãi.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "681",
+      "expectedDescription": "Gói truy cập Claude qua cổng API bên thứ ba, hạn mức quy đổi 500 USD và thời hạn 30 ngày theo nguồn. Cần xác nhận cách trừ tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Claude API 30 ngày, hạn mức tín dụng 500 USD. Cấu hình khóa API trong công cụ hỗ trợ như VS Code, Claude Code, Cursor hoặc 9router theo hướng dẫn đi kèm. Bảo hành trong thời hạn gói. Tín dụng dùng cho dịch vụ, không phải tiền mặt.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "688",
+      "expectedDescription": "Liên kết kích hoạt Notion Business 3 tháng kèm 300 tín dụng mỗi tháng theo nguồn; yêu cầu thẻ thanh toán và kích hoạt trong 24 giờ.",
+      "description": "Notion là không gian ghi chú, tổ chức tài liệu và quản lý công việc. Bạn có thể tập hợp nội dung học tập, kế hoạch cá nhân và tài liệu nhóm trong cùng một hệ thống. Gói phù hợp với người muốn xây dựng nơi làm việc có tổ chức. Education Plus và Business là các loại gói khác nhau.\n\nThông tin gói và cách sử dụng\nLiên kết kích hoạt Notion Business 3 tháng, kèm 300 tín dụng Notion mỗi tháng. Cần thẻ thanh toán và đổi liên kết trong 24 giờ từ lúc mua. Bảo hành kích hoạt 24 giờ, không bảo hành sau kích hoạt.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "691",
+      "expectedDescription": "Gói đổi tín dụng sử dụng ElevenLabs qua nền tảng Vibi.Pro, hạn mức 1 triệu tín dụng. Kiểm tra cách quy đổi, thời hạn và nền tảng sử dụng.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nGói 1 triệu tín dụng tạo giọng nói AI trên cổng sử dụng riêng, có thư viện hơn 10.000 giọng nói đa ngôn ngữ với mô hình ElevenLabs và MiniMax. Nhận mã, đăng nhập đúng tài khoản rồi đổi để nạp tín dụng. Tín dụng còn dư không bị xóa vào cuối tháng. Mỗi mã chỉ dùng một lần; đã kích hoạt không hoàn, không chuyển sang tài khoản khác. Hỗ trợ khi mã không kích hoạt được, nạp sai số tín dụng hoặc lỗi kỹ thuật hệ thống. Đây là tín dụng trên cổng tạo giọng nói, không phải gói thuê bao đăng nhập tại ElevenLabs.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "692",
+      "expectedDescription": "Gói đổi tín dụng sử dụng ElevenLabs qua nền tảng Vibi.Pro, hạn mức 300.000 tín dụng. Kiểm tra cách quy đổi, thời hạn và nền tảng sử dụng.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nGói 300.000 tín dụng tạo giọng nói AI trên cổng sử dụng riêng, có thư viện hơn 10.000 giọng nói đa ngôn ngữ với mô hình ElevenLabs và MiniMax. Nhận mã, đăng nhập đúng tài khoản rồi đổi để nạp tín dụng. Tín dụng còn dư không bị xóa vào cuối tháng. Mỗi mã chỉ dùng một lần; đã kích hoạt không hoàn, không chuyển sang tài khoản khác. Hỗ trợ khi mã không kích hoạt được, nạp sai số tín dụng hoặc lỗi kỹ thuật hệ thống. Đây là tín dụng trên cổng tạo giọng nói, không phải gói thuê bao đăng nhập tại ElevenLabs.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "693",
+      "expectedDescription": "Gói đổi tín dụng sử dụng ElevenLabs qua nền tảng Vibi.Pro, hạn mức 131.000 tín dụng. Kiểm tra cách quy đổi, thời hạn và nền tảng sử dụng.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nGói 131.000 tín dụng tạo giọng nói AI trên cổng sử dụng riêng, có thư viện hơn 10.000 giọng nói đa ngôn ngữ với mô hình ElevenLabs và MiniMax. Nhận mã, đăng nhập đúng tài khoản rồi đổi để nạp tín dụng. Tín dụng còn dư không bị xóa vào cuối tháng. Mỗi mã chỉ dùng một lần; đã kích hoạt không hoàn, không chuyển sang tài khoản khác. Hỗ trợ khi mã không kích hoạt được, nạp sai số tín dụng hoặc lỗi kỹ thuật hệ thống. Đây là tín dụng trên cổng tạo giọng nói, không phải gói thuê bao đăng nhập tại ElevenLabs.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "697",
+      "expectedDescription": "Liên kết ưu đãi LinkedIn Career 3 tháng dành cho tài khoản đã tạo từ ít nhất 1 tháng và chưa từng nâng cấp. Nguồn ghi không bảo hành.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết ưu đãi LinkedIn Career 3 tháng cho tài khoản đã tạo ít nhất 1 tháng và chưa từng nâng cấp. Đăng nhập tài khoản muốn dùng, mở liên kết và thêm thẻ để nhận ưu đãi 0 đồng. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "700",
+      "expectedDescription": "Gói sử dụng Codex API qua máy chủ bên thứ ba với hạn mức nguồn gọi là 1 tỷ tín dụng, thời hạn 2 ngày. Cần xác minh đơn vị tín dụng và giới hạn.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API với hạn mức 1 tỷ tín dụng, thời hạn 2 ngày. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "705",
+      "expectedDescription": "Tài khoản Suno Premier 1 tháng, nguồn ghi bảo hành 7 ngày nhưng phần hướng dẫn có điều kiện riêng về mật khẩu. Cần làm rõ trước khi giao.",
+      "description": "Suno là công cụ tạo nhạc bằng AI, phù hợp thử nghiệm ý tưởng âm nhạc và tạo nội dung theo mô tả. Bạn dùng tín dụng được cấp để thực hiện các lượt tạo theo cách tính của ứng dụng. Hãy chọn thời hạn và lượng tín dụng phù hợp với dự án.\n\nThông tin gói và cách sử dụng\nTài khoản Suno đăng nhập qua Microsoft, có 2.500 tín dụng tạo nhạc. Đổi mật khẩu sau khi mua; bảo hành mật khẩu trong 30 phút đầu.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "709",
+      "expectedDescription": "Tài khoản Suno Pro 1 tháng với khoảng 2.500 tín dụng, bảo hành 3 ngày theo nguồn. Một số đơn có thể cần nhà cung cấp xử lý thủ công.",
+      "description": "Suno là công cụ tạo nhạc bằng AI, phù hợp thử nghiệm ý tưởng âm nhạc và tạo nội dung theo mô tả. Bạn dùng tín dụng được cấp để thực hiện các lượt tạo theo cách tính của ứng dụng. Hãy chọn thời hạn và lượng tín dụng phù hợp với dự án.\n\nThông tin gói và cách sử dụng\nTài khoản Suno Pro 1 tháng, kèm 2.500 tín dụng và bảo hành 3 ngày. Khi không có hàng sẵn, thời gian xử lý có thể lên đến 24 giờ.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "710",
+      "expectedDescription": "Tài khoản Manus Pro 1 tháng với khoảng 5.000 tín dụng theo thông tin nguồn. Bảo hành công bố 24 giờ.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Manus Pro 1 tháng, kèm 5.000 tín dụng. Bảo hành 24 giờ.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "712",
+      "expectedDescription": "Tài khoản Wink VIP+ 7 ngày, khoảng 100 tín dụng, giới hạn đăng nhập 1 thiết bị. Nhà cung cấp giao tài khoản và quy định sử dụng riêng.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Wink VIP+ 7 ngày, kèm 100 tín dụng, dùng trên 1 thiết bị. Nhận thông tin đăng nhập Wink và hộp thư. Có thể dùng ứng dụng Wink trên PC nếu điện thoại không đăng nhập được. Ở màn hình đăng nhập chọn thêm phương thức, đăng nhập bằng mật khẩu rồi chuyển sang email. Thiết bị đã dùng thử 7 ngày có thể không nhận gói; không hoàn tiền nếu tài khoản vẫn có gói. Không bảo hành lỗi do đăng nhập quá nhiều thiết bị.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "713",
+      "expectedDescription": "Tài khoản Meitu SVIP 1 tháng cho 1 thiết bị iPhone/iOS. Nguồn yêu cầu đăng nhập sớm và hạn chế đăng xuất; cần đọc kỹ điều kiện bảo hành.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Meitu SVIP 1 tháng dành cho 1 iPhone hoặc thiết bị iOS. Đăng nhập trong 30 phút sau khi mua; giữ phiên đăng nhập, không chia sẻ tài khoản, không đổi mật khẩu hay thông tin tài khoản. Không sử dụng nhiều thiết bị. Vi phạm các điều kiện này làm mất bảo hành. Nếu gặp lỗi ngay khi đăng nhập, chụp màn hình để gửi hỗ trợ.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "715",
+      "expectedDescription": "Tài khoản CapCut Pro Team thời hạn nguồn ghi 90 ngày, giao email và mật khẩu. Bite giới thiệu tối đa 2.000 tín dụng AI, khuyến nghị dùng 1–2 thiết bị và ghi bảo hành 90 ngày nhưng loại trừ lỗi do đăng nhập quá nhiều. Mô tả nguồn về tự gia hạn hàng tháng chưa rõ ràng; cần xác minh trước khi đăng bán.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro Team 90 ngày, nhận email và mật khẩu. Có thể nhận tối đa 2.000 tín dụng AI. Khuyến nghị dùng trên 1–2 thiết bị, tránh đăng nhập, đăng xuất liên tục hoặc sử dụng nhiều thiết bị. Bảo hành 90 ngày, không bao gồm lỗi do đăng nhập quá thường xuyên.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "716",
+      "expectedDescription": "Tài khoản Zoom Pro khoảng 28 ngày, giới hạn cuộc họp 100 người và tối đa 30 giờ theo công bố nguồn. Giao thông tin đăng nhập.",
+      "description": "Zoom phục vụ họp trực tuyến, học tập và đào tạo. Gói Pro phù hợp khi bạn cần chủ trì cuộc họp dài và quản lý nhóm người tham gia trong cùng buổi. Giới hạn số người và thời lượng của lựa chọn này được nêu bên dưới.\n\nThông tin gói và cách sử dụng\nTài khoản Zoom Pro khoảng 28 ngày, tổ chức cuộc họp tối đa 100 người và 30 giờ mỗi cuộc. Nhận email, mật khẩu và cách truy cập hộp thư. Giữ nguyên mật khẩu trong thời hạn gói để hỗ trợ xử lý tài khoản. Khi cần mã xác thực, mở nội dung thư để lấy đúng mã 6 số. Nếu tài khoản bị khóa do nhập sai, chờ 30 phút trước khi thử lại.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "717",
+      "expectedDescription": "Mã kích hoạt Kaspersky Premium và VPN thời hạn 1 năm, nguồn bảo hành 300 ngày. Có thể cần địa chỉ IP Việt Nam ở lần kích hoạt đầu.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nMã Kaspersky Premium kèm VPN cho 1 máy tính Windows, thời hạn khoảng 1 năm; ngày hết hạn thực tế có thể chênh vài tuần theo thời điểm kích hoạt. Lần kích hoạt đầu cần IP Việt Nam, sau đó sử dụng bình thường không cần VPN kích hoạt. Tải bản Premium để có VPN đi kèm. Bảo hành 300 ngày.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "723",
+      "expectedDescription": "Liên kết đổi gói Railway Hobby thời hạn 1 năm kèm hướng dẫn kích hoạt. Nguồn ghi không bảo hành.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết ưu đãi Railway dành cho tài khoản mới, kèm hướng dẫn thiết lập. Tạo tài khoản từ liên kết nhận được, vào Workspace Settings → Plans để xem ưu đãi và thực hiện các bước nâng cấp. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "724",
+      "expectedDescription": "Tài khoản iLovePDF Premium 1 năm, hỗ trợ chỉnh sửa PDF trên web, máy tính, điện thoại và có 2.000 tín dụng AI theo Bite. Nguồn giao email, mật khẩu của tài khoản đã tạo và hướng dẫn đổi mật khẩu sau khi đăng nhập. Tên sản phẩm ghi bảo hành 24 giờ; cần xác nhận điều kiện bảo hành trước khi bán.",
+      "description": "iLovePDF tập hợp các công cụ làm việc với tài liệu PDF trong một nơi. Gói Premium phù hợp khi bạn thường xuyên xử lý hồ sơ, bài tập, tài liệu công việc, cần chỉnh sửa hoặc chuyển đổi tệp mà không phải chuyển qua nhiều ứng dụng.\n\nThông tin gói và cách sử dụng\nTài khoản iLovePDF Premium 1 năm, kèm 2.000 tín dụng AI. Truy cập các công cụ chỉnh sửa, chuyển đổi PDF và chữ ký điện tử trên web, máy tính, điện thoại; sử dụng không quảng cáo. Nhận email và mật khẩu tài khoản, đăng nhập rồi đổi mật khẩu. Bảo hành 24 giờ.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "725",
+      "expectedDescription": "Gói sử dụng Grok API qua cổng bên thứ ba trong 1 tháng, hạn mức ghi 50 triệu tín dụng. Cần đối chiếu endpoint, mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 1 tháng, hạn mức 50 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "726",
+      "expectedDescription": "Gói sử dụng Grok API qua cổng bên thứ ba trong 1 tháng, hạn mức ghi 30 triệu tín dụng. Cần đối chiếu endpoint, mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 1 tháng, hạn mức 30 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "727",
+      "expectedDescription": "Gói sử dụng Grok API qua cổng bên thứ ba trong 1 tháng, hạn mức ghi 10 triệu tín dụng. Cần đối chiếu endpoint, mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 1 tháng, hạn mức 10 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "728",
+      "expectedDescription": "Gói sử dụng Grok API qua cổng bên thứ ba trong 3 ngày, hạn mức ghi 50 triệu tín dụng. Cần đối chiếu endpoint, mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 3 ngày, hạn mức 50 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "729",
+      "expectedDescription": "Gói sử dụng Grok API qua cổng bên thứ ba trong 3 ngày, hạn mức ghi 30 triệu tín dụng. Cần đối chiếu endpoint, mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 3 ngày, hạn mức 30 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "730",
+      "expectedDescription": "Gói sử dụng Grok API qua cổng bên thứ ba trong 3 ngày, hạn mức ghi 10 triệu tín dụng. Cần đối chiếu endpoint, mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 3 ngày, hạn mức 10 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "731",
+      "expectedDescription": "Tài khoản Grammarly Pro có công cụ AI hỗ trợ sửa câu, viết lại và điều chỉnh giọng văn, thời hạn 1 tháng. Giao email và mật khẩu.",
+      "description": "Grammarly hỗ trợ viết tiếng Anh, rà cách diễn đạt và hoàn thiện nội dung trước khi gửi hoặc xuất bản. Gói Pro phù hợp với người thường xuyên viết email, bài luận hoặc tài liệu và cần các công cụ chỉnh sửa nâng cao trong quy trình làm việc.\n\nThông tin gói và cách sử dụng\nTài khoản Grammarly Pro 1 tháng, hỗ trợ sửa câu, viết lại toàn bộ câu, điều chỉnh giọng văn và đưa ra gợi ý tiếng Anh. Có kiểm tra đạo văn, nội dung AI và 2.000 lượt yêu cầu AI. Nhận email và mật khẩu. Không thêm hoặc thay đổi thông tin tài khoản; vi phạm sẽ mất bảo hành.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "732",
+      "expectedDescription": "Tài khoản ExpressVPN trong 12 tháng, giao email và mật khẩu, nguồn ghi không bảo hành. Cần xác nhận số thiết bị hỗ trợ.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản ExpressVPN 12 tháng. Nhận email và mật khẩu để đăng nhập ứng dụng. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "733",
+      "expectedDescription": "Tài khoản ExpressVPN dùng 3 ngày, giao thông tin đăng nhập và mã kích hoạt theo nguồn. Cần đối chiếu cách nhận mã.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản ExpressVPN 3 ngày, nhận email, mật khẩu và mã kích hoạt. Sử dụng thông tin được giao để đăng nhập và kích hoạt ứng dụng. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "735",
+      "expectedDescription": "Tài khoản Coursera Premium quyền tổ chức trong 12 tháng, nhận email, mật khẩu và 2FA; nguồn ghi bảo hành 7 ngày. Cần xác minh quyền nhận chứng chỉ.",
+      "description": "Coursera là nền tảng học trực tuyến cho người muốn bổ sung kiến thức và kỹ năng theo khóa học. Gói này phù hợp với kế hoạch học trong thời gian dài hơn một khóa ngắn. Quyền truy cập thuộc loại Premium theo tổ chức, không đồng nhất với Coursera Plus.\n\nThông tin gói và cách sử dụng\nTài khoản Coursera Premium theo tổ chức Org+ trong 12 tháng, có quyền truy cập khóa học và chứng chỉ trong phạm vi gói. Nhận email, mật khẩu và xác thực hai bước. Bảo hành 7 ngày. Đây là Premium theo tổ chức, không phải Coursera Plus.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "737",
+      "expectedDescription": "Quyền truy cập Claude API qua bên thứ ba, hạn mức 50 triệu token trong 2 ngày. Cần xác nhận đơn vị tín dụng và các mô hình hỗ trợ.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Claude API 50 triệu token, sử dụng trong 2 ngày tính từ khi đổi mã. Nhận mã kích hoạt, mở cổng đổi mã theo hướng dẫn, cấu hình khóa API và chọn ứng dụng hoặc mô hình phù hợp. Có thể kết nối với các công cụ hỗ trợ API như Cursor, VS Code và 9router. Theo dõi hạn mức còn lại và ngày hết hạn trên trang quản lý. Mã chưa kích hoạt chưa bắt đầu tính thời gian. Đây là gói kết nối API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "739",
+      "expectedDescription": "Tài khoản Scribd Premium riêng trong 1 tháng, nhận thông tin đăng nhập và quyền truy cập email liên quan. Nguồn ghi bảo hành trọn gói.",
+      "description": "Scribd là nền tảng nội dung đọc và tài liệu trực tuyến. Gói Premium phù hợp với người muốn tiếp cận nội dung thuộc quyền truy cập trả phí trong một khoảng thời gian nhất định.\n\nThông tin gói và cách sử dụng\nTài khoản Scribd Premium riêng 1 tháng. Nhận thông tin đăng nhập và quyền truy cập email liên quan. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "741",
+      "expectedDescription": "Liên kết kích hoạt Apple TV trong 12 tháng theo tên nguồn, không yêu cầu thẻ thanh toán. Cần kiểm tra điều kiện tài khoản và thời hạn giữ liên kết.",
+      "description": "Gói giải trí phù hợp khi bạn muốn xem nội dung trong thời gian xác định. Tài khoản riêng, hồ sơ riêng và suất sử dụng khác nhau về quản lý tài khoản, thiết bị và số lượt xem đồng thời. Thông tin bên dưới giúp bạn hiểu đúng quyền sử dụng của lựa chọn này.\n\nThông tin gói và cách sử dụng\nLiên kết kích hoạt Apple TV 12 tháng trên tài khoản đủ điều kiện, không cần thẻ thanh toán.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "747",
+      "expectedDescription": "Tài khoản Muse AI với hạn mức ghi 31 tỷ token, giao qua email. Nguồn ghi không bảo hành; cần xác nhận phạm vi token.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Muse AI với 31 tỷ token, nhận thông tin truy cập qua email. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "749",
+      "expectedDescription": "Phiếu ưu đãi Surfshark trong 2 tháng, cần thẻ có ít nhất 1 USD để kích hoạt. Nguồn giới hạn hỗ trợ sau khi giao liên kết.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nPhiếu kích hoạt Surfshark 2 tháng, cần thẻ thanh toán có ít nhất 1 USD. Thực hiện các bước nhận ưu đãi theo hướng dẫn đi kèm liên kết.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "751",
+      "expectedDescription": "Liên kết đổi gói Lovable Lite 12 tháng trên tài khoản người dùng, nguồn ghi không cần thẻ và không bảo hành sau kích hoạt.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết kích hoạt Lovable Lite 12 tháng trên tài khoản của bạn. Không cần thẻ thanh toán. Đăng nhập đúng tài khoản muốn dùng rồi hoàn tất bước đổi ưu đãi. Không bảo hành sau kích hoạt.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "753",
+      "expectedDescription": "Tài khoản Spotify Premium thời hạn 1 tháng, nhà cung cấp mô tả tài khoản riêng. Cần kiểm tra giới hạn vùng và thiết bị.",
+      "description": "Gói nghe nhạc phù hợp với người muốn sử dụng Premium trong một khoảng thời gian nhất định. Bạn có thể nhận tài khoản có gói hoặc kích hoạt ưu đãi trên tài khoản của mình tùy lựa chọn. Hãy chú ý điều kiện tài khoản, cách kích hoạt và gia hạn nếu ưu đãi yêu cầu thẻ thanh toán.\n\nThông tin gói và cách sử dụng\nTài khoản Spotify Premium 1 tháng, dùng riêng thông tin đăng nhập được giao. Có thể đổi mật khẩu. Không đổi tên hoặc ảnh hồ sơ trong tháng đầu; không đổi email tài khoản. Đổi email sẽ mất bảo hành và bị loại khỏi nhóm gia đình. Nếu đăng nhập lỗi trên điện thoại, xóa dữ liệu ứng dụng Android hoặc cài lại ứng dụng iOS rồi thử lại.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "755",
+      "expectedDescription": "Gói Claude API qua bên thứ ba có tiêu đề 100 triệu token/3 ngày nhưng phần mô tả ghi 50 triệu token/2 ngày. Cần xác minh.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói truy cập Claude API, nhận mã để đổi và thiết lập khóa kết nối trong công cụ lập trình. Có hướng dẫn cấu hình ứng dụng và theo dõi hạn mức trên cổng sử dụng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "757",
+      "expectedDescription": "Quyền sử dụng ElevenLabs qua nền tảng Vibi.Pro với hạn mức ghi 131.000 tín dụng API. Cần phân biệt với tín dụng trực tiếp trên ElevenLabs.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nGói 131.000 tín dụng tạo giọng nói AI trên cổng sử dụng riêng, có thư viện hơn 10.000 giọng nói đa ngôn ngữ với mô hình ElevenLabs và MiniMax. Nhận mã, đăng nhập đúng tài khoản rồi đổi để nạp tín dụng. Tín dụng còn dư không bị xóa vào cuối tháng. Mỗi mã chỉ dùng một lần; đã kích hoạt không hoàn, không chuyển sang tài khoản khác. Hỗ trợ khi mã không kích hoạt được, nạp sai số tín dụng hoặc lỗi kỹ thuật hệ thống. Đây là tín dụng trên cổng tạo giọng nói, không phải gói thuê bao đăng nhập tại ElevenLabs.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "758",
+      "expectedDescription": "Tài khoản YouTube Premium trong 1 tháng kèm quyền truy cập Gmail theo nguồn. Cần đọc hướng dẫn bảo mật trước khi đăng nhập.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản YouTube Premium 1 tháng, kèm quyền truy cập Gmail. Nhận thông tin tài khoản và làm theo hướng dẫn đăng nhập, bảo mật đi kèm.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "759",
+      "expectedDescription": "Mã hoặc liên kết kích hoạt NordVPN Basic trong 3 tháng, nguồn ghi có thể cộng dồn thời hạn và dùng nhiều thiết bị.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nMã kích hoạt NordVPN Basic 3 tháng, sử dụng tối đa 10 thiết bị. Có thể cộng dồn nhiều mã trên cùng tài khoản, không cần thẻ thanh toán. Đăng nhập Nord Account và đổi mã tại trang kích hoạt.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "760",
+      "expectedDescription": "Gói proxy xoay HTTP/SOCKS5 với dung lượng nguồn công bố 2 GB. Cần đối chiếu vùng IP, thời hạn và quy định sử dụng.",
+      "description": "Thông tin gói và cách sử dụng\nGói proxy xoay 2 GB hỗ trợ HTTP và SOCKS5, tối đa 600 kết nối đồng thời. Nhận máy chủ, tên đăng nhập và mật khẩu để cấu hình; cổng SOCKS5 là 1080, HTTP là 8443. Có thể chọn quốc gia bằng cách thêm hậu tố -country-XX vào tên đăng nhập, chẳng hạn -country-us. Phù hợp với công cụ có hỗ trợ cấu hình proxy.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "762",
+      "expectedDescription": "Tài khoản Lovable Free đã tạo sẵn, thời hạn tài khoản nguồn giới thiệu 12 tháng. Đây là gói miễn phí, không phải Lovable Pro.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản Lovable Free đã tạo sẵn, nhận email, mật khẩu và thông tin xác thực; mật khẩu Outlook được giao nếu có. Đây là tài khoản miễn phí, không bao gồm Lovable Pro hoặc quyền lợi trả phí. Không hoàn tiền.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "763",
+      "expectedDescription": "Tài khoản CapCut Pro cá nhân thời hạn 30 ngày; nguồn ghi tối đa 2.000 tín dụng AI, giao email và mật khẩu. Khuyến nghị đăng nhập trên 1–2 thiết bị, hạn chế đăng xuất/đăng nhập liên tục. Bite ghi bảo hành 30 ngày và giới hạn xử lý lỗi đăng nhập do dùng quá nhiều thiết bị; cần xác nhận điều kiện cụ thể.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro cá nhân 30 ngày, có thể nhận tối đa 2.000 tín dụng AI. Nhận email và mật khẩu. Dùng trên 1–2 thiết bị, hạn chế đăng nhập, đăng xuất thường xuyên. Bảo hành 30 ngày; hỗ trợ một lần với lỗi đăng nhập do đăng nhập quá thường xuyên.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "764",
+      "expectedDescription": "Tài khoản ChatGPT Plus 30 ngày thanh toán qua Apple Pay, nhà cung cấp giao tài khoản đã tạo sẵn. Cần xác minh chính sách bảo hành và quyền truy cập.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 30 ngày, nhận Gmail, mật khẩu và xác thực hai bước. Tự quản lý bảo mật sau khi nhận; không hỗ trợ khôi phục mật khẩu hoặc xác thực qua email gốc. Báo lỗi mật khẩu hoặc xác thực trong 24 giờ đầu.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "765",
+      "expectedDescription": "Danh sách hơn 1.000 nhóm và kênh Telegram liên quan mua bán, giao dịch và cộng đồng. Kiểm tra tính cập nhật trước khi sử dụng.",
+      "description": "Thông tin gói và cách sử dụng\nBộ sưu tập hơn 1.000 liên kết nhóm và kênh Telegram về mua bán, giao dịch và cộng đồng. Dữ liệu ở dạng danh sách nhóm hoặc Addlist; một Addlist có thể chứa nhiều nhóm. Chỉ cần mua số lượng 1 để nhận toàn bộ bộ sưu tập. Tuân thủ quy định của từng nhóm khi tham gia, không bảo hành hoặc hoàn tiền.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "767",
+      "expectedDescription": "Tài khoản Wink VIP 30 ngày, giới hạn 1 thiết bị, nguồn yêu cầu không chia sẻ hoặc đổi thông tin đăng nhập.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Wink VIP 30 ngày cho iPhone, chỉ dùng trên 1 thiết bị. Không chia sẻ, không đổi mật khẩu hoặc thông tin tài khoản. Dùng nhiều thiết bị hoặc vi phạm quy định sẽ mất bảo hành.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "768",
+      "expectedDescription": "Tài khoản Xingtu SVIP 30 ngày với bộ lọc, chỉnh sửa ảnh và công cụ AI theo thông tin nguồn. Nhận tài khoản đã tạo sẵn.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Xingtu SVIP 30 ngày với bộ lọc, chỉnh dáng bằng AI, xóa vật thể, mẫu chỉnh ảnh và xuất ảnh chất lượng cao không watermark. Chỉ dùng trên 1 điện thoại. Đăng nhập bằng số điện thoại được giao, chọn mã quốc gia +1 và lấy mã từ đường dẫn đi kèm. Giữ phiên đăng nhập, không đổi số hoặc thông tin, không xóa ứng dụng, không chia sẻ tài khoản. Bảo hành khi mất VIP do lỗi hệ thống trong thời hạn gói; không bảo hành khi vi phạm giới hạn thiết bị hoặc thay đổi thông tin.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "769",
+      "expectedDescription": "Tài khoản Xingtu VIP 30 ngày với bộ lọc và công cụ chỉnh sửa ảnh. Cần phân biệt quyền lợi VIP với SVIP khi đối chiếu nguồn.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Xingtu 30 ngày với bộ lọc, công cụ AI, xóa vật thể, mẫu chỉnh ảnh và xuất ảnh chất lượng cao không watermark. Chỉ dùng trên 1 điện thoại. Chọn mã quốc gia +1, nhập số được giao rồi lấy mã xác thực từ đường dẫn đi kèm. Không chia sẻ, đăng xuất, đổi số điện thoại, đổi thông tin hoặc xóa ứng dụng khi sử dụng. Bảo hành lỗi hệ thống làm mất gói; không bảo hành lỗi do dùng nhiều thiết bị hoặc thay đổi tài khoản.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "770",
+      "expectedDescription": "Tài khoản ChatGPT Free có quyền truy cập Codex theo mô tả nguồn trong 1 tháng, không bảo hành. Cần xác minh giới hạn và các mô hình hỗ trợ.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Free có quyền dùng Codex trong 1 tháng, nhận email, mật khẩu và xác thực hai bước. Không hỗ trợ mô hình Sol; dùng các mô hình phù hợp được hướng dẫn trong gói. Đây là tài khoản Free, không phải ChatGPT Plus. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "772",
+      "expectedDescription": "Tài khoản Meitu VIP+ trong 90 ngày, sử dụng các bộ lọc, AI và xuất ảnh theo nguồn. Cần lưu ý yêu cầu đăng nhập và bảo mật tài khoản.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Meitu VIP+ 90 ngày với bộ lọc VIP, công cụ AI, xóa vật thể và xuất tệp HD/4K không watermark. Phải đăng nhập ngay trong ngày nhận; đăng nhập sang ngày khác sẽ mất bảo hành. Chỉ dùng 1 thiết bị, không đăng xuất hoặc chia sẻ tài khoản. Vi phạm các điều kiện sử dụng làm mất bảo hành.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "773",
+      "expectedDescription": "Liên kết nâng cấp Gemini Pro trong 18 tháng theo nhà cung cấp, thời hạn giữ liên kết ghi 4 giờ. Cần kiểm tra điều kiện tài khoản.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nLiên kết nâng cấp Gemini Pro 18 tháng trên tài khoản của bạn, không cần thẻ thanh toán. Mở liên kết và xác nhận để kích hoạt; có thể mời thêm 5 thành viên vào nhóm gia đình. Bảo hành giữ liên kết trong 4 giờ trước khi dùng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "774",
+      "expectedDescription": "Quyền sử dụng công cụ gửi tin nhắn hàng loạt Telegram Plus 1 tháng, tối đa 10 chiến dịch và 1.500 tin/ngày theo nguồn. Cần đối chiếu quy định nền tảng.",
+      "description": "Thông tin gói và cách sử dụng\nGói công cụ quản lý chiến dịch Telegram Plus 1 tháng cho 1 tài khoản, tối đa 10 chiến dịch và 1.500 tin nhắn/ngày. Đồng bộ nhóm, kênh và chủ đề, kiểm tra nhóm được phép đăng, lưu mẫu tin hoặc chuyển tiếp từ Saved Messages. Có thể đặt lịch, số vòng lặp, thời gian chờ, tạm dừng, tiếp tục và nhân bản chiến dịch. Theo dõi số tin đã gửi, lỗi, lịch thử lại và hạn mức theo tài khoản hoặc chiến dịch. Giao diện tiếng Việt và tiếng Anh. Chỉ gửi nội dung tại nơi bạn có quyền và sự đồng ý phù hợp.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "775",
+      "expectedDescription": "Tài khoản Notion Education Plus trong 12 tháng, bảo hành nguồn ghi 1 tháng. Tài khoản đã tạo sẵn, có hướng dẫn thay đổi bảo mật.",
+      "description": "Notion là không gian ghi chú, tổ chức tài liệu và quản lý công việc. Bạn có thể tập hợp nội dung học tập, kế hoạch cá nhân và tài liệu nhóm trong cùng một hệ thống. Gói phù hợp với người muốn xây dựng nơi làm việc có tổ chức. Education Plus và Business là các loại gói khác nhau.\n\nThông tin gói và cách sử dụng\nTài khoản Notion Education Plus 12 tháng, bảo hành 1 tháng. Nhận email, mật khẩu Outlook và mật khẩu Notion. Đăng nhập hộp thư trước, sau đó vào Notion. Có thể đổi email và thiết lập lại bảo mật sau khi nhận.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "777",
+      "expectedDescription": "Gói Claude API qua máy chủ bên thứ ba với hạn mức 500 triệu token và thời hạn 6 ngày theo nguồn. Cần xác minh cách tính và giới hạn.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Claude API 500 triệu token, sử dụng trong 6 ngày tính từ khi đổi mã. Nhận mã kích hoạt, mở cổng đổi mã theo hướng dẫn, cấu hình khóa API và chọn ứng dụng hoặc mô hình phù hợp. Có thể kết nối với các công cụ hỗ trợ API như Cursor, VS Code và 9router. Theo dõi hạn mức còn lại và ngày hết hạn trên trang quản lý. Mã chưa kích hoạt chưa bắt đầu tính thời gian. Đây là gói kết nối API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "778",
+      "expectedDescription": "Mã HMA VPN dùng trên Android và máy tính trong khoảng 20–30 ngày. Không hỗ trợ iOS theo mô tả nguồn.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nMã HMA VPN dùng khoảng 20–30 ngày trên Android và máy tính. Nhận mã để kích hoạt theo hướng dẫn. Không hỗ trợ iOS. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "779",
+      "expectedDescription": "Mã HMA VPN dành cho Android và máy tính, thời hạn 30 ngày, nguồn ghi bảo hành 25 ngày. Không hỗ trợ iOS.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nMã HMA VPN 30 ngày dành cho Android và máy tính. Nhận mã và làm theo bước kích hoạt. Không hỗ trợ iOS. Bảo hành 25 ngày.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "781",
+      "expectedDescription": "Tài khoản CapCut Pro cá nhân dùng khoảng 29–30 ngày, kèm 650 tín dụng theo Bite. Giao thông tin đăng nhập tài khoản và email; giới hạn đăng nhập 2 thiết bị. Nguồn loại trừ bảo hành đối với lỗi giới hạn thiết bị hoặc cảnh báo bảo mật, cần nói rõ điều kiện này trước khi bán.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro cá nhân khoảng 29–30 ngày, kèm 650 tín dụng. Nhận email, mật khẩu CapCut và mật khẩu hộp thư. Chỉ đăng nhập trên 2 thiết bị. Không bảo hành lỗi vượt giới hạn thiết bị hoặc cảnh báo bảo mật.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "783",
+      "expectedDescription": "Tài khoản hưởng ưu đãi giảm 50% phí ChatGPT Plus tháng đầu, khách tự thanh toán phần còn lại. Nguồn ghi không bảo hành.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản có ưu đãi giảm 50% phí ChatGPT Plus trong tháng đầu. Giá mua tài khoản chưa bao gồm khoản thanh toán đăng ký Plus còn lại; bạn tự hoàn tất phần này. Nhận email, mật khẩu và xác thực hai bước, sau đó tự bảo mật email và tài khoản. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "784",
+      "expectedDescription": "Tài khoản hưởng ưu đãi giảm 50% phí ChatGPT Plus trong 2 tháng, khách tự thanh toán phần còn lại. Nguồn ghi không bảo hành.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản có ưu đãi giảm 50% phí ChatGPT Plus trong 2 tháng. Bạn tự thanh toán phí đăng ký còn lại; đây không phải gói Plus đã được thanh toán sẵn. Nhận email, mật khẩu và xác thực hai bước rồi tự bảo mật tài khoản. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "785",
+      "expectedDescription": "Tài khoản ChatGPT Plus 30 ngày thanh toán qua Google Pay, nguồn công bố bảo hành 24 giờ. Giao thông tin đăng nhập và xác thực.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 30 ngày, nhận email, mật khẩu và xác thực hai bước. Bảo hành 24 giờ, không áp dụng cho Codex, 9router hoặc công cụ kết nối ngoài. Tự bảo mật tài khoản sau khi nhận; không hỗ trợ trường hợp thay đổi xác thực làm phát sinh yêu cầu mã qua email.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "786",
+      "expectedDescription": "Tài khoản Suno Pro 1 tháng, tiêu đề nguồn ghi bảo hành 1 ngày nhưng không cung cấp mô tả chi tiết. Cần yêu cầu bổ sung thông tin.",
+      "description": "Suno là công cụ tạo nhạc bằng AI, phù hợp thử nghiệm ý tưởng âm nhạc và tạo nội dung theo mô tả. Bạn dùng tín dụng được cấp để thực hiện các lượt tạo theo cách tính của ứng dụng. Hãy chọn thời hạn và lượng tín dụng phù hợp với dự án.\n\nThông tin gói và cách sử dụng\nTài khoản Suno Pro 1 tháng, bảo hành 1 ngày.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "787",
+      "expectedDescription": "Tài khoản ChatGPT Plus 1 tháng, nguồn ghi không bảo hành. Cần đổi phương thức xác thực sau khi nhận và kiểm tra quyền truy cập.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 1 tháng, nhận email, mật khẩu và xác thực hai bước. Đổi xác thực hai bước trong 1 giờ đầu sau khi mua để bảo vệ tài khoản. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "788",
+      "expectedDescription": "Tài khoản CapCut Pro Team 1 tháng với khoảng 650 tín dụng, giới hạn 2 thiết bị theo nguồn. Giao email và mật khẩu.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro Team 1 tháng, kèm 650 tín dụng. Nhận email và mật khẩu CapCut; đăng nhập tối đa 2 thiết bị. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "789",
+      "expectedDescription": "Tài khoản ChatGPT Plus 1 tháng thanh toán Google Pay, bảo hành nguồn 1 ngày. Cần kiểm tra email tạm và đổi xác thực sau nhận.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 1 tháng, nhận tài khoản, mật khẩu và xác thực hai bước. Email đi kèm là email tạm có thời hạn ngắn; cần tự bảo mật tài khoản và đổi email, xác thực ngay sau khi nhận. Không bảo hành quyền truy cập Codex.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "791",
+      "expectedDescription": "Tài khoản Higgsfield Genjutsu có giới hạn tạo video theo mô tả nguồn, bảo hành 24 giờ. Cần xác minh vì tiêu đề 30 ngày có thể chỉ là giới hạn tính năng.",
+      "description": "Gói sáng tạo AI phù hợp thử nghiệm ý tưởng hình ảnh hoặc video cho nội dung cá nhân và công việc. Hạn mức có thể tính bằng tín dụng hoặc lượt tạo, nên chọn theo dự án thực tế. Thông số đầu ra và hình thức nhận của gói được ghi cụ thể dưới đây.\n\nThông tin gói và cách sử dụng\nTài khoản Higgsfield với quyền tạo 1 video bằng Motion/Swap Genjutsu, độ phân giải 720p và độ dài tối đa 30 giây. Nhận tài khoản, mật khẩu và đường dẫn lấy mã đăng nhập. Thời gian tạo khoảng 20 phút hoặc lâu hơn tùy tải hệ thống. Nên tạo ngay sau khi nhận và tránh bật, tắt quá trình tạo nhiều lần để không mất lượt. Bảo hành 24 giờ.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "792",
+      "expectedDescription": "Tài khoản Xingtu VIP 30 ngày với công cụ AI, bộ lọc và chỉnh sửa ảnh, nguồn công bố bảo hành trọn gói.",
+      "description": "Ứng dụng phù hợp với người thường xuyên chỉnh sửa ảnh hoặc video để chia sẻ, xây dựng nội dung cá nhân hay giới thiệu sản phẩm. Gói trả phí mở quyền sử dụng các công cụ theo cấp gói. Chọn đúng hệ điều hành, thời hạn và số thiết bị giúp bạn sử dụng phù hợp với nhu cầu.\n\nThông tin gói và cách sử dụng\nTài khoản Xingtu VIP 30 ngày với bộ lọc, công cụ AI chỉnh dáng, xóa vật thể, mẫu chỉnh ảnh và xuất ảnh chất lượng cao không watermark. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "793",
+      "expectedDescription": "Tài khoản PIA VPN dùng trong 7 ngày, giao tên đăng nhập và mật khẩu. Nguồn công bố bảo hành trọn thời gian.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản PIA VPN 7 ngày, nhận tên đăng nhập và mật khẩu. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "794",
+      "expectedDescription": "Tài khoản PureVPN Max trong 7 ngày, giao email và mật khẩu. Nguồn công bố bảo hành trọn thời gian.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản PureVPN Max 7 ngày, nhận email và mật khẩu đăng nhập. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "795",
+      "expectedDescription": "Tài khoản CapCut Pro Team dùng 7 ngày, giao email và mật khẩu; có hướng dẫn đăng nhập trên điện thoại và máy tính.",
+      "description": "CapCut là công cụ dựng và chỉnh sửa video cho người sáng tạo nội dung. Gói Pro phù hợp khi bạn thường xuyên làm video mạng xã hội, giới thiệu sản phẩm hoặc phục vụ công việc và muốn sử dụng tài nguyên, công cụ trả phí. Mỗi lựa chọn có thời hạn, loại tài khoản và hạn mức AI riêng.\n\nThông tin gói và cách sử dụng\nTài khoản CapCut Pro Team 7 ngày, nhận email và mật khẩu. Có thể dùng trên điện thoại và máy tính, nên giới hạn 1–2 thiết bị. Đăng nhập và sử dụng ngay sau khi nhận; tránh đăng nhập, đăng xuất liên tục. Bảo hành quyền Pro trong thời hạn gói, không bao gồm lỗi do cố tình dùng nhiều thiết bị.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "796",
+      "expectedDescription": "Tài khoản ChatGPT Plus 30 ngày thanh toán Apple Pay, nguồn cung cấp tài khoản Gmail đã tạo sẵn. Cần xác nhận chính sách bảo hành.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 30 ngày, nhận Gmail, mật khẩu và xác thực hai bước. Bảo hành trong thời hạn gói; không bảo hành Codex hoặc công cụ kết nối ngoài. Báo lỗi thông tin đăng nhập trong 15 phút sau khi giao. Không cần đổi thông tin; nếu tự đổi mật khẩu, email hoặc xác thực khiến mất quyền truy cập thì trường hợp đó không được bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "797",
+      "expectedDescription": "Tài khoản ChatGPT Plus 1 tháng thanh toán Apple Pay, giao email, mật khẩu và xác thực hai bước. Nguồn ghi bảo hành trọn tháng.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 1 tháng, nhận email, mật khẩu và xác thực hai bước. Tự bảo mật tài khoản khi nhận. Bảo hành 1 tháng, không bao gồm Codex, 9router và các công cụ kết nối ngoài.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "798",
+      "expectedDescription": "Tài khoản ChatGPT Plus 30 ngày thanh toán Google Pay, nguồn công bố bảo hành 20 ngày. Cần đối chiếu điều kiện sử dụng.",
+      "description": "ChatGPT là trợ lý AI hỗ trợ trao đổi ý tưởng, soạn nội dung, giải thích kiến thức và xử lý câu hỏi trong học tập hoặc công việc. Lựa chọn này phù hợp khi bạn đã xác định mình cần tài khoản có sẵn, ưu đãi tự nâng cấp hay quyền dùng Codex. Các hình thức này không có cùng quyền lợi.\n\nThông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 30 ngày, nhận Gmail, mật khẩu và xác thực hai bước. Bảo hành 20 ngày. Cần tự bảo mật tài khoản ngay sau khi nhận; không hỗ trợ khôi phục mật khẩu hoặc xác thực qua hộp thư. Trường hợp tài khoản ngừng hoạt động trong thời hạn bảo hành được hoàn theo số ngày còn lại trên thời hạn bảo hành 20 ngày.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "799",
+      "expectedDescription": "Tài khoản ChatGPT Plus 30 ngày thanh toán Apple Pay, nguồn ghi không bảo hành. Giao tài khoản Gmail và thông tin xác thực.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản ChatGPT Plus 30 ngày, nhận Gmail, mật khẩu và xác thực hai bước. Tự quản lý thông tin truy cập; không bảo đảm nhận được mã email khi thay đổi xác thực. Không bảo hành Codex, 9router và không hoàn tiền.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "800",
+      "expectedDescription": "Gói Kahoot Silver 1 tháng, nhà cung cấp công bố tối đa 100 người tham gia. Cách nâng cấp có thể yêu cầu thông tin đăng nhập của người mua; cần kiểm tra an toàn.",
+      "description": "Kahoot biến câu hỏi, khảo sát và nội dung trình bày thành hoạt động tương tác. Gói phù hợp cho lớp học, đào tạo, sinh hoạt nhóm hoặc sự kiện cần người tham gia trả lời trực tiếp. Chọn đúng cấp gói giúp bạn đáp ứng quy mô người tham gia và có bộ công cụ tổ chức phù hợp.\n\nThông tin gói và cách sử dụng\nGói Kahoot Silver 1 tháng, tổ chức trò chơi tối đa 100 người. Tạo bài trình chiếu và câu hỏi bằng AI từ chủ đề, URL hoặc tài liệu dài tối đa 150 trang; nhập slide từ PowerPoint, Keynote hoặc PDF. Có hỏi đáp trực tiếp, khảo sát, Lecture Mode, chủ đề Premium và tùy chỉnh nền, logo, ảnh đại diện. Nâng cấp thủ công trên tài khoản của bạn, cần quyền truy cập để xử lý. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "801",
+      "expectedDescription": "Gói Kahoot One Event 1 tháng, số người tham gia công bố tối đa 800. Cần xác nhận quyền tổ chức sự kiện và cách nâng cấp an toàn.",
+      "description": "Kahoot biến câu hỏi, khảo sát và nội dung trình bày thành hoạt động tương tác. Gói phù hợp cho lớp học, đào tạo, sinh hoạt nhóm hoặc sự kiện cần người tham gia trả lời trực tiếp. Chọn đúng cấp gói giúp bạn đáp ứng quy mô người tham gia và có bộ công cụ tổ chức phù hợp.\n\nThông tin gói và cách sử dụng\nGói Kahoot One Event 30 ngày cho sự kiện tối đa 800 người mỗi phiên. Tổ chức các buổi Kahoot trong thời hạn gói, dùng Quiz, Poll, Word Cloud, Brainstorm, hỏi đáp và thu thập phản hồi. Phù hợp sự kiện trực tiếp, trực tuyến hoặc kết hợp; người chơi tham gia bằng PIN hoặc QR. Nâng cấp thủ công trên tài khoản, cần quyền truy cập để xử lý. Không tự gia hạn. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "802",
+      "expectedDescription": "Gói Kahoot Gold 1 tháng, nhà cung cấp công bố tối đa 200 người tham gia. Cần kiểm tra điều kiện nâng cấp và yêu cầu thông tin đăng nhập.",
+      "description": "Kahoot biến câu hỏi, khảo sát và nội dung trình bày thành hoạt động tương tác. Gói phù hợp cho lớp học, đào tạo, sinh hoạt nhóm hoặc sự kiện cần người tham gia trả lời trực tiếp. Chọn đúng cấp gói giúp bạn đáp ứng quy mô người tham gia và có bộ công cụ tổ chức phù hợp.\n\nThông tin gói và cách sử dụng\nGói Kahoot Gold 1 tháng, tối đa 200 người tham gia. Tạo câu hỏi và nội dung học tập bằng AI, xây dựng bài luyện thi từ tài liệu hoặc nguồn tham khảo, dùng câu hỏi tương tác và cộng tác. Có chế độ tự học, trò chơi kiểm tra nâng cao, hỗ trợ hơn 55 ngôn ngữ và nội dung Kahoot!+ AccessPass Premium. Nâng cấp thủ công trên tài khoản, cần quyền truy cập để xử lý. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "803",
+      "expectedDescription": "Gói Kahoot Bronze 1 tháng, nhà cung cấp công bố tối đa 50 người tham gia. Cần kiểm tra cách nâng cấp và quyền sử dụng.",
+      "description": "Kahoot biến câu hỏi, khảo sát và nội dung trình bày thành hoạt động tương tác. Gói phù hợp cho lớp học, đào tạo, sinh hoạt nhóm hoặc sự kiện cần người tham gia trả lời trực tiếp. Chọn đúng cấp gói giúp bạn đáp ứng quy mô người tham gia và có bộ công cụ tổ chức phù hợp.\n\nThông tin gói và cách sử dụng\nGói Kahoot Bronze 1 tháng, tối đa 50 người tham gia. Tạo câu hỏi, bài trình chiếu bằng AI từ chủ đề, URL hoặc tài liệu tối đa 150 trang; nhập slide PowerPoint, Keynote và PDF. Có hỏi đáp trực tiếp, khảo sát, Lecture Mode, chủ đề Premium và tùy chỉnh nền, logo, ảnh đại diện. Nâng cấp thủ công trên tài khoản, cần quyền truy cập để xử lý. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "804",
+      "expectedDescription": "Tài khoản Hotspot Shield VPN dùng ngẫu nhiên 5–7 ngày, nguồn giao email và mật khẩu, bảo hành theo thông tin nguồn.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản Hotspot Shield VPN dùng khoảng 5–7 ngày. Nhận email và mật khẩu đăng nhập. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "806",
+      "expectedDescription": "Tài khoản Kling trong 1 tháng với 1.000 tín dụng theo tiêu đề nguồn; chưa có mô tả hoặc cách giao cụ thể.",
+      "description": "Gói sáng tạo AI phù hợp thử nghiệm ý tưởng hình ảnh hoặc video cho nội dung cá nhân và công việc. Hạn mức có thể tính bằng tín dụng hoặc lượt tạo, nên chọn theo dự án thực tế. Thông số đầu ra và hình thức nhận của gói được ghi cụ thể dưới đây.\n\nThông tin gói và cách sử dụng\nGói Kling 1 tháng, kèm 1.000 tín dụng tạo nội dung. Bảo hành 24 giờ.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "807",
+      "expectedDescription": "Tài khoản Genspark Plus 1 tháng, nguồn ghi 10.000 tín dụng và bảo hành 15 ngày. Dùng các tính năng tìm kiếm, nghiên cứu và sáng tạo nội dung bằng AI.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nGói Genspark Plus 1 tháng, kèm 10.000 tín dụng để tìm kiếm, nghiên cứu, tạo nội dung, báo cáo và bài trình chiếu bằng AI. Nâng cấp được xử lý thủ công trên tài khoản, thời gian khoảng 1–2 giờ. Bảo hành gói dịch vụ 15 ngày; không bảo hành vi phạm chính sách sử dụng.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "808",
+      "expectedDescription": "Tài khoản ExpressVPN dùng ngẫu nhiên 2–3 ngày. Nguồn có quy trình riêng để nhận mã đăng nhập qua email tạm.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản ExpressVPN dùng khoảng 2–3 ngày. Nhận email, mật khẩu và hướng dẫn mở hộp thư để lấy OTP. Nếu không thấy mã kích hoạt, vào trang quản lý đăng ký ExpressVPN và làm theo quy trình đặt lại mật khẩu, lấy mã. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "809",
+      "expectedDescription": "Dịch vụ mua vật phẩm trang trí Discord với ngân sách nguồn ghi khoảng 170.000 đồng, cần đăng nhập tài khoản để thực hiện. Kiểm tra cách xác thực và an toàn.",
+      "description": "Thông tin gói và cách sử dụng\nDịch vụ mua vật phẩm trang trí Discord, gồm khung avatar, hiệu ứng hồ sơ và bảng tên. Vật phẩm đã mua vẫn thuộc tài khoản sau khi Nitro hết hạn. Xử lý trực tiếp trên tài khoản, cần thông tin đăng nhập và xác thực để thực hiện; thời gian khoảng 3–5 phút. Có thể đổi mật khẩu hoặc đăng xuất phiên xử lý sau khi hoàn thành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "810",
+      "expectedDescription": "Dịch vụ mua vật phẩm trang trí Discord với ngân sách nguồn ghi khoảng 66.000 đồng, cần đăng nhập tài khoản để thực hiện. Kiểm tra cách xác thực và an toàn.",
+      "description": "Thông tin gói và cách sử dụng\nDịch vụ mua vật phẩm trang trí Discord, gồm khung avatar, hiệu ứng hồ sơ và bảng tên. Vật phẩm đã mua vẫn thuộc tài khoản sau khi Nitro hết hạn. Xử lý trực tiếp trên tài khoản, cần thông tin đăng nhập và xác thực để thực hiện; thời gian khoảng 3–5 phút. Có thể đổi mật khẩu hoặc đăng xuất phiên xử lý sau khi hoàn thành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "811",
+      "expectedDescription": "Quyền truy cập Claude API qua cổng bên thứ ba với hạn mức nguồn gọi là 1 tỷ tín dụng, thời hạn 7 ngày. Cần xác minh cách quy đổi.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Claude API với hạn mức 1 tỷ tín dụng, thời hạn 7 ngày. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "812",
+      "expectedDescription": "Tài khoản Apple ID dùng Gmail và bật xác thực hai bước, vùng mặc định Hoa Kỳ theo nguồn. Cần kiểm tra trạng thái tài khoản trước sử dụng.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản Apple ID dùng email Gmail, đã thiết lập xác thực hai bước, khu vực mặc định Hoa Kỳ và chưa dùng dịch vụ. Nhận thông tin tài khoản và hướng dẫn lấy mã đăng nhập. Bảo hành 24 giờ trước đăng nhập; sau đăng nhập không còn bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "813",
+      "expectedDescription": "Mã thuê số điện thoại nhận OTP cho Codex trong 24 giờ, nguồn không bảo hành. Cần xác minh vùng số, cách nhận mã và điều kiện sử dụng.",
+      "description": "Thông tin gói và cách sử dụng\nMã thuê số điện thoại nhận OTP trong 24 giờ cho bước xác minh Codex/ChatGPT. Có lựa chọn số Việt Nam hoặc Hoa Kỳ. Nhận mã và hướng dẫn mở trang lấy số, nhập số vào bước xác minh rồi chờ tin nhắn hiển thị. Nếu số bị từ chối hoặc không nhận mã, có thể thuê số khác; mã thuê được hoàn theo quy trình sau 2 phút hoặc khi hủy trên trang. Không bảo hành.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "814",
+      "expectedDescription": "Quyền truy cập Codex API qua máy chủ bên thứ ba với hạn mức 500 triệu tín dụng trong 1 tháng. Cần kiểm tra mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API với hạn mức 500 triệu tín dụng trong 1 tháng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "815",
+      "expectedDescription": "Quyền truy cập Codex API qua máy chủ bên thứ ba với hạn mức 1 tỷ tín dụng trong 7 ngày. Cần kiểm tra mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API với hạn mức 1 tỷ tín dụng trong 7 ngày. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "816",
+      "expectedDescription": "Quyền truy cập Codex API qua máy chủ bên thứ ba với hạn mức 500 triệu tín dụng trong 1 ngày. Cần kiểm tra mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API với hạn mức 500 triệu tín dụng trong 1 ngày. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "817",
+      "expectedDescription": "Quyền truy cập Codex API qua máy chủ bên thứ ba với hạn mức 200 triệu tín dụng trong 5 ngày. Cần kiểm tra mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API với hạn mức 200 triệu tín dụng trong 5 ngày. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "819",
+      "expectedDescription": "Quyền truy cập Codex API qua máy chủ bên thứ ba với hạn mức 100 triệu tín dụng trong 5 ngày. Cần kiểm tra mô hình và cách tính.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Codex API với hạn mức 100 triệu tín dụng trong 5 ngày. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "825",
+      "expectedDescription": "Gói sử dụng Grok API qua máy chủ bên thứ ba trong 1 tháng, hạn mức nguồn ghi 200 triệu tín dụng. Cần đối chiếu đơn vị tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 1 tháng, hạn mức 200 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "826",
+      "expectedDescription": "Gói sử dụng Grok API qua máy chủ bên thứ ba trong 5 ngày, hạn mức nguồn ghi 100 triệu tín dụng. Cần đối chiếu đơn vị tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói Grok API trong 5 ngày, hạn mức 100 triệu tín dụng. Nhận mã đổi khóa API, cấu hình địa chỉ kết nối và khóa trong công cụ bạn sử dụng. Có hướng dẫn thiết lập và trang theo dõi khóa, hạn mức. Bảo hành khi khóa không sử dụng được trong thời hạn áp dụng; mức hoàn tính theo phần token chưa sử dụng. Đây là gói sử dụng qua cổng API, không phải tài khoản thuê bao trên website trò chuyện.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "827",
+      "expectedDescription": "Bộ tài khoản JetBrains Education trong 1 năm, dùng các IDE như IntelliJ IDEA, PyCharm và WebStorm. Cần kiểm tra quyền giáo dục và cách giao.",
+      "description": "JetBrains cung cấp các môi trường phát triển tích hợp phục vụ viết mã và xây dựng phần mềm. Bộ Education phù hợp với sinh viên, giáo viên và người học lập trình cần công cụ cho nhiều ngôn ngữ. Hãy chọn theo hình thức cấp tài khoản hoặc kích hoạt trên email của bạn.\n\nThông tin gói và cách sử dụng\nTài khoản JetBrains Education 1 năm, sử dụng bộ IDE như IntelliJ IDEA, PyCharm, WebStorm, CLion và Rider cho học tập, bài tập và dự án lập trình. Nhận email, mật khẩu JetBrains và mật khẩu hộp thư. Bảo hành trong thời hạn gói. Giấy phép giáo dục không mặc nhiên áp dụng cho công việc thương mại.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "828",
+      "expectedDescription": "Bộ quyền JetBrains Education trong 1 năm, nguồn mô tả là gói chính thức. Cần xác minh điều kiện sử dụng giáo dục và cách cấp quyền.",
+      "description": "JetBrains cung cấp các môi trường phát triển tích hợp phục vụ viết mã và xây dựng phần mềm. Bộ Education phù hợp với sinh viên, giáo viên và người học lập trình cần công cụ cho nhiều ngôn ngữ. Hãy chọn theo hình thức cấp tài khoản hoặc kích hoạt trên email của bạn.\n\nThông tin gói và cách sử dụng\nGói JetBrains Education 1 năm trên email của bạn, dùng các IDE như IntelliJ IDEA, PyCharm, WebStorm, CLion và Rider cho học tập và lập trình. Cung cấp email và thực hiện bước nhận mã theo hướng dẫn kích hoạt. Bảo hành trong thời hạn gói. Giấy phép giáo dục không mặc nhiên thay thế giấy phép thương mại.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "829",
+      "expectedDescription": "Tài khoản HeyGen Creator thời hạn 1 tháng, dùng tạo video AI và xuất Full HD 1080p. Bite giao email và mật khẩu; không bảo hành vi phạm chính sách sử dụng. Thời hạn bảo hành chưa thống nhất: tên sản phẩm ghi 3 ngày, mô tả ghi 1 ngày. Cần hỏi lại Bite trước khi bán.",
+      "description": "Gói sáng tạo AI phù hợp thử nghiệm ý tưởng hình ảnh hoặc video cho nội dung cá nhân và công việc. Hạn mức có thể tính bằng tín dụng hoặc lượt tạo, nên chọn theo dự án thực tế. Thông số đầu ra và hình thức nhận của gói được ghi cụ thể dưới đây.\n\nThông tin gói và cách sử dụng\nTài khoản HeyGen Creator 1 tháng, hỗ trợ tạo video đa ngôn ngữ và xuất Full HD 1080p. Nhận email và mật khẩu. Không bảo hành trường hợp vi phạm chính sách sử dụng.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "830",
+      "expectedDescription": "Suất sử dụng Galaxy Play Premium 30 ngày, nguồn cho phép đăng nhập 2 thiết bị và xem 1 thiết bị mỗi lúc. Không gồm phim thuê theo lượt.",
+      "description": "Gói giải trí phù hợp khi bạn muốn xem nội dung trong thời gian xác định. Tài khoản riêng, hồ sơ riêng và suất sử dụng khác nhau về quản lý tài khoản, thiết bị và số lượt xem đồng thời. Thông tin bên dưới giúp bạn hiểu đúng quyền sử dụng của lựa chọn này.\n\nThông tin gói và cách sử dụng\nSuất Galaxy Play Premium 30 ngày, đăng nhập tối đa 2 thiết bị và xem trên 1 thiết bị tại một thời điểm. Không bao gồm phim thuê theo lượt và anime. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "831",
+      "expectedDescription": "Gói API DeepSeek qua bên thứ ba trong 1 tháng, hạn mức nguồn ghi 100 USD. Cần kiểm tra mô hình và mức quy đổi tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói DeepSeek API 1 tháng với 100 USD tín dụng sử dụng dịch vụ. Cổng API có lựa chọn mô hình xử lý văn bản, lập trình và tạo ảnh. Nhận mã nạp, đăng ký hoặc đăng nhập cổng, mở Wallet để nhập mã, sau đó tạo khóa tại API Key và kết nối ứng dụng theo hướng dẫn. Mức tiêu hao tùy mô hình và khối lượng xử lý; không có tỷ lệ token cố định cho mọi yêu cầu. Tín dụng không phải tiền mặt. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "832",
+      "expectedDescription": "Gói API DeepSeek qua bên thứ ba trong 1 tháng, hạn mức nguồn ghi 50 USD. Cần kiểm tra mô hình và mức quy đổi tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói DeepSeek API 1 tháng với 50 USD tín dụng sử dụng dịch vụ. Cổng API có lựa chọn mô hình xử lý văn bản, lập trình và tạo ảnh. Nhận mã nạp, đăng ký hoặc đăng nhập cổng, mở Wallet để nhập mã, sau đó tạo khóa tại API Key và kết nối ứng dụng theo hướng dẫn. Mức tiêu hao tùy mô hình và khối lượng xử lý; không có tỷ lệ token cố định cho mọi yêu cầu. Tín dụng không phải tiền mặt. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "833",
+      "expectedDescription": "Gói API DeepSeek qua bên thứ ba trong 1 tháng, hạn mức nguồn ghi 30 USD. Cần kiểm tra mô hình và mức quy đổi tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói DeepSeek API 1 tháng với 30 USD tín dụng sử dụng dịch vụ. Cổng API có lựa chọn mô hình xử lý văn bản, lập trình và tạo ảnh. Nhận mã nạp, đăng ký hoặc đăng nhập cổng, mở Wallet để nhập mã, sau đó tạo khóa tại API Key và kết nối ứng dụng theo hướng dẫn. Mức tiêu hao tùy mô hình và khối lượng xử lý; không có tỷ lệ token cố định cho mọi yêu cầu. Tín dụng không phải tiền mặt. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "834",
+      "expectedDescription": "Gói API DeepSeek qua bên thứ ba trong 1 tháng, hạn mức nguồn ghi 10 USD. Cần kiểm tra mô hình và mức quy đổi tín dụng.",
+      "description": "Gói API dành cho người muốn sử dụng AI trong công cụ lập trình hoặc ứng dụng hỗ trợ kết nối API. Bạn thiết lập địa chỉ kết nối và khóa truy cập trong phần mềm cần dùng, thay vì chỉ đăng nhập website trò chuyện. Lựa chọn này phù hợp với công việc có khối lượng dự kiến, giúp bạn chọn hạn mức và thời gian theo từng đợt làm việc.\n\nThông tin gói và cách sử dụng\nGói DeepSeek API 1 tháng với 10 USD tín dụng sử dụng dịch vụ. Cổng API có lựa chọn mô hình xử lý văn bản, lập trình và tạo ảnh. Nhận mã nạp, đăng ký hoặc đăng nhập cổng, mở Wallet để nhập mã, sau đó tạo khóa tại API Key và kết nối ứng dụng theo hướng dẫn. Mức tiêu hao tùy mô hình và khối lượng xử lý; không có tỷ lệ token cố định cho mọi yêu cầu. Tín dụng không phải tiền mặt. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "835",
+      "expectedDescription": "Tài khoản Brain.fm trong 90 ngày, nghe nhạc tập trung, thư giãn và ngủ. Nhận email và mật khẩu theo nguồn.",
+      "description": "Brain.fm cung cấp nhạc cho khoảng thời gian cần tập trung hoặc nghỉ ngơi. Gói phù hợp khi bạn muốn duy trì một không gian âm thanh riêng lúc học, làm việc hoặc thư giãn. Bạn có thể bố trí phiên nghe theo mục đích của mình.\n\nThông tin gói và cách sử dụng\nTài khoản Brain.fm 90 ngày, nghe nhạc không lời hỗ trợ tập trung, thư giãn, thiền và ngủ. Có chế độ cá nhân hóa và bộ đếm Pomodoro, dùng trên máy tính hoặc điện thoại. Nhận email và mật khẩu, đăng nhập tại trang Brain.fm. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "836",
+      "expectedDescription": "Liên kết kích hoạt Apple Music Individual trong 5 tháng, dùng trên tài khoản đủ điều kiện. Nguồn chỉ bảo hành liên kết trước kích hoạt 1 ngày.",
+      "description": "Gói nghe nhạc phù hợp với người muốn sử dụng Premium trong một khoảng thời gian nhất định. Bạn có thể nhận tài khoản có gói hoặc kích hoạt ưu đãi trên tài khoản của mình tùy lựa chọn. Hãy chú ý điều kiện tài khoản, cách kích hoạt và gia hạn nếu ưu đãi yêu cầu thẻ thanh toán.\n\nThông tin gói và cách sử dụng\nLiên kết Apple Music Individual 5 tháng, kích hoạt trên tài khoản của bạn. Cần thẻ thanh toán và VPN Ấn Độ để nhận ưu đãi. Bảo hành liên kết trong 24 giờ; không bảo hành sau kích hoạt và không hỗ trợ hoàn tiền sau thanh toán.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "837",
+      "expectedDescription": "Suất hồ sơ Netflix Premium 4K trong 1 tháng, được cấp tên hồ sơ và PIN riêng theo mô tả nguồn. Đây không phải tài khoản Netflix riêng hoàn toàn.",
+      "description": "Gói giải trí phù hợp khi bạn muốn xem nội dung trong thời gian xác định. Tài khoản riêng, hồ sơ riêng và suất sử dụng khác nhau về quản lý tài khoản, thiết bị và số lượt xem đồng thời. Thông tin bên dưới giúp bạn hiểu đúng quyền sử dụng của lựa chọn này.\n\nThông tin gói và cách sử dụng\nHồ sơ Netflix Premium 4K 1 tháng, mỗi hồ sơ dành cho 1 khách, có tên, mã PIN và email đăng nhập riêng. Đây là hồ sơ riêng trong tài khoản, không phải toàn bộ tài khoản độc lập. Nhận mã OTP qua email được giao. Đăng nhập tối đa 2 thiết bị nhưng chỉ xem trên 1 thiết bị mỗi lúc. Một số khu vực cần VPN thuộc vùng được hỗ trợ để phát nội dung. Bảo hành trong thời hạn gói.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "838",
+      "expectedDescription": "Tài khoản Gmail mới, vùng IP ngẫu nhiên, nguồn yêu cầu đăng nhập và bảo mật trong 30 phút sau khi nhận. Cần kiểm tra thông tin khôi phục.",
+      "description": "Thông tin gói và cách sử dụng\nTài khoản Gmail mới, IP đăng ký ngẫu nhiên. Nhận email và mật khẩu, đăng nhập và bảo mật trong 30 phút sau khi nhận. Quá thời gian này không hỗ trợ thay tài khoản.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "839",
+      "expectedDescription": "Liên kết ưu đãi Spotify Premium 3 tháng trên tài khoản đủ điều kiện, cần kiểm tra các điều kiện kích hoạt trước khi sử dụng.",
+      "description": "Gói nghe nhạc phù hợp với người muốn sử dụng Premium trong một khoảng thời gian nhất định. Bạn có thể nhận tài khoản có gói hoặc kích hoạt ưu đãi trên tài khoản của mình tùy lựa chọn. Hãy chú ý điều kiện tài khoản, cách kích hoạt và gia hạn nếu ưu đãi yêu cầu thẻ thanh toán.\n\nThông tin gói và cách sử dụng\nLiên kết Spotify Premium 3 tháng, kích hoạt trên tài khoản mới hoặc đủ điều kiện. Mở bằng Chrome, đăng nhập hoặc tạo tài khoản Spotify, hoàn tất thiết lập thanh toán rồi nhận Premium. Cần VPN Đức hoặc Tây Ban Nha để kích hoạt. Tài khoản đã dùng Premium hoặc dùng thử có thể không áp dụng; không bảo hành sau kích hoạt.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "840",
+      "expectedDescription": "Tài khoản Surfshark VPN dùng trên 1 thiết bị trong 2 tháng. Nguồn giới hạn đổi trả khi dùng quá số thiết bị cho phép.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nTài khoản Surfshark VPN 2 tháng, chỉ đăng nhập và sử dụng trên 1 thiết bị. Nhận email, mật khẩu và hướng dẫn xác thực. Đăng nhập thêm thiết bị sẽ bị ngắt quyền truy cập, không được đổi tài khoản hoặc hoàn tiền.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "842",
+      "expectedDescription": "Tài khoản Coursera Premium quyền tổ chức trong 12 tháng, nguồn giao email, mật khẩu và 2FA, bảo hành 7 ngày. Cần kiểm tra quyền cấp chứng chỉ.",
+      "description": "Coursera là nền tảng học trực tuyến cho người muốn bổ sung kiến thức và kỹ năng theo khóa học. Gói này phù hợp với kế hoạch học trong thời gian dài hơn một khóa ngắn. Quyền truy cập thuộc loại Premium theo tổ chức, không đồng nhất với Coursera Plus.\n\nThông tin gói và cách sử dụng\nTài khoản Coursera Premium theo tổ chức Org+ trong 12 tháng, truy cập khóa học và chứng chỉ thuộc phạm vi gói. Nhận email, mật khẩu và xác thực hai bước. Bảo hành 7 ngày. Đây là Premium theo tổ chức, không phải Coursera Plus.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "843",
+      "expectedDescription": "Liên kết ưu đãi YouTube Premium trong 3 tháng, yêu cầu phương thức thanh toán và tài khoản đủ điều kiện dùng thử.",
+      "description": "Thông tin gói và cách sử dụng\nLiên kết dùng thử YouTube Premium 3 tháng, yêu cầu thẻ hoặc phương thức thanh toán và tài khoản chưa từng có hoặc chưa có gói đang hoạt động. Đổi tại trang YouTube Redeem trong 7 ngày sau khi mua. Áp dụng tại các khu vực: Ba Lan, Ấn Độ, Bỉ, Argentina, Indonesia, Canada, Đan Mạch, Ý, Mexico, Pháp, UAE, Hà Lan, Nam Phi, Brazil, Thổ Nhĩ Kỳ, Hoa Kỳ, Thụy Điển, Úc, Đức, Anh, Tây Ban Nha, Thụy Sĩ và Hồng Kông. Bảo hành sau kích hoạt 3 tháng.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "844",
+      "expectedDescription": "Tài khoản ElevenLabs Pro 1 tháng, nguồn giới thiệu 50.000 tín dụng và bảo hành 25 ngày. Giao email, mật khẩu và cách truy cập hộp thư.",
+      "description": "Gói tạo giọng nói AI phù hợp làm lời dẫn video, nội dung thuyết minh và dự án cần chuyển văn bản thành giọng đọc. Bạn chọn theo lượng tín dụng dự kiến sử dụng và hình thức truy cập. Tài khoản Creator, Pro và mã tín dụng trên cổng riêng là những sản phẩm khác nhau, không dùng chung hạn mức.\n\nThông tin gói và cách sử dụng\nTài khoản ElevenLabs Pro 1 tháng, kèm 50.000 tín dụng, bảo hành 25 ngày. Nhận email, mật khẩu hộp thư, mật khẩu ElevenLabs và đường dẫn truy cập thư. Gói không hỗ trợ nhân bản giọng nói.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "845",
+      "expectedDescription": "Liên kết kích hoạt Gemini Plus trong 6 tháng trên tài khoản Google của người nhận. Theo mô tả từ Bite, không cần thẻ thanh toán khi đổi liên kết; nguồn nêu có thể mời tối đa 5 tài khoản và có quyền truy cập một số tính năng Gemini, dung lượng lưu trữ và điểm Flow. Bite chỉ công bố bảo hành liên kết trong 24 giờ. Cần kiểm tra quyền lợi, giới hạn sử dụng, tài khoản đủ điều kiện và cách kích hoạt trước khi bán.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nLiên kết kích hoạt Gemini Plus 6 tháng trên tài khoản Google của bạn, không cần thẻ thanh toán. Gói có quyền sử dụng Gemini, 400 GB lưu trữ cho Drive, Photos và Gmail, 250 điểm Flow và khả năng mời tối đa 5 tài khoản. Bảo hành giữ liên kết 24 giờ.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "848",
+      "expectedDescription": "Tài khoản OpenArt với 4.000 tín dụng trong 30 ngày theo tên nguồn, bảo hành 24 giờ. Nhận email và mật khẩu đăng nhập.",
+      "description": "Gói sáng tạo AI phù hợp thử nghiệm ý tưởng hình ảnh hoặc video cho nội dung cá nhân và công việc. Hạn mức có thể tính bằng tín dụng hoặc lượt tạo, nên chọn theo dự án thực tế. Thông số đầu ra và hình thức nhận của gói được ghi cụ thể dưới đây.\n\nThông tin gói và cách sử dụng\nTài khoản OpenArt 30 ngày, kèm 4.000 tín dụng. Nhận email và mật khẩu đăng nhập. Bảo hành 24 giờ.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "849",
+      "expectedDescription": "Tài khoản Grok Premium và Cursor Premium dùng chung gói 1 tháng, bảo hành nguồn ghi 28 ngày. Giao thông tin đăng nhập.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nGói tài khoản Grok Premium và Cursor Premium 1 tháng. Nhận email, mật khẩu tài khoản và thông tin truy cập hộp thư. Bảo hành 28 ngày.",
+      "reviewStatus": "needs_review"
+    },
+    {
+      "externalId": "850",
+      "expectedDescription": "Tài khoản Grok Premium và Cursor Premium dùng trong 14 ngày, bảo hành nguồn ghi 1 ngày. Cần đọc quy trình đổi email để sử dụng Cursor.",
+      "description": "Gói AI phù hợp với người muốn dùng trợ lý thông minh để hỗ trợ học tập, công việc hoặc phát triển ý tưởng. Mỗi lựa chọn có thời hạn, hạn mức và cách nhận riêng. Chọn theo công việc dự kiến, đặc biệt vì tài khoản có sẵn khác với liên kết nâng cấp tài khoản cá nhân.\n\nThông tin gói và cách sử dụng\nTài khoản Grok Premium và Cursor Premium 14 ngày, nhận email và mật khẩu. Để dùng Cursor, thực hiện bước đổi email tài khoản sang Gmail theo hướng dẫn. Bảo hành 1 ngày.",
+      "reviewStatus": "verify"
+    },
+    {
+      "externalId": "851",
+      "expectedDescription": "Mã kích hoạt NordVPN 3 tháng qua liên kết từ nhà cung cấp. Người nhận mở liên kết, nhập email, xác nhận OTP và thiết lập mật khẩu để kích hoạt. Theo hướng dẫn nguồn, có thể bỏ qua bước thêm thẻ thanh toán. Nhà cung cấp ghi bảo hành liên kết 3 ngày; cần kiểm tra điều kiện tài khoản và thời hạn trước khi bán.",
+      "description": "Gói phù hợp khi bạn cần công cụ bảo vệ kết nối hoặc thiết bị trong một khoảng thời gian cụ thể. Bạn nhận tài khoản, mã hoặc liên kết theo loại đã chọn rồi thiết lập trên thiết bị tương thích. Hãy chọn thời hạn và số thiết bị sát nhu cầu; khả năng sử dụng phụ thuộc cả điều kiện mạng và khu vực.\n\nThông tin gói và cách sử dụng\nLiên kết kích hoạt NordVPN 3 tháng, không cần thẻ thanh toán. Mở liên kết, nhập email, lấy OTP từ hộp thư và đặt mật khẩu để kích hoạt. Nếu được hỏi thêm thẻ cho gia hạn, chọn Skip. Bảo hành giữ liên kết trong 3 ngày.",
+      "reviewStatus": "verify"
+    }
+  ]
+}

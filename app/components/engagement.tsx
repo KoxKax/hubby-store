@@ -212,43 +212,89 @@ function ReviewDialog({ close }: { close: () => void }) {
   );
 }
 export function ActivityNotifications() {
-  const enabled = experienceOf(useContent()).activityNotifications !== false;
+  const content = useContent();
+  const enabled = experienceOf(content).activityNotifications !== false;
   const { notice } = useStore();
   const feed = useFetcher<{ events: Activity[] }>();
   const [dismissed, setDismissed] = useState(false);
   const [current, setCurrent] = useState<Activity | null>(null);
-  const queue = useRef<Activity[]>([]);
+  const realQueue = useRef<Activity[]>([]);
   const seen = useRef(new Set<string>());
   const busy = useRef(false);
   const load = feed.load;
+
   useEffect(() => {
     if (!enabled || dismissed) return;
     function poll() {
       if (!document.hidden && !busy.current) void load("/activity");
     }
     poll();
-    const timer = setInterval(poll, 15_000);
-    return () => clearInterval(timer);
+    const timer = setInterval(poll, 12_000);
+    const onPaid = () => {
+      void load("/activity");
+    };
+    window.addEventListener("hubby:paid", onPaid);
+    return () => {
+      clearInterval(timer);
+      window.removeEventListener("hubby:paid", onPaid);
+    };
   }, [enabled, dismissed, load]);
   busy.current = feed.state !== "idle";
+
   useEffect(() => {
     if (!feed.data?.events || !enabled || dismissed) return;
+    let hasNewReal = false;
     for (const event of feed.data.events) {
       if (seen.current.has(event.id)) continue;
       seen.current.add(event.id);
-      if (Date.now() - event.at < 15 * 60_000) queue.current.push(event);
+      if (Date.now() - event.at < 15 * 60_000) {
+        realQueue.current.push(event);
+        hasNewReal = true;
+      }
     }
-    queue.current = queue.current.slice(-5);
+    realQueue.current = realQueue.current.slice(-10);
     if (seen.current.size > 200)
       seen.current = new Set(Array.from(seen.current).slice(-100));
-    if (!current && !document.hidden && !notice)
-      setCurrent(queue.current.shift() ?? null);
+
+    if (hasNewReal && !document.hidden && !notice) {
+      if (!current) {
+        const next = realQueue.current.shift();
+        if (next) setCurrent(next);
+      }
+    }
   }, [feed.data, enabled, dismissed, current, notice]);
+
+  const hasMounted = useRef(false);
+
   useEffect(() => {
-    if (!current || notice) return;
-    const timer = setTimeout(() => setCurrent(null), 7000);
-    return () => clearTimeout(timer);
-  }, [current, notice]);
+    if (!enabled || dismissed) return;
+
+    if (current) {
+      const timer = setTimeout(() => {
+        setCurrent(null);
+      }, 6500);
+      return () => clearTimeout(timer);
+    }
+
+    const isInitial = !hasMounted.current;
+    if (isInitial) hasMounted.current = true;
+
+    const delay = isInitial
+      ? 3500
+      : realQueue.current.length > 0
+        ? 1500
+        : Math.floor(Math.random() * 8000) + 9000;
+
+    const scheduleTimer = setTimeout(() => {
+      if (document.hidden || notice) return;
+      if (realQueue.current.length > 0) {
+        setCurrent(realQueue.current.shift() ?? null);
+      }
+    }, delay);
+
+    return () => clearTimeout(scheduleTimer);
+  }, [current, enabled, dismissed, notice]);
+
   if (!enabled || dismissed || !current || notice) return null;
   const minutes = Math.floor(Math.max(0, Date.now() - current.at) / 60_000);
   return (
@@ -259,12 +305,16 @@ export function ActivityNotifications() {
       <div>
         <small>{minutes ? `${minutes} phút trước` : "Vừa xong"}</small>
         <p>
-          {current.customer} vừa{" "}
-          {current.kind === "purchase" ? "mua" : "thêm vào giỏ"}
-          <br />
-          <strong>
-            {current.product} · {current.variant}
-          </strong>
+          <span className="pop-customer">{current.customer}</span>{" "}
+          {current.kind === "purchase" ? (
+            <>
+              vừa mua <strong>{current.product}</strong>
+            </>
+          ) : (
+            <>
+              vừa thêm <strong>{current.product}</strong> vào giỏ hàng
+            </>
+          )}
         </p>
       </div>
       <button
@@ -274,7 +324,7 @@ export function ActivityNotifications() {
         onClick={() => {
           setDismissed(true);
           setCurrent(null);
-          queue.current = [];
+          realQueue.current = [];
         }}
       >
         <Icon name="close" />

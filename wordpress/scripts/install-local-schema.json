@@ -1,0 +1,10 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "features": { "networking": false },
+  "steps": [
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-load.php'; if (wp_get_environment_type() !== 'local' || !function_exists('hubby_supplier_install')) { throw new RuntimeException('Expected the isolated Hubby local installation.'); } hubby_supplier_install(); if (get_option('hubby_supplier_schema') !== '3') { throw new RuntimeException('Supplier schema installation did not complete.'); } echo 'Hubby supplier schema v3 installed locally.';"
+    }
+  ]
+}

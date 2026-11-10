@@ -1,11 +1,13 @@
 import { useState } from "react";
 import type { MetaFunction } from "react-router";
-import { Link } from "react-router";
+import { Link, useRouteLoaderData } from "react-router";
+import type { loader as rootLoader } from "../root";
 import { useContent } from "../components/content-context";
 import { Icon } from "../components/icons";
 import { useStore } from "../components/store-context";
 import { EmptyState, PageIntro, ProductArt } from "../components/storefront";
 import { findVariant } from "../content/fixtures";
+import { customerCopy } from "../content/experience";
 import { cartSubtotal, demoDiscount } from "../domain/demo-cart";
 import { calculateLineTotal, formatVnd } from "../domain/money";
 
@@ -13,18 +15,19 @@ export const meta: MetaFunction = () => [{ title: "Giỏ hàng của bạn — H
 
 export default function Cart() {
   const content = useContent();
+  const couponsEnabled = useRouteLoaderData<typeof rootLoader>("root")?.couponsEnabled === true;
   const store = useStore();
   const [code, setCode] = useState("");
   const [applied, setApplied] = useState("");
   const [message, setMessage] = useState("");
   const subtotal = cartSubtotal(store.lines, content);
-  const discount = demoDiscount(subtotal, applied, content);
+  const discount = couponsEnabled ? demoDiscount(subtotal, applied, content) : 0;
   return (
     <main className="container cart-page" id="main" tabIndex={-1}>
       <PageIntro
-        eyebrow="YOUR LITTLE UPGRADES"
-        title="Lựa chọn của bạn."
-        description="Một bước nữa để ngày thường có thêm chút khác biệt."
+        eyebrow="GIỎ HÀNG"
+        title="Giỏ hàng của bạn"
+        description="Kiểm tra gói và số lượng trước khi đặt hàng."
       />
       {!store.ready ? (
         <div className="empty-state" role="status">
@@ -32,18 +35,18 @@ export default function Cart() {
         </div>
       ) : !store.lines.length ? (
         <EmptyState
-          title="Giỏ hàng đang chờ một điều mới."
-          description="Dạo một vòng bộ sưu tập và chọn trải nghiệm bạn muốn thử."
+          title="Giỏ hàng chưa có sản phẩm"
+          description="Chọn sản phẩm và thêm gói bạn cần vào giỏ nhé."
         />
       ) : (
         <div className="cart-grid">
           <section className="cart-items" aria-label="Sản phẩm trong giỏ">
             <div className="cart-table-caption">
               <span>
-                {store.lines.reduce((sum, line) => sum + line.quantity, 0)} lựa
-                chọn trong giỏ
+                {store.lines.reduce((sum, line) => sum + line.quantity, 0)} sản
+                phẩm trong giỏ
               </span>
-              <span>Giá VND</span>
+              <span>Đơn giá</span>
             </div>
             {store.lines.map((line) => {
               const found = findVariant(line.variantId, content);
@@ -60,10 +63,8 @@ export default function Cart() {
                   </Link>
                   <div className="cart-item-copy">
                     <Link to={`/san-pham/${product.slug}`}>{product.name}</Link>
-                    <p>
-                      {variant.label} · {product.deliveryLabel}
-                    </p>
-                    <span>{formatVnd(variant.priceVnd)} / gói</span>
+                    <p>{customerCopy(variant.label)}</p>
+                    <span>Đơn giá: {formatVnd(variant.priceVnd)}</span>
                     <button
                       type="button"
                       className="remove-link"
@@ -112,17 +113,17 @@ export default function Cart() {
             })}
             <Link className="text-link continue-shopping" to="/#san-pham">
               <Icon name="arrow" style={{ transform: "rotate(180deg)" }} />
-              Tiếp tục khám phá
+              Tiếp tục mua sắm
             </Link>
           </section>
           <aside className="order-summary">
-            <p className="eyebrow">YOUR SELECTION</p>
-            <h2>Tóm tắt lựa chọn</h2>
+            <p className="eyebrow">ĐƠN HÀNG</p>
+            <h2>Tổng tiền</h2>
             <div className="summary-line">
               <span>Tạm tính</span>
               <span>{formatVnd(subtotal)}</span>
             </div>
-            <form
+            {couponsEnabled && <form
               className="coupon-form"
               onSubmit={(event) => {
                 event.preventDefault();
@@ -154,7 +155,7 @@ export default function Cart() {
               <p role="status" className="form-message">
                 {message}
               </p>
-            </form>
+            </form>}
             {discount > 0 && (
               <div className="summary-line discount-line">
                 <span>Ưu đãi</span>
@@ -167,9 +168,9 @@ export default function Cart() {
             </div>
             <Link
               className="button primary full-width"
-              to={`/thanh-toan${applied ? `?coupon=${encodeURIComponent(applied)}` : ""}`}
+              to={`/thanh-toan${couponsEnabled && applied ? `?coupon=${encodeURIComponent(applied)}` : ""}`}
             >
-              Tiếp tục
+              Tiến hành thanh toán
               <Icon name="arrow" />
             </Link>
             <p className="demo-inline">

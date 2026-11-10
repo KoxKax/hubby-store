@@ -9,6 +9,7 @@ import {
   useLoaderData,
   useNavigation,
 } from "react-router";
+import { CommerceOrderDetail } from "../components/commerce-space";
 import {
   CommandButton,
   type OrderView,
@@ -18,18 +19,58 @@ import {
 } from "../components/local-commerce";
 import { PageIntro } from "../components/storefront";
 import { formatVnd } from "../domain/money";
+import {
+  commerceRpc,
+  customerOrder,
+  customerSpace,
+} from "../server/commerce-repository.server";
 import { csrfToken, secureForm } from "../server/form-security.server";
-import { localCall } from "../server/local-shop.server";
+import { localCall, localEnabled } from "../server/local-shop.server";
+import { payosCheckoutReady } from "../server/payos-checkout.server";
+import {
+  payosDeliveryGateway,
+  revealRegisteredPayosDelivery,
+} from "../server/payos-delivery.server";
+import { payosFulfillmentReady } from "../server/payos-fulfillment.server";
+import {
+  payosResumeRedirect,
+  resumeRegisteredPayosCheckout,
+} from "../server/payos-resume.server";
+import { runtimeContext } from "../server/runtime-context.server";
+import { identity } from "../server/supabase.server";
 export function meta() {
-  return [{ title: "Chi tiết đơn mẫu — Hubby" }];
+  return [{ title: "Chi tiết đơn hàng — Hubby" }];
+}
+export function headers() {
+  return {
+    "Cache-Control": "private, no-store",
+    "Referrer-Policy": "no-referrer",
+  };
 }
 export async function loader({ request, context, params }: LoaderFunctionArgs) {
+  if (!localEnabled(request, context)) {
+    const order = await customerOrder(request, context, params.id ?? "");
+    const space = await customerSpace(
+      request,
+      context,
+      `/don-hang/${order.id}`,
+    );
+    return {
+      live: true as const,
+      order,
+      tickets: space.tickets,
+      csrf: csrfToken(request, context),
+      requestKey: crypto.randomUUID(),
+      resumeReady: payosCheckoutReady(context.get(runtimeContext).env),
+    };
+  }
   const result = await localCall<{ order: OrderView; tickets: TicketView[] }>(
     request,
     context,
     { action: "get", id: params.id },
   );
   return {
+    live: false as const,
     ...result,
     csrf: csrfToken(request, context),
     paymentKey: crypto.randomUUID(),
@@ -37,6 +78,52 @@ export async function loader({ request, context, params }: LoaderFunctionArgs) {
   };
 }
 export async function action({ request, context, params }: ActionFunctionArgs) {
+  if (!localEnabled(request, context)) {
+    // A POST with valid CSRF and a verified signed-in order is the only way
+    // to request plaintext. GET/loader, anonymous and unrelated orders never
+    // fetch encrypted stock, let alone decrypt it.
+    const order = await customerOrder(request, context, params.id ?? "");
+    const form = await secureForm(request, 2000);
+    if (form.get("intent") === "resume") {
+      if (
+        order.state !== "pending_payment" ||
+        !payosCheckoutReady(context.get(runtimeContext).env)
+      )
+        return data({ error: "Đơn không còn chờ thanh toán. Nếu đã chuyển tiền, bạn không cần thanh toán lại; trạng thái mới đang được cập nhật." }, { status: 409 });
+      try {
+        const url = await resumeRegisteredPayosCheckout(order.id, {
+          rpc: (name, args) => commerceRpc(request, context, name, args),
+        });
+        return payosResumeRedirect(url);
+      } catch (error) {
+        return data({ error: error instanceof Response ? await error.text() : "Chưa mở được liên kết. Nếu đã chuyển tiền, bạn không cần thanh toán lại." }, { status: error instanceof Response ? error.status : 503 });
+      }
+    }
+    if (form.get("intent") !== "reveal")
+      throw new Response("Yêu cầu không được hỗ trợ.", { status: 405 });
+    const env = context.get(runtimeContext).env;
+    if (order.state !== "delivered" || !payosFulfillmentReady(env))
+      throw new Response("Thông tin giao hàng chưa sẵn sàng.", { status: 409 });
+    const user = await identity(request, context);
+    const key = env.INVENTORY_ENCRYPTION_KEY_V1;
+    if (!user || !key)
+      throw new Response("Phiên nhận hàng không hợp lệ.", { status: 403 });
+    const products = await revealRegisteredPayosDelivery(
+      order.id,
+      user.id,
+      payosDeliveryGateway(env),
+      { 1: key },
+    );
+    return data(
+      { products, error: "" },
+      {
+        headers: {
+          "Cache-Control": "private, no-store",
+          "Referrer-Policy": "no-referrer",
+        },
+      },
+    );
+  }
   try {
     const form = await secureForm(request, 6000);
     await localCall(request, context, {
@@ -52,20 +139,38 @@ export async function action({ request, context, params }: ActionFunctionArgs) {
         error:
           error instanceof Response
             ? await error.text()
-            : "Không thể gửi ticket.",
+            : "Chưa gửi được yêu cầu hỗ trợ. Vui lòng thử lại.",
       },
       { status: error instanceof Response ? error.status : 400 },
     );
   }
 }
 export default function Order() {
+  const state = useLoaderData<typeof loader>();
+  if (state.live)
+    return (
+      <CommerceOrderDetail
+        order={state.order}
+        tickets={state.tickets}
+        csrf={state.csrf}
+        requestKey={state.requestKey}
+        resumeReady={state.resumeReady}
+      />
+    );
+  return <LocalOrder state={state} />;
+}
+function LocalOrder({
+  state,
+}: {
+  state: Extract<Awaited<ReturnType<typeof loader>>, { live: false }>;
+}) {
   const {
     order: o,
     tickets,
     csrf,
     paymentKey: initialPaymentKey,
     refundKey: initialRefundKey,
-  } = useLoaderData<typeof loader>();
+  } = state;
   const result = useActionData<typeof action>();
   const nav = useNavigation();
   const [paymentKey] = useState(initialPaymentKey);
@@ -74,7 +179,7 @@ export default function Order() {
     <main className="container account-page" id="main" tabIndex={-1}>
       <PageIntro
         eyebrow={`ORDER / ${o.id.slice(0, 8).toUpperCase()}`}
-        title="Một nâng cấp đang đến."
+        title="Chi tiết đơn hàng"
         description="Thông tin đơn hàng, sản phẩm và hỗ trợ ở cùng một nơi."
       />
       <SandboxNotice />

@@ -1,7 +1,8 @@
 import { type ActionFunctionArgs, data } from "react-router";
 import { feedbackInput } from "../domain/engagement";
+import { commerceRpc } from "../server/commerce-repository.server";
 import { secureForm } from "../server/form-security.server";
-import { localCall } from "../server/local-shop.server";
+import { localCall, localEnabled } from "../server/local-shop.server";
 export function loader() {
   return new Response(null, { status: 405 });
 }
@@ -13,7 +14,21 @@ export async function action({ request, context }: ActionFunctionArgs) {
         ["key", "category", "message"].map((key) => [key, form.get(key)]),
       ),
     );
-    await localCall(request, context, { action: "feedback", ...input });
+    if (localEnabled(request, context))
+      await localCall(request, context, { action: "feedback", ...input });
+    else {
+      if (input.category === "review")
+        return data(
+          { error: "Dùng biểu mẫu đánh giá sản phẩm nhé." },
+          { status: 400 },
+        );
+      await commerceRpc(request, context, "submit_community", {
+        p_key: input.key,
+        p_kind: "feedback",
+        p_category: input.category,
+        p_body: input.message,
+      });
+    }
     return { ok: true, message: "Cảm ơn bạn! Hubby đã nhận được góp ý." };
   } catch (error) {
     return data(

@@ -3,10 +3,11 @@ import { Form, Link, useSearchParams } from "react-router";
 import { useContent } from "../components/content-context";
 import { Icon } from "../components/icons";
 import { EmptyState, PageIntro, ProductCard } from "../components/storefront";
+import { customerCopy } from "../content/experience";
 import { filterProducts } from "../domain/catalog";
 
 export const meta: MetaFunction = () => [
-  { title: "Danh mục tài khoản — Hubby" },
+  { title: "Danh mục sản phẩm — Hubby" },
 ];
 
 export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
@@ -35,9 +36,9 @@ export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
   return (
     <main className="container catalog-page" id="main" tabIndex={-1}>
       <PageIntro
-        eyebrow="TÀI KHOẢN & SUBSCRIPTION"
-        title={selectedCategory?.name ?? "Chọn tài khoản của bạn."}
-        description={selectedCategory?.description ?? content.shop.description}
+        eyebrow="TÀI KHOẢN & DỊCH VỤ SỐ"
+        title={selectedCategory?.name ?? "Khám phá sản phẩm"}
+        description={customerCopy(selectedCategory?.description ?? content.shop.description)}
       />
       <div className="catalog-toolbar">
         <Form className="catalog-search" method="get" role="search">
@@ -45,7 +46,7 @@ export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
           <input
             key={q}
             name="q"
-            aria-label="Tìm trong bộ sưu tập"
+            aria-label="Tìm sản phẩm"
             placeholder="Bạn đang tìm điều gì?"
             defaultValue={q}
           />
@@ -61,7 +62,7 @@ export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
             value={sort}
             onChange={(event) => update("sort", event.target.value)}
           >
-            <option value="featured">Bộ sưu tập</option>
+            <option value="featured">Nổi bật</option>
             <option value="price-asc">Giá tăng dần</option>
             <option value="price-desc">Giá giảm dần</option>
             <option value="name">Tên A–Z</option>
@@ -100,15 +101,15 @@ export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
                   update("available", event.target.checked ? "1" : "")
                 }
               />
-              Chỉ hiện gói còn hàng mẫu
+              Chỉ hiện sản phẩm còn hàng
             </label>
           </div>
           <div className="sidebar-note">
             <Icon name="sparkles" />
-            <h3>Một chút cảm hứng?</h3>
-            <p>Khám phá thứ phù hợp với phiên bản mới của bạn.</p>
+            <h3>Cần chọn gói phù hợp?</h3>
+            <p>Liên hệ Hubby để được hướng dẫn trước khi đặt hàng.</p>
             <Link to="/ho-tro">
-              Cần Hubby giúp?
+              Liên hệ tư vấn
               <Icon name="arrow" />
             </Link>
           </div>
@@ -118,12 +119,12 @@ export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
             <span>
               {products.length} sản phẩm{q && <> cho “{q}”</>}
             </span>
-            <span>Dữ liệu mẫu</span>
+            <span>Kiểm tra giá và tình trạng còn hàng trong từng gói</span>
           </div>
           {preview === "error" ? (
             <EmptyState
               title="Chưa thể tải bộ sưu tập"
-              description="Trạng thái lỗi mô phỏng. Thử tải lại để xem các sản phẩm mẫu."
+              description="Chưa tải được danh sách sản phẩm. Hãy thử lại."
               href="/san-pham"
               cta="Thử lại"
             />
@@ -149,8 +150,8 @@ export default function Catalog({ fixedCategory }: { fixedCategory?: string }) {
             </div>
           ) : (
             <EmptyState
-              title="Chưa tìm thấy điều bạn cần."
-              description="Thử một từ khóa khác hoặc khám phá lại toàn bộ bộ sưu tập."
+              title="Không tìm thấy sản phẩm phù hợp"
+              description="Bạn có thể đổi từ khóa, chọn danh mục khác hoặc xóa bộ lọc để xem toàn bộ sản phẩm."
               cta="Xóa bộ lọc"
             />
           )}

@@ -5,8 +5,8 @@ export function dataConfig(env: HubbyEnv) {
     env.DATA_MODE !== "supabase" ||
     env.APP_ENV === "production" ||
     env.SUPABASE_ENVIRONMENT !== "staging" ||
-    env.PAYMENTS_MODE !== "mock" ||
-    env.SUPPLIERS_MODE !== "mock"
+    (env.PAYMENTS_MODE !== "mock" && env.PAYMENTS_MODE !== "payos") ||
+    !["mock", "bite"].includes(env.SUPPLIERS_MODE ?? "")
   )
     throw new Response("Cấu hình staging chưa hợp lệ", { status: 503 });
   const url = new URL(env.SUPABASE_URL ?? "https://not-configured.invalid");
